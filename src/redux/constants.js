@@ -6,6 +6,8 @@ const UPGRADE_FAILED = 'UPGRADE_FAILED'
 const ERROR_MESSAGE = 'ERROR_MESSAGE'
 const SUCCESS_MESSAGE = 'SUCCESS_MESSAGE'
 
+const SET_MENU = 'SET_MENU'
+
 module.exports = {
     UPGRADE_REQUESTED,
     UPGRADE_REJECTED,
@@ -14,4 +16,6 @@ module.exports = {
 
     ERROR_MESSAGE,
     SUCCESS_MESSAGE,
+
+    SET_MENU,
 }
