@@ -1,0 +1,102 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "villageIds": [1]
+        }
+    ],
+    "villages": [
+        {
+            "id": 1,
+            "resources": {
+                "clay": 750,
+                "wood": 750,
+                "iron": 750
+            },
+            "production": {
+                "clay": 10,
+                "wood": 10,
+                "iron": 10
+            },
+            "resourceFields": [
+                {
+                    "id": 1,
+                    "level": 1,
+                    "type": "clay"
+                },
+                {
+                    "id": 2,
+                    "level": 1,
+                    "type": "clay"
+                },
+                {
+                    "id": 3,
+                    "level": 1,
+                    "type": "clay"
+                },
+                {
+                    "id": 4,
+                    "level": 1,
+                    "type": "clay"
+                },
+                {
+                    "id": 5,
+                    "level": 1,
+                    "type": "clay"
+                },
+                {
+                    "id": 6,
+                    "level": 1,
+                    "type": "wood"
+                },
+                {
+                    "id": 7,
+                    "level": 1,
+                    "type": "wood"
+                },
+                {
+                    "id": 8,
+                    "level": 1,
+                    "type": "wood"
+                },
+                {
+                    "id": 9,
+                    "level": 1,
+                    "type": "wood"
+                },
+                {
+                    "id": 10,
+                    "level": 1,
+                    "type": "wood"
+                },
+                {
+                    "id": 11,
+                    "level": 1,
+                    "type": "iron"
+                },
+                {
+                    "id": 12,
+                    "level": 1,
+                    "type": "iron"
+                },
+                {
+                    "id": 13,
+                    "level": 1,
+                    "type": "iron"
+                },
+                {
+                    "id": 14,
+                    "level": 1,
+                    "type": "iron"
+                },
+                {
+                    "id": 15,
+                    "level": 1,
+                    "type": "iron"
+                }
+            ],
+            "buildings": [],
+            "timers": []
+        }
+    ]
+}
