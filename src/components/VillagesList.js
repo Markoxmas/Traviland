@@ -75,7 +75,7 @@ export default function VillagesList() {
                 onClose={handleClose}
             >
                 {villages.map((village) => (
-                    <StyledMenuItem>
+                    <StyledMenuItem key={village.id}>
                         <ListItemText
                             primary={village.name}
                             onClick={() => handleClose(village.id)}
