@@ -8,6 +8,8 @@ const SUCCESS_MESSAGE = 'SUCCESS_MESSAGE'
 
 const SET_MENU = 'SET_MENU'
 
+const SET_VILLAGE = 'SET_VILLAGE'
+
 module.exports = {
     UPGRADE_REQUESTED,
     UPGRADE_REJECTED,
@@ -18,4 +20,6 @@ module.exports = {
     SUCCESS_MESSAGE,
 
     SET_MENU,
+
+    SET_VILLAGE,
 }

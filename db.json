@@ -8,10 +8,16 @@
     "villages": [
         {
             "id": 1,
+            "name": "Main village",
             "resources": {
                 "clay": 750,
                 "wood": 750,
                 "iron": 750
+            },
+            "maxResources": {
+                "clay": 1500,
+                "wood": 1500,
+                "iron": 1500
             },
             "production": {
                 "clay": 10,

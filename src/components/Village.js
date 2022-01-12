@@ -1,5 +1,9 @@
 import React from 'react'
 
-export default function Village() {
-    return <h3 style={{ textAlign: 'center' }}>Village under construction!</h3>
+export default function Village({ village }) {
+    return (
+        <div style={{ textAlign: 'center' }}>
+            Village <b>{village.name}</b> is under construction
+        </div>
+    )
 }

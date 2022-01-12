@@ -1,7 +1,7 @@
 import CONST from '../constants'
 
 const initialState = {
-    tab: 0,
+    tab: 1,
 }
 
 const menuReducer = (state = initialState, action = {}) => {

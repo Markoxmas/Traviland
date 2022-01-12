@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
 import Menu from './components/Menu'
 import Profile from './components/Profile'
-import Village from './components/Village'
+import Villages from './components/Villages'
 
 export default function App() {
     const { tab } = useSelector((state) => state.menuReducer)
@@ -15,7 +15,7 @@ export default function App() {
             <Container maxWidth="lg">
                 <Menu />
                 {tab === 0 && <Profile />}
-                {tab === 1 && <Village />}
+                {tab === 1 && <Villages />}
                 <Typography component="div" />
             </Container>
         </React.Fragment>
