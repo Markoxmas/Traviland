@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { withStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import Menu from '@material-ui/core/Menu'
@@ -38,21 +38,18 @@ const StyledMenuItem = withStyles((theme) => ({
     },
 }))(MenuItem)
 
-export default function VillagesList() {
+export default function VillagesList({ villages, chosenVillage }) {
     const dispatch = useDispatch()
     const [anchorEl, setAnchorEl] = React.useState(null)
-    const { villageId } = useSelector((state) => state.villageMenu)
-    const villages = useSelector((state) => state.villagesReducer)
-    const chosenVillage = villages.filter(
-        (village) => village.id === villageId
-    )[0]
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget)
     }
 
     const handleClose = (newId) => {
-        dispatch(onSetVillage(newId))
+        if (typeof newId === 'number') {
+            dispatch(onSetVillage(newId))
+        }
         setAnchorEl(null)
     }
 
