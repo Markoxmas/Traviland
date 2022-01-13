@@ -14,7 +14,7 @@ const useStyles = makeStyles({
 
 export default function Villages() {
     const classes = useStyles()
-    const { villageId } = useSelector((state) => state.villageMenu)
+    const { villageId } = useSelector((state) => state.villageMenuReducer)
     const villages = useSelector((state) => state.villagesReducer)
     const village = villages.filter((village) => village.id === villageId)[0]
     return (

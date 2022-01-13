@@ -4,7 +4,7 @@ const initialState = {
     villageId: 1,
 }
 
-const villageMenu = (state = initialState, action = {}) => {
+const villageMenuReducer = (state = initialState, action = {}) => {
     switch (action.type) {
         case CONST.SET_VILLAGE:
             return { ...state, villageId: action.newId }
@@ -13,4 +13,4 @@ const villageMenu = (state = initialState, action = {}) => {
     }
 }
 
-export default villageMenu
+export default villageMenuReducer

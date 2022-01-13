@@ -7,22 +7,22 @@ export default function Village({ village }) {
         <div style={{ textAlign: 'center' }}>
             <div>
                 {village.resourceFields.slice(0, 5).map((field) => (
-                    <ResourceField field={field} />
+                    <ResourceField key={field.id} field={field} />
                 ))}
             </div>
             <div>
                 {village.resourceFields.slice(5, 10).map((field) => (
-                    <ResourceField field={field} />
+                    <ResourceField key={field.id} field={field} />
                 ))}
             </div>
             <div>
                 {village.resourceFields.slice(10, 15).map((field) => (
-                    <ResourceField field={field} />
+                    <ResourceField key={field.id} field={field} />
                 ))}
             </div>
             <div>
                 {village.buildings.slice(0, 5).map((field) => (
-                    <BuildingField field={field} />
+                    <BuildingField key={field.id} field={field} />
                 ))}
             </div>
         </div>

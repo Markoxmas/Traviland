@@ -1,10 +1,6 @@
 import CONST from '../constants'
 
-const initialState = [
-    getDefaultVillage(1, 'Main village'),
-    getDefaultVillage(2, 'Second village'),
-    getDefaultVillage(3, 'Third village'),
-]
+const initialState = []
 
 const villagesReducer = (state = initialState, action = {}) => {
     switch (action.type) {
@@ -12,6 +8,8 @@ const villagesReducer = (state = initialState, action = {}) => {
             return state.map((village) =>
                 village.id === action.village.id ? action.village : village
             )
+        case CONST.LOAD_DATA_SUCCESS:
+            return [...action.data.villages]
         default:
             return state
     }
