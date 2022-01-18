@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
 import ListItemText from '@material-ui/core/ListItemText'
-import { onSetVillage } from '../redux/actions/villageMenuActions'
+import { onSetVillage } from '../../redux/actions/villageMenuActions'
 
 const StyledMenu = withStyles({
     paper: {

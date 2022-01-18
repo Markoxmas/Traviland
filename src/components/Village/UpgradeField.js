@@ -4,20 +4,11 @@ import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles((theme) => ({
     field: {
-        width: '50px',
-        height: '50px',
+        width: '100px',
+        height: '80px',
         margin: '2px',
-        fontWeight: 'bold',
     },
 }))
-
-const getColor = (type) => {
-    return type === 'clay'
-        ? 'rgba(255, 0, 0, 0.7)'
-        : type === 'wood'
-        ? 'rgba(0, 255, 0, 0.7)'
-        : 'rgba(0, 0, 255, 0.7)'
-}
 
 export default function UpgradeField({ field }) {
     const classes = useStyles()
@@ -25,10 +16,13 @@ export default function UpgradeField({ field }) {
     return (
         <Button
             className={classes.field}
-            style={{ background: getColor(field.type) }}
+            style={{ background: field.color }}
             variant="contained"
         >
-            {field.level}
+            <div>
+                {field.name && field.name}
+                <div>{field.level}</div>
+            </div>
         </Button>
     )
 }

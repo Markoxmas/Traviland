@@ -31,7 +31,8 @@ export default function Menu() {
                 centered
             >
                 <Tab label="Profile" />
-                <Tab label="Village" />
+                <Tab label="Resources" />
+                <Tab label="Buildings" />
             </Tabs>
         </Paper>
     )
