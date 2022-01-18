@@ -24,84 +24,179 @@
                 "wood": 10,
                 "iron": 10
             },
+            "checkpoint": {
+                "clay": 750,
+                "wood": 750,
+                "iron": 750,
+                "time": 1642535746996
+            },
             "resourceFields": [
                 {
                     "id": 1,
                     "level": 1,
-                    "type": "clay"
+                    "type": "clay",
+                    "color": "rgba(255, 0, 0, 0.7)"
                 },
                 {
                     "id": 2,
                     "level": 1,
-                    "type": "clay"
+                    "type": "clay",
+                    "color": "rgba(255, 0, 0, 0.7)"
                 },
                 {
                     "id": 3,
                     "level": 1,
-                    "type": "clay"
+                    "type": "clay",
+                    "color": "rgba(255, 0, 0, 0.7)"
                 },
                 {
                     "id": 4,
                     "level": 1,
-                    "type": "clay"
-                },
-                {
-                    "id": 5,
-                    "level": 1,
-                    "type": "clay"
+                    "type": "clay",
+                    "color": "rgba(255, 0, 0, 0.7)"
                 },
                 {
                     "id": 6,
                     "level": 1,
-                    "type": "wood"
+                    "type": "wood",
+                    "color": "rgba(0, 255, 0, 0.7)"
                 },
                 {
                     "id": 7,
                     "level": 1,
-                    "type": "wood"
+                    "type": "wood",
+                    "color": "rgba(0, 255, 0, 0.7)"
                 },
                 {
                     "id": 8,
                     "level": 1,
-                    "type": "wood"
+                    "type": "wood",
+                    "color": "rgba(0, 255, 0, 0.7)"
                 },
                 {
                     "id": 9,
                     "level": 1,
-                    "type": "wood"
-                },
-                {
-                    "id": 10,
-                    "level": 1,
-                    "type": "wood"
+                    "type": "wood",
+                    "color": "rgba(0, 255, 0, 0.7)"
                 },
                 {
                     "id": 11,
                     "level": 1,
-                    "type": "iron"
+                    "type": "iron",
+                    "color": "rgba(0, 0, 255, 0.7)"
                 },
                 {
                     "id": 12,
                     "level": 1,
-                    "type": "iron"
+                    "type": "iron",
+                    "color": "rgba(0, 0, 255, 0.7)"
                 },
                 {
                     "id": 13,
                     "level": 1,
-                    "type": "iron"
+                    "type": "iron",
+                    "color": "rgba(0, 0, 255, 0.7)"
                 },
                 {
                     "id": 14,
                     "level": 1,
-                    "type": "iron"
-                },
-                {
-                    "id": 15,
-                    "level": 1,
-                    "type": "iron"
+                    "type": "iron",
+                    "color": "rgba(0, 0, 255, 0.7)"
                 }
             ],
-            "buildings": [],
+            "buildings": [
+                {
+                    "id": 16,
+                    "level": 1,
+                    "type": "warehouse",
+                    "name": "Warehouse",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 17,
+                    "level": 1,
+                    "type": "brickyard",
+                    "name": "Brickyard",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 18,
+                    "level": 1,
+                    "type": "iron_foundry",
+                    "name": "Iron foundry",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 19,
+                    "level": 1,
+                    "type": "sawmill",
+                    "name": "Sawmill",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 20,
+                    "level": 1,
+                    "type": "barracks",
+                    "name": "Barracks",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 21,
+                    "level": 1,
+                    "type": "stable",
+                    "name": "Stable",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 22,
+                    "level": 1,
+                    "type": "blacksmith",
+                    "name": "Blacksmith",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 23,
+                    "level": 1,
+                    "type": "armoury",
+                    "name": "Armoury",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 24,
+                    "level": 1,
+                    "type": "rally_point",
+                    "name": "Rally point",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 25,
+                    "level": 1,
+                    "type": "palace",
+                    "name": "Palace",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 26,
+                    "level": 1,
+                    "type": "marketplace",
+                    "name": "Marketplace",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 27,
+                    "level": 1,
+                    "type": "main_building",
+                    "name": "Main building",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 28,
+                    "level": 1,
+                    "type": "wonder_of_the_world",
+                    "name": "Wonder of the world",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                }
+            ],
             "timers": []
         }
     ],
@@ -119,6 +214,8 @@
             "PROD_CLAY_K": 1.07,
             "PROD_IRON_A1": 120,
             "PROD_IRON_K": 1.1,
+            "TIME_A1": 100000,
+            "TIME_K": 100000,
             "MAX_LEVEL": 10
         },
         "CLAY": {
@@ -134,6 +231,8 @@
             "PROD_CLAY_K": 1.07,
             "PROD_IRON_A1": 120,
             "PROD_IRON_K": 1.1,
+            "TIME_A1": 100000,
+            "TIME_K": 100000,
             "MAX_LEVEL": 10
         },
         "IRON": {
@@ -149,6 +248,8 @@
             "PROD_CLAY_K": 1.07,
             "PROD_IRON_A1": 120,
             "PROD_IRON_K": 1.1,
+            "TIME_A1": 100000,
+            "TIME_K": 100000,
             "MAX_LEVEL": 10
         },
         "WAREHOUSE": {
@@ -158,6 +259,8 @@
             "CLAY_K": 1.07,
             "IRON_A1": 120,
             "IRON_K": 1.1,
+            "TIME_A1": 100000,
+            "TIME_K": 100000,
             "MAX_LEVEL": 20
         },
         "BRICKYARD": {
@@ -167,6 +270,8 @@
             "CLAY_K": 1.07,
             "IRON_A1": 120,
             "IRON_K": 1.1,
+            "TIME_A1": 100000,
+            "TIME_K": 100000,
             "MAX_LEVEL": 5
         },
         "IRON_FOUNDRY": {
@@ -176,6 +281,8 @@
             "CLAY_K": 1.07,
             "IRON_A1": 120,
             "IRON_K": 1.1,
+            "TIME_A1": 100000,
+            "TIME_K": 100000,
             "MAX_LEVEL": 5
         },
         "SAWMILL": {
@@ -185,6 +292,8 @@
             "CLAY_K": 1.07,
             "IRON_A1": 120,
             "IRON_K": 1.1,
+            "TIME_A1": 100000,
+            "TIME_K": 100000,
             "MAX_LEVEL": 5
         },
         "BARRACKS": {
@@ -194,6 +303,8 @@
             "CLAY_K": 1.07,
             "IRON_A1": 120,
             "IRON_K": 1.1,
+            "TIME_A1": 100000,
+            "TIME_K": 100000,
             "MAX_LEVEL": 20
         },
         "STABLE": {
@@ -203,6 +314,8 @@
             "CLAY_K": 1.07,
             "IRON_A1": 120,
             "IRON_K": 1.1,
+            "TIME_A1": 100000,
+            "TIME_K": 100000,
             "MAX_LEVEL": 20
         },
         "BLACKSMITH": {
@@ -212,6 +325,8 @@
             "CLAY_K": 1.07,
             "IRON_A1": 120,
             "IRON_K": 1.1,
+            "TIME_A1": 100000,
+            "TIME_K": 100000,
             "MAX_LEVEL": 20
         },
         "ARMOURY": {
@@ -221,6 +336,8 @@
             "CLAY_K": 1.07,
             "IRON_A1": 120,
             "IRON_K": 1.1,
+            "TIME_A1": 100000,
+            "TIME_K": 100000,
             "MAX_LEVEL": 20
         },
         "RALLY_POINT": {
@@ -230,6 +347,8 @@
             "CLAY_K": 1.07,
             "IRON_A1": 120,
             "IRON_K": 1.1,
+            "TIME_A1": 100000,
+            "TIME_K": 100000,
             "MAX_LEVEL": 20
         },
         "PALACE": {
@@ -239,6 +358,8 @@
             "CLAY_K": 1.07,
             "IRON_A1": 120,
             "IRON_K": 1.1,
+            "TIME_A1": 100000,
+            "TIME_K": 100000,
             "MAX_LEVEL": 20
         },
         "MARKETPLACE": {
@@ -248,6 +369,8 @@
             "CLAY_K": 1.07,
             "IRON_A1": 120,
             "IRON_K": 1.1,
+            "TIME_A1": 100000,
+            "TIME_K": 100000,
             "MAX_LEVEL": 20
         },
         "MAIN_BUILDING": {
@@ -257,6 +380,8 @@
             "CLAY_K": 1.07,
             "IRON_A1": 120,
             "IRON_K": 1.1,
+            "TIME_A1": 100000,
+            "TIME_K": 100000,
             "MAX_LEVEL": 20
         },
         "WONDER_OF_THE_WORLD": {
@@ -266,6 +391,8 @@
             "CLAY_K": 1.07,
             "IRON_A1": 120,
             "IRON_K": 1.1,
+            "TIME_A1": 100000,
+            "TIME_K": 100000,
             "MAX_LEVEL": 100
         }
     }
