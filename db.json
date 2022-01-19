@@ -34,72 +34,84 @@
                 {
                     "id": 1,
                     "level": 1,
+                    "name": "Clay",
                     "type": "clay",
                     "color": "rgba(255, 0, 0, 0.7)"
                 },
                 {
                     "id": 2,
                     "level": 1,
+                    "name": "Clay",
                     "type": "clay",
                     "color": "rgba(255, 0, 0, 0.7)"
                 },
                 {
                     "id": 3,
                     "level": 1,
+                    "name": "Clay",
                     "type": "clay",
                     "color": "rgba(255, 0, 0, 0.7)"
                 },
                 {
                     "id": 4,
                     "level": 1,
+                    "name": "Clay",
                     "type": "clay",
                     "color": "rgba(255, 0, 0, 0.7)"
                 },
                 {
                     "id": 6,
                     "level": 1,
+                    "name": "Wood",
                     "type": "wood",
                     "color": "rgba(0, 255, 0, 0.7)"
                 },
                 {
                     "id": 7,
                     "level": 1,
+                    "name": "Wood",
                     "type": "wood",
                     "color": "rgba(0, 255, 0, 0.7)"
                 },
                 {
                     "id": 8,
                     "level": 1,
+                    "name": "Wood",
                     "type": "wood",
                     "color": "rgba(0, 255, 0, 0.7)"
                 },
                 {
                     "id": 9,
                     "level": 1,
+                    "name": "Wood",
                     "type": "wood",
                     "color": "rgba(0, 255, 0, 0.7)"
                 },
                 {
                     "id": 11,
                     "level": 1,
+                    "name": "Iron",
                     "type": "iron",
                     "color": "rgba(0, 0, 255, 0.7)"
                 },
                 {
                     "id": 12,
                     "level": 1,
+                    "name": "Iron",
                     "type": "iron",
                     "color": "rgba(0, 0, 255, 0.7)"
                 },
                 {
                     "id": 13,
                     "level": 1,
+                    "name": "Iron",
                     "type": "iron",
                     "color": "rgba(0, 0, 255, 0.7)"
                 },
                 {
                     "id": 14,
                     "level": 1,
+                    "name": "Iron",
                     "type": "iron",
                     "color": "rgba(0, 0, 255, 0.7)"
                 }

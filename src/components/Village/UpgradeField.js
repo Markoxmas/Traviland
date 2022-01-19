@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function UpgradeField({ field }) {
+export default function UpgradeField({ field, openUpgradeWindow }) {
     const classes = useStyles()
 
     return (
@@ -18,6 +18,7 @@ export default function UpgradeField({ field }) {
             className={classes.field}
             style={{ background: field.color }}
             variant="contained"
+            onClick={() => openUpgradeWindow(field)}
         >
             <div>
                 {field.name && field.name}
