@@ -51,6 +51,7 @@ export default function Village({ village }) {
                 open={openUpgrade}
                 field={field}
                 closeWindow={closeUpgradeWindow}
+                village={village}
             />
         </Grid>
     )

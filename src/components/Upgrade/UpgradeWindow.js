@@ -1,12 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useSelector } from 'react-redux'
 import Button from '@material-ui/core/Button'
 import Dialog from '@material-ui/core/Dialog'
 import DialogActions from '@material-ui/core/DialogActions'
 import DialogContent from '@material-ui/core/DialogContent'
 import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
+import Cost from './Cost'
+import ResourceUpgradeInfo from './ResourceUpgradeInfo'
+import getUpgradeCost from '../../lib/getUpgradeCost'
+import getTimeToUpgrade from '../../lib/getTimeToUpgrade'
 
-export default function UpgradeWindow({ open, closeWindow, field }) {
+export default function UpgradeWindow({ open, closeWindow, field, village }) {
+    const serverConfig = useSelector((state) => state.serverConfigReducer)
+    let cost, timeToUpgrade, canBeUpgraded
+    if (field.id) {
+        cost = getUpgradeCost(serverConfig, field)
+        timeToUpgrade = getTimeToUpgrade(village, cost)
+        canBeUpgraded = timeToUpgrade === 0
+    }
     return (
         <React.Fragment>
             <Dialog maxWidth="sm" open={open} onClose={closeWindow}>
@@ -15,8 +27,10 @@ export default function UpgradeWindow({ open, closeWindow, field }) {
                 </DialogTitle>
                 <DialogContent>
                     <DialogContentText>
-                        Here you put how much upgrade costs and what will it
-                        bring.
+                        {['clay', 'wood', 'iron'].includes(field.type) && (
+                            <ResourceUpgradeInfo field={field} />
+                        )}
+                        <Cost cost={cost} />
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
@@ -24,7 +38,7 @@ export default function UpgradeWindow({ open, closeWindow, field }) {
                         Cancel
                     </Button>
                     <Button onClick={closeWindow} color="primary">
-                        Upgrade
+                        {canBeUpgraded ? 'Upgrade' : timeToUpgrade}
                     </Button>
                 </DialogActions>
             </Dialog>
