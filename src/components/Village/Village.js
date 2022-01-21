@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import Grid from '@material-ui/core/Grid'
 import UpgradeField from './UpgradeField'
 import UpgradeWindow from '../Upgrade/UpgradeWindow'
+import { onSetResources } from '../../redux/actions/resourcesActions'
+import getResources from '../../lib/getResources'
 
 const useStyles = makeStyles({
     root: {
@@ -14,9 +16,23 @@ const useStyles = makeStyles({
 
 export default function Village({ village }) {
     const classes = useStyles()
+    const dispatch = useDispatch()
     const [openUpgrade, setOpenUpgrade] = React.useState(false)
     const [field, setField] = React.useState({})
     const { tab } = useSelector((state) => state.menuReducer)
+
+    useEffect(() => {
+        //when initializing and when changing villages, calculates resources
+        dispatch(onSetResources(getResources(village, new Date().getTime())))
+        //auto updates resources every second
+        const intervalId = setInterval(() => {
+            dispatch(
+                onSetResources(getResources(village, new Date().getTime()))
+            )
+        }, 1000)
+
+        return () => clearInterval(intervalId)
+    }, [village])
 
     function openUpgradeWindow(field) {
         setOpenUpgrade(true)
