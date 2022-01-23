@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
-import getUpgradeProductionInfo from '../../lib/getUpgradeProductionInfo'
+import getProductionInfo from '../../lib/getProductionInfo'
 
 const useStyles = makeStyles({
     root: {
@@ -25,7 +25,7 @@ const useStyles = makeStyles({
 export default function ResourceUpgradeInfo({ field }) {
     const classes = useStyles()
     const serverConfig = useSelector((state) => state.serverConfigReducer)
-    const production = getUpgradeProductionInfo(serverConfig, field)
+    const production = getProductionInfo(serverConfig, field)
     return (
         <Card className={classes.root}>
             <CardContent>

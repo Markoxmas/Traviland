@@ -6,6 +6,7 @@ import UpgradeField from './UpgradeField'
 import UpgradeWindow from '../Upgrade/UpgradeWindow'
 import { onSetResources } from '../../redux/actions/resourcesActions'
 import getResources from '../../lib/getResources'
+import Timer from '../Timer'
 
 const useStyles = makeStyles({
     root: {
@@ -69,6 +70,9 @@ export default function Village({ village }) {
                 closeWindow={closeUpgradeWindow}
                 village={village}
             />
+            {village.timers.map((timer) => (
+                <Timer timer={timer} />
+            ))}
         </Grid>
     )
 }

@@ -1,5 +1,5 @@
 const SERVER_CONFIG = {
-    //Upgrade requirements are calculated by geometric sequence an = a1 * k ^ (n - 1)
+    SERVER_SPEED: 20,
     WOOD: {
         WOOD_A1: 100,
         WOOD_K: 1.05,
@@ -9,10 +9,8 @@ const SERVER_CONFIG = {
         IRON_K: 1.1,
         PROD_WOOD_A1: 100,
         PROD_WOOD_K: 1.05,
-        PROD_CLAY_A1: 100,
-        PROD_CLAY_K: 1.07,
-        PROD_IRON_A1: 120,
-        PROD_IRON_K: 1.1,
+        TIME_A1: 60000,
+        TIME_K: 1.1,
         MAX_LEVEL: 10,
     },
     CLAY: {
@@ -22,12 +20,10 @@ const SERVER_CONFIG = {
         CLAY_K: 1.07,
         IRON_A1: 120,
         IRON_K: 1.1,
-        PROD_WOOD_A1: 100,
-        PROD_WOOD_K: 1.05,
         PROD_CLAY_A1: 100,
         PROD_CLAY_K: 1.07,
-        PROD_IRON_A1: 120,
-        PROD_IRON_K: 1.1,
+        TIME_A1: 60000,
+        TIME_K: 1.1,
         MAX_LEVEL: 10,
     },
     IRON: {
@@ -37,12 +33,10 @@ const SERVER_CONFIG = {
         CLAY_K: 1.07,
         IRON_A1: 120,
         IRON_K: 1.1,
-        PROD_WOOD_A1: 100,
-        PROD_WOOD_K: 1.05,
-        PROD_CLAY_A1: 100,
-        PROD_CLAY_K: 1.07,
         PROD_IRON_A1: 120,
         PROD_IRON_K: 1.1,
+        TIME_A1: 60000,
+        TIME_K: 1.1,
         MAX_LEVEL: 10,
     },
     WAREHOUSE: {
@@ -52,6 +46,8 @@ const SERVER_CONFIG = {
         CLAY_K: 1.07,
         IRON_A1: 120,
         IRON_K: 1.1,
+        TIME_A1: 100000,
+        TIME_K: 100000,
         MAX_LEVEL: 20,
     },
     BRICKYARD: {
@@ -61,6 +57,8 @@ const SERVER_CONFIG = {
         CLAY_K: 1.07,
         IRON_A1: 120,
         IRON_K: 1.1,
+        TIME_A1: 100000,
+        TIME_K: 100000,
         MAX_LEVEL: 5,
     },
     IRON_FOUNDRY: {
@@ -70,6 +68,8 @@ const SERVER_CONFIG = {
         CLAY_K: 1.07,
         IRON_A1: 120,
         IRON_K: 1.1,
+        TIME_A1: 100000,
+        TIME_K: 100000,
         MAX_LEVEL: 5,
     },
     SAWMILL: {
@@ -79,6 +79,8 @@ const SERVER_CONFIG = {
         CLAY_K: 1.07,
         IRON_A1: 120,
         IRON_K: 1.1,
+        TIME_A1: 100000,
+        TIME_K: 100000,
         MAX_LEVEL: 5,
     },
     BARRACKS: {
@@ -88,6 +90,8 @@ const SERVER_CONFIG = {
         CLAY_K: 1.07,
         IRON_A1: 120,
         IRON_K: 1.1,
+        TIME_A1: 100000,
+        TIME_K: 100000,
         MAX_LEVEL: 20,
     },
     STABLE: {
@@ -97,6 +101,8 @@ const SERVER_CONFIG = {
         CLAY_K: 1.07,
         IRON_A1: 120,
         IRON_K: 1.1,
+        TIME_A1: 100000,
+        TIME_K: 100000,
         MAX_LEVEL: 20,
     },
     BLACKSMITH: {
@@ -106,6 +112,8 @@ const SERVER_CONFIG = {
         CLAY_K: 1.07,
         IRON_A1: 120,
         IRON_K: 1.1,
+        TIME_A1: 100000,
+        TIME_K: 100000,
         MAX_LEVEL: 20,
     },
     ARMOURY: {
@@ -115,6 +123,8 @@ const SERVER_CONFIG = {
         CLAY_K: 1.07,
         IRON_A1: 120,
         IRON_K: 1.1,
+        TIME_A1: 100000,
+        TIME_K: 100000,
         MAX_LEVEL: 20,
     },
     RALLY_POINT: {
@@ -124,6 +134,8 @@ const SERVER_CONFIG = {
         CLAY_K: 1.07,
         IRON_A1: 120,
         IRON_K: 1.1,
+        TIME_A1: 100000,
+        TIME_K: 100000,
         MAX_LEVEL: 20,
     },
     PALACE: {
@@ -133,6 +145,8 @@ const SERVER_CONFIG = {
         CLAY_K: 1.07,
         IRON_A1: 120,
         IRON_K: 1.1,
+        TIME_A1: 100000,
+        TIME_K: 100000,
         MAX_LEVEL: 20,
     },
     MARKETPLACE: {
@@ -142,6 +156,8 @@ const SERVER_CONFIG = {
         CLAY_K: 1.07,
         IRON_A1: 120,
         IRON_K: 1.1,
+        TIME_A1: 100000,
+        TIME_K: 100000,
         MAX_LEVEL: 20,
     },
     MAIN_BUILDING: {
@@ -151,6 +167,8 @@ const SERVER_CONFIG = {
         CLAY_K: 1.07,
         IRON_A1: 120,
         IRON_K: 1.1,
+        TIME_A1: 100000,
+        TIME_K: 100000,
         MAX_LEVEL: 20,
     },
     WONDER_OF_THE_WORLD: {
@@ -160,6 +178,8 @@ const SERVER_CONFIG = {
         CLAY_K: 1.07,
         IRON_A1: 120,
         IRON_K: 1.1,
+        TIME_A1: 100000,
+        TIME_K: 100000,
         MAX_LEVEL: 100,
     },
 }

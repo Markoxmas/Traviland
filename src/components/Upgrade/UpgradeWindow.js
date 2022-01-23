@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import Button from '@material-ui/core/Button'
 import Dialog from '@material-ui/core/Dialog'
 import DialogActions from '@material-ui/core/DialogActions'
@@ -10,14 +10,21 @@ import Cost from './Cost'
 import ResourceUpgradeInfo from './ResourceUpgradeInfo'
 import getUpgradeCost from '../../lib/getUpgradeCost'
 import getTimeToUpgrade from '../../lib/getTimeToUpgrade'
+import { onUpgradeRequested } from '../../redux/actions/upgradeActions'
 
 export default function UpgradeWindow({ open, closeWindow, field, village }) {
     const serverConfig = useSelector((state) => state.serverConfigReducer)
+    const dispatch = useDispatch()
     let cost, timeToUpgrade, canBeUpgraded
     if (field.id) {
         cost = getUpgradeCost(serverConfig, field)
         timeToUpgrade = getTimeToUpgrade(village, cost)
         canBeUpgraded = timeToUpgrade === 0
+    }
+
+    const handleUpgrade = (village, upgrade, dispatch) => {
+        dispatch(onUpgradeRequested(village, upgrade, dispatch))
+        closeWindow()
     }
     return (
         <React.Fragment>
@@ -37,7 +44,16 @@ export default function UpgradeWindow({ open, closeWindow, field, village }) {
                     <Button onClick={closeWindow} color="secondary">
                         Cancel
                     </Button>
-                    <Button onClick={closeWindow} color="primary">
+                    <Button
+                        onClick={() =>
+                            handleUpgrade(
+                                village.id,
+                                { id: field.id },
+                                dispatch
+                            )
+                        }
+                        color="primary"
+                    >
                         {canBeUpgraded ? 'Upgrade' : timeToUpgrade}
                     </Button>
                 </DialogActions>

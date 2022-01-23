@@ -1,7 +1,7 @@
 export default function getTimeToUpgrade(village, cost) {
     const { resources, production } = village
 
-    //how many seconds it needs to have enough of the resource
+    //how many ms it needs to have enough of the resource
     const timeDiff = Math.max(
         ...[
             Math.floor(

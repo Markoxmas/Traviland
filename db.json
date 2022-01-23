@@ -1,604 +1,615 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "villageIds": [1]
-        }
-    ],
-    "villages": [
-        {
-            "id": 1,
-            "name": "Main village",
-            "resources": {
-                "clay": 750,
-                "wood": 750,
-                "iron": 750
-            },
-            "maxResources": {
-                "clay": 1500,
-                "wood": 1500,
-                "iron": 1500
-            },
-            "production": {
-                "clay": 300,
-                "wood": 300,
-                "iron": 300
-            },
-            "checkpoint": {
-                "clay": 750,
-                "wood": 750,
-                "iron": 750,
-                "time": 1642535746996
-            },
-            "resourceFields": [
-                {
-                    "id": 1,
-                    "level": 1,
-                    "name": "Clay",
-                    "type": "clay",
-                    "color": "rgba(255, 0, 0, 0.7)"
-                },
-                {
-                    "id": 2,
-                    "level": 1,
-                    "name": "Clay",
-                    "type": "clay",
-                    "color": "rgba(255, 0, 0, 0.7)"
-                },
-                {
-                    "id": 3,
-                    "level": 1,
-                    "name": "Clay",
-                    "type": "clay",
-                    "color": "rgba(255, 0, 0, 0.7)"
-                },
-                {
-                    "id": 4,
-                    "level": 1,
-                    "name": "Clay",
-                    "type": "clay",
-                    "color": "rgba(255, 0, 0, 0.7)"
-                },
-                {
-                    "id": 6,
-                    "level": 1,
-                    "name": "Wood",
-                    "type": "wood",
-                    "color": "rgba(0, 255, 0, 0.7)"
-                },
-                {
-                    "id": 7,
-                    "level": 1,
-                    "name": "Wood",
-                    "type": "wood",
-                    "color": "rgba(0, 255, 0, 0.7)"
-                },
-                {
-                    "id": 8,
-                    "level": 1,
-                    "name": "Wood",
-                    "type": "wood",
-                    "color": "rgba(0, 255, 0, 0.7)"
-                },
-                {
-                    "id": 9,
-                    "level": 1,
-                    "name": "Wood",
-                    "type": "wood",
-                    "color": "rgba(0, 255, 0, 0.7)"
-                },
-                {
-                    "id": 11,
-                    "level": 1,
-                    "name": "Iron",
-                    "type": "iron",
-                    "color": "rgba(0, 0, 255, 0.7)"
-                },
-                {
-                    "id": 12,
-                    "level": 1,
-                    "name": "Iron",
-                    "type": "iron",
-                    "color": "rgba(0, 0, 255, 0.7)"
-                },
-                {
-                    "id": 13,
-                    "level": 1,
-                    "name": "Iron",
-                    "type": "iron",
-                    "color": "rgba(0, 0, 255, 0.7)"
-                },
-                {
-                    "id": 14,
-                    "level": 1,
-                    "name": "Iron",
-                    "type": "iron",
-                    "color": "rgba(0, 0, 255, 0.7)"
-                }
-            ],
-            "buildings": [
-                {
-                    "id": 16,
-                    "level": 1,
-                    "type": "warehouse",
-                    "name": "Warehouse",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 17,
-                    "level": 1,
-                    "type": "brickyard",
-                    "name": "Brickyard",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 18,
-                    "level": 1,
-                    "type": "iron_foundry",
-                    "name": "Iron foundry",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 19,
-                    "level": 1,
-                    "type": "sawmill",
-                    "name": "Sawmill",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 20,
-                    "level": 1,
-                    "type": "barracks",
-                    "name": "Barracks",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 21,
-                    "level": 1,
-                    "type": "stable",
-                    "name": "Stable",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 22,
-                    "level": 1,
-                    "type": "blacksmith",
-                    "name": "Blacksmith",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 23,
-                    "level": 1,
-                    "type": "armoury",
-                    "name": "Armoury",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 24,
-                    "level": 1,
-                    "type": "rally_point",
-                    "name": "Rally point",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 25,
-                    "level": 1,
-                    "type": "palace",
-                    "name": "Palace",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 26,
-                    "level": 1,
-                    "type": "marketplace",
-                    "name": "Marketplace",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 27,
-                    "level": 1,
-                    "type": "main_building",
-                    "name": "Main building",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 28,
-                    "level": 1,
-                    "type": "wonder_of_the_world",
-                    "name": "Wonder of the world",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                }
-            ],
-            "timers": []
-        },
-        {
-            "id": 2,
-            "name": "Second village",
-            "resources": {
-                "clay": 750,
-                "wood": 750,
-                "iron": 750
-            },
-            "maxResources": {
-                "clay": 60000,
-                "wood": 60000,
-                "iron": 60000
-            },
-            "production": {
-                "clay": 80000,
-                "wood": 80000,
-                "iron": 80000
-            },
-            "checkpoint": {
-                "clay": 750,
-                "wood": 750,
-                "iron": 750,
-                "time": 1642765756923
-            },
-            "resourceFields": [
-                {
-                    "id": 1,
-                    "level": 1,
-                    "name": "Clay",
-                    "type": "clay",
-                    "color": "rgba(255, 0, 0, 0.7)"
-                },
-                {
-                    "id": 2,
-                    "level": 1,
-                    "name": "Clay",
-                    "type": "clay",
-                    "color": "rgba(255, 0, 0, 0.7)"
-                },
-                {
-                    "id": 3,
-                    "level": 1,
-                    "name": "Clay",
-                    "type": "clay",
-                    "color": "rgba(255, 0, 0, 0.7)"
-                },
-                {
-                    "id": 4,
-                    "level": 1,
-                    "name": "Clay",
-                    "type": "clay",
-                    "color": "rgba(255, 0, 0, 0.7)"
-                },
-                {
-                    "id": 6,
-                    "level": 1,
-                    "name": "Wood",
-                    "type": "wood",
-                    "color": "rgba(0, 255, 0, 0.7)"
-                },
-                {
-                    "id": 7,
-                    "level": 1,
-                    "name": "Wood",
-                    "type": "wood",
-                    "color": "rgba(0, 255, 0, 0.7)"
-                },
-                {
-                    "id": 8,
-                    "level": 1,
-                    "name": "Wood",
-                    "type": "wood",
-                    "color": "rgba(0, 255, 0, 0.7)"
-                },
-                {
-                    "id": 9,
-                    "level": 1,
-                    "name": "Wood",
-                    "type": "wood",
-                    "color": "rgba(0, 255, 0, 0.7)"
-                },
-                {
-                    "id": 11,
-                    "level": 1,
-                    "name": "Iron",
-                    "type": "iron",
-                    "color": "rgba(0, 0, 255, 0.7)"
-                },
-                {
-                    "id": 12,
-                    "level": 1,
-                    "name": "Iron",
-                    "type": "iron",
-                    "color": "rgba(0, 0, 255, 0.7)"
-                },
-                {
-                    "id": 13,
-                    "level": 1,
-                    "name": "Iron",
-                    "type": "iron",
-                    "color": "rgba(0, 0, 255, 0.7)"
-                },
-                {
-                    "id": 14,
-                    "level": 1,
-                    "name": "Iron",
-                    "type": "iron",
-                    "color": "rgba(0, 0, 255, 0.7)"
-                }
-            ],
-            "buildings": [
-                {
-                    "id": 16,
-                    "level": 1,
-                    "type": "warehouse",
-                    "name": "Warehouse",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 17,
-                    "level": 1,
-                    "type": "brickyard",
-                    "name": "Brickyard",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 18,
-                    "level": 1,
-                    "type": "iron_foundry",
-                    "name": "Iron foundry",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 19,
-                    "level": 1,
-                    "type": "sawmill",
-                    "name": "Sawmill",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 20,
-                    "level": 1,
-                    "type": "barracks",
-                    "name": "Barracks",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 21,
-                    "level": 1,
-                    "type": "stable",
-                    "name": "Stable",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 22,
-                    "level": 1,
-                    "type": "blacksmith",
-                    "name": "Blacksmith",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 23,
-                    "level": 1,
-                    "type": "armoury",
-                    "name": "Armoury",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 24,
-                    "level": 1,
-                    "type": "rally_point",
-                    "name": "Rally point",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 25,
-                    "level": 1,
-                    "type": "palace",
-                    "name": "Palace",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 26,
-                    "level": 1,
-                    "type": "marketplace",
-                    "name": "Marketplace",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 27,
-                    "level": 1,
-                    "type": "main_building",
-                    "name": "Main building",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                },
-                {
-                    "id": 28,
-                    "level": 1,
-                    "type": "wonder_of_the_world",
-                    "name": "Wonder of the world",
-                    "color": "rgba(165, 42, 42, 0.7)"
-                }
-            ],
-            "timers": []
-        }
-    ],
-    "serverConfig": {
-        "WOOD": {
-            "WOOD_A1": 100,
-            "WOOD_K": 1.05,
-            "CLAY_A1": 100,
-            "CLAY_K": 1.07,
-            "IRON_A1": 120,
-            "IRON_K": 1.1,
-            "PROD_WOOD_A1": 100,
-            "PROD_WOOD_K": 1.05,
-            "TIME_A1": 100000,
-            "TIME_K": 100000,
-            "MAX_LEVEL": 10
-        },
-        "CLAY": {
-            "WOOD_A1": 100,
-            "WOOD_K": 1.05,
-            "CLAY_A1": 100,
-            "CLAY_K": 1.07,
-            "IRON_A1": 120,
-            "IRON_K": 1.1,
-            "PROD_CLAY_A1": 100,
-            "PROD_CLAY_K": 1.07,
-            "TIME_A1": 100000,
-            "TIME_K": 100000,
-            "MAX_LEVEL": 10
-        },
-        "IRON": {
-            "WOOD_A1": 100,
-            "WOOD_K": 1.05,
-            "CLAY_A1": 100,
-            "CLAY_K": 1.07,
-            "IRON_A1": 120,
-            "IRON_K": 1.1,
-            "PROD_IRON_A1": 120,
-            "PROD_IRON_K": 1.1,
-            "TIME_A1": 100000,
-            "TIME_K": 100000,
-            "MAX_LEVEL": 10
-        },
-        "WAREHOUSE": {
-            "WOOD_A1": 100,
-            "WOOD_K": 1.05,
-            "CLAY_A1": 100,
-            "CLAY_K": 1.07,
-            "IRON_A1": 120,
-            "IRON_K": 1.1,
-            "TIME_A1": 100000,
-            "TIME_K": 100000,
-            "MAX_LEVEL": 20
-        },
-        "BRICKYARD": {
-            "WOOD_A1": 100,
-            "WOOD_K": 1.05,
-            "CLAY_A1": 100,
-            "CLAY_K": 1.07,
-            "IRON_A1": 120,
-            "IRON_K": 1.1,
-            "TIME_A1": 100000,
-            "TIME_K": 100000,
-            "MAX_LEVEL": 5
-        },
-        "IRON_FOUNDRY": {
-            "WOOD_A1": 100,
-            "WOOD_K": 1.05,
-            "CLAY_A1": 100,
-            "CLAY_K": 1.07,
-            "IRON_A1": 120,
-            "IRON_K": 1.1,
-            "TIME_A1": 100000,
-            "TIME_K": 100000,
-            "MAX_LEVEL": 5
-        },
-        "SAWMILL": {
-            "WOOD_A1": 100,
-            "WOOD_K": 1.05,
-            "CLAY_A1": 100,
-            "CLAY_K": 1.07,
-            "IRON_A1": 120,
-            "IRON_K": 1.1,
-            "TIME_A1": 100000,
-            "TIME_K": 100000,
-            "MAX_LEVEL": 5
-        },
-        "BARRACKS": {
-            "WOOD_A1": 100,
-            "WOOD_K": 1.05,
-            "CLAY_A1": 100,
-            "CLAY_K": 1.07,
-            "IRON_A1": 120,
-            "IRON_K": 1.1,
-            "TIME_A1": 100000,
-            "TIME_K": 100000,
-            "MAX_LEVEL": 20
-        },
-        "STABLE": {
-            "WOOD_A1": 100,
-            "WOOD_K": 1.05,
-            "CLAY_A1": 100,
-            "CLAY_K": 1.07,
-            "IRON_A1": 120,
-            "IRON_K": 1.1,
-            "TIME_A1": 100000,
-            "TIME_K": 100000,
-            "MAX_LEVEL": 20
-        },
-        "BLACKSMITH": {
-            "WOOD_A1": 100,
-            "WOOD_K": 1.05,
-            "CLAY_A1": 100,
-            "CLAY_K": 1.07,
-            "IRON_A1": 120,
-            "IRON_K": 1.1,
-            "TIME_A1": 100000,
-            "TIME_K": 100000,
-            "MAX_LEVEL": 20
-        },
-        "ARMOURY": {
-            "WOOD_A1": 100,
-            "WOOD_K": 1.05,
-            "CLAY_A1": 100,
-            "CLAY_K": 1.07,
-            "IRON_A1": 120,
-            "IRON_K": 1.1,
-            "TIME_A1": 100000,
-            "TIME_K": 100000,
-            "MAX_LEVEL": 20
-        },
-        "RALLY_POINT": {
-            "WOOD_A1": 100,
-            "WOOD_K": 1.05,
-            "CLAY_A1": 100,
-            "CLAY_K": 1.07,
-            "IRON_A1": 120,
-            "IRON_K": 1.1,
-            "TIME_A1": 100000,
-            "TIME_K": 100000,
-            "MAX_LEVEL": 20
-        },
-        "PALACE": {
-            "WOOD_A1": 100,
-            "WOOD_K": 1.05,
-            "CLAY_A1": 100,
-            "CLAY_K": 1.07,
-            "IRON_A1": 120,
-            "IRON_K": 1.1,
-            "TIME_A1": 100000,
-            "TIME_K": 100000,
-            "MAX_LEVEL": 20
-        },
-        "MARKETPLACE": {
-            "WOOD_A1": 100,
-            "WOOD_K": 1.05,
-            "CLAY_A1": 100,
-            "CLAY_K": 1.07,
-            "IRON_A1": 120,
-            "IRON_K": 1.1,
-            "TIME_A1": 100000,
-            "TIME_K": 100000,
-            "MAX_LEVEL": 20
-        },
-        "MAIN_BUILDING": {
-            "WOOD_A1": 100,
-            "WOOD_K": 1.05,
-            "CLAY_A1": 100,
-            "CLAY_K": 1.07,
-            "IRON_A1": 120,
-            "IRON_K": 1.1,
-            "TIME_A1": 100000,
-            "TIME_K": 100000,
-            "MAX_LEVEL": 20
-        },
-        "WONDER_OF_THE_WORLD": {
-            "WOOD_A1": 100,
-            "WOOD_K": 1.05,
-            "CLAY_A1": 100,
-            "CLAY_K": 1.07,
-            "IRON_A1": 120,
-            "IRON_K": 1.1,
-            "TIME_A1": 100000,
-            "TIME_K": 100000,
-            "MAX_LEVEL": 100
-        }
+  "users": [
+    {
+      "id": 1,
+      "villageIds": [
+        1
+      ]
     }
+  ],
+  "villages": [
+    {
+      "id": 1,
+      "name": "Main village",
+      "resources": {
+        "clay": 215,
+        "wood": 225,
+        "iron": 90
+      },
+      "maxResources": {
+        "clay": 1500,
+        "wood": 1500,
+        "iron": 1500
+      },
+      "production": {
+        "clay": 300,
+        "wood": 300,
+        "iron": 300
+      },
+      "checkpoint": {
+        "clay": 750,
+        "wood": 750,
+        "iron": 750,
+        "time": 1642535746996
+      },
+      "resourceFields": [
+        {
+          "id": 1,
+          "level": 1,
+          "name": "Clay",
+          "type": "clay",
+          "color": "rgba(255, 0, 0, 0.7)"
+        },
+        {
+          "id": 2,
+          "level": 1,
+          "name": "Clay",
+          "type": "clay",
+          "color": "rgba(255, 0, 0, 0.7)"
+        },
+        {
+          "id": 3,
+          "level": 1,
+          "name": "Clay",
+          "type": "clay",
+          "color": "rgba(255, 0, 0, 0.7)"
+        },
+        {
+          "id": 4,
+          "level": 1,
+          "name": "Clay",
+          "type": "clay",
+          "color": "rgba(255, 0, 0, 0.7)"
+        },
+        {
+          "id": 6,
+          "level": 1,
+          "name": "Wood",
+          "type": "wood",
+          "color": "rgba(0, 255, 0, 0.7)"
+        },
+        {
+          "id": 7,
+          "level": 1,
+          "name": "Wood",
+          "type": "wood",
+          "color": "rgba(0, 255, 0, 0.7)"
+        },
+        {
+          "id": 8,
+          "level": 1,
+          "name": "Wood",
+          "type": "wood",
+          "color": "rgba(0, 255, 0, 0.7)"
+        },
+        {
+          "id": 9,
+          "level": 1,
+          "name": "Wood",
+          "type": "wood",
+          "color": "rgba(0, 255, 0, 0.7)"
+        },
+        {
+          "id": 11,
+          "level": 1,
+          "name": "Iron",
+          "type": "iron",
+          "color": "rgba(0, 0, 255, 0.7)"
+        },
+        {
+          "id": 12,
+          "level": 1,
+          "name": "Iron",
+          "type": "iron",
+          "color": "rgba(0, 0, 255, 0.7)"
+        },
+        {
+          "id": 13,
+          "level": 1,
+          "name": "Iron",
+          "type": "iron",
+          "color": "rgba(0, 0, 255, 0.7)"
+        },
+        {
+          "id": 14,
+          "level": 1,
+          "name": "Iron",
+          "type": "iron",
+          "color": "rgba(0, 0, 255, 0.7)"
+        }
+      ],
+      "buildings": [
+        {
+          "id": 16,
+          "level": 1,
+          "type": "warehouse",
+          "name": "Warehouse",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 17,
+          "level": 1,
+          "type": "brickyard",
+          "name": "Brickyard",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 18,
+          "level": 1,
+          "type": "iron_foundry",
+          "name": "Iron foundry",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 19,
+          "level": 1,
+          "type": "sawmill",
+          "name": "Sawmill",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 20,
+          "level": 1,
+          "type": "barracks",
+          "name": "Barracks",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 21,
+          "level": 1,
+          "type": "stable",
+          "name": "Stable",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 22,
+          "level": 1,
+          "type": "blacksmith",
+          "name": "Blacksmith",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 23,
+          "level": 1,
+          "type": "armoury",
+          "name": "Armoury",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 24,
+          "level": 1,
+          "type": "rally_point",
+          "name": "Rally point",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 25,
+          "level": 1,
+          "type": "palace",
+          "name": "Palace",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 26,
+          "level": 1,
+          "type": "marketplace",
+          "name": "Marketplace",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 27,
+          "level": 1,
+          "type": "main_building",
+          "name": "Main building",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 28,
+          "level": 1,
+          "type": "wonder_of_the_world",
+          "name": "Wonder of the world",
+          "color": "rgba(165, 42, 42, 0.7)"
+        }
+      ],
+      "timers": []
+    },
+    {
+      "id": 2,
+      "name": "Second village",
+      "resources": {
+        "clay": 46704,
+        "wood": 46792,
+        "iron": 45883
+      },
+      "maxResources": {
+        "clay": 60000,
+        "wood": 60000,
+        "iron": 60000
+      },
+      "production": {
+        "clay": 80000,
+        "wood": 80000,
+        "iron": 80000
+      },
+      "checkpoint": {
+        "clay": 750,
+        "wood": 750,
+        "iron": 750,
+        "time": 1642765756923
+      },
+      "resourceFields": [
+        {
+          "id": 1,
+          "level": 1,
+          "name": "Clay",
+          "type": "clay",
+          "color": "rgba(255, 0, 0, 0.7)"
+        },
+        {
+          "id": 2,
+          "level": 1,
+          "name": "Clay",
+          "type": "clay",
+          "color": "rgba(255, 0, 0, 0.7)"
+        },
+        {
+          "id": 3,
+          "level": 1,
+          "name": "Clay",
+          "type": "clay",
+          "color": "rgba(255, 0, 0, 0.7)"
+        },
+        {
+          "id": 4,
+          "level": 1,
+          "name": "Clay",
+          "type": "clay",
+          "color": "rgba(255, 0, 0, 0.7)"
+        },
+        {
+          "id": 6,
+          "level": 1,
+          "name": "Wood",
+          "type": "wood",
+          "color": "rgba(0, 255, 0, 0.7)"
+        },
+        {
+          "id": 7,
+          "level": 1,
+          "name": "Wood",
+          "type": "wood",
+          "color": "rgba(0, 255, 0, 0.7)"
+        },
+        {
+          "id": 8,
+          "level": 1,
+          "name": "Wood",
+          "type": "wood",
+          "color": "rgba(0, 255, 0, 0.7)"
+        },
+        {
+          "id": 9,
+          "level": 1,
+          "name": "Wood",
+          "type": "wood",
+          "color": "rgba(0, 255, 0, 0.7)"
+        },
+        {
+          "id": 11,
+          "level": 1,
+          "name": "Iron",
+          "type": "iron",
+          "color": "rgba(0, 0, 255, 0.7)"
+        },
+        {
+          "id": 12,
+          "level": 1,
+          "name": "Iron",
+          "type": "iron",
+          "color": "rgba(0, 0, 255, 0.7)"
+        },
+        {
+          "id": 13,
+          "level": 1,
+          "name": "Iron",
+          "type": "iron",
+          "color": "rgba(0, 0, 255, 0.7)"
+        },
+        {
+          "id": 14,
+          "level": 1,
+          "name": "Iron",
+          "type": "iron",
+          "color": "rgba(0, 0, 255, 0.7)"
+        }
+      ],
+      "buildings": [
+        {
+          "id": 16,
+          "level": 1,
+          "type": "warehouse",
+          "name": "Warehouse",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 17,
+          "level": 1,
+          "type": "brickyard",
+          "name": "Brickyard",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 18,
+          "level": 1,
+          "type": "iron_foundry",
+          "name": "Iron foundry",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 19,
+          "level": 1,
+          "type": "sawmill",
+          "name": "Sawmill",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 20,
+          "level": 1,
+          "type": "barracks",
+          "name": "Barracks",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 21,
+          "level": 1,
+          "type": "stable",
+          "name": "Stable",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 22,
+          "level": 1,
+          "type": "blacksmith",
+          "name": "Blacksmith",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 23,
+          "level": 1,
+          "type": "armoury",
+          "name": "Armoury",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 24,
+          "level": 1,
+          "type": "rally_point",
+          "name": "Rally point",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 25,
+          "level": 1,
+          "type": "palace",
+          "name": "Palace",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 26,
+          "level": 1,
+          "type": "marketplace",
+          "name": "Marketplace",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 27,
+          "level": 1,
+          "type": "main_building",
+          "name": "Main building",
+          "color": "rgba(165, 42, 42, 0.7)"
+        },
+        {
+          "id": 28,
+          "level": 1,
+          "type": "wonder_of_the_world",
+          "name": "Wonder of the world",
+          "color": "rgba(165, 42, 42, 0.7)"
+        }
+      ],
+      "timers": [
+        {
+          "id": 39490,
+          "startTime": 1642943887168,
+          "length": 3300,
+          "fieldId": 1,
+          "villageId": 2
+        }
+      ]
+    }
+  ],
+  "serverConfig": {
+    "SERVER_SPEED": 20,
+    "WOOD": {
+      "WOOD_A1": 100,
+      "WOOD_K": 1.05,
+      "CLAY_A1": 100,
+      "CLAY_K": 1.07,
+      "IRON_A1": 120,
+      "IRON_K": 1.1,
+      "PROD_WOOD_A1": 100,
+      "PROD_WOOD_K": 1.05,
+      "TIME_A1": 60000,
+      "TIME_K": 1.1,
+      "MAX_LEVEL": 10
+    },
+    "CLAY": {
+      "WOOD_A1": 100,
+      "WOOD_K": 1.05,
+      "CLAY_A1": 100,
+      "CLAY_K": 1.07,
+      "IRON_A1": 120,
+      "IRON_K": 1.1,
+      "PROD_CLAY_A1": 100,
+      "PROD_CLAY_K": 1.07,
+      "TIME_A1": 60000,
+      "TIME_K": 1.1,
+      "MAX_LEVEL": 10
+    },
+    "IRON": {
+      "WOOD_A1": 100,
+      "WOOD_K": 1.05,
+      "CLAY_A1": 100,
+      "CLAY_K": 1.07,
+      "IRON_A1": 120,
+      "IRON_K": 1.1,
+      "PROD_IRON_A1": 120,
+      "PROD_IRON_K": 1.1,
+      "TIME_A1": 60000,
+      "TIME_K": 1.1,
+      "MAX_LEVEL": 10
+    },
+    "WAREHOUSE": {
+      "WOOD_A1": 100,
+      "WOOD_K": 1.05,
+      "CLAY_A1": 100,
+      "CLAY_K": 1.07,
+      "IRON_A1": 120,
+      "IRON_K": 1.1,
+      "TIME_A1": 100000,
+      "TIME_K": 100000,
+      "MAX_LEVEL": 20
+    },
+    "BRICKYARD": {
+      "WOOD_A1": 100,
+      "WOOD_K": 1.05,
+      "CLAY_A1": 100,
+      "CLAY_K": 1.07,
+      "IRON_A1": 120,
+      "IRON_K": 1.1,
+      "TIME_A1": 100000,
+      "TIME_K": 100000,
+      "MAX_LEVEL": 5
+    },
+    "IRON_FOUNDRY": {
+      "WOOD_A1": 100,
+      "WOOD_K": 1.05,
+      "CLAY_A1": 100,
+      "CLAY_K": 1.07,
+      "IRON_A1": 120,
+      "IRON_K": 1.1,
+      "TIME_A1": 100000,
+      "TIME_K": 100000,
+      "MAX_LEVEL": 5
+    },
+    "SAWMILL": {
+      "WOOD_A1": 100,
+      "WOOD_K": 1.05,
+      "CLAY_A1": 100,
+      "CLAY_K": 1.07,
+      "IRON_A1": 120,
+      "IRON_K": 1.1,
+      "TIME_A1": 100000,
+      "TIME_K": 100000,
+      "MAX_LEVEL": 5
+    },
+    "BARRACKS": {
+      "WOOD_A1": 100,
+      "WOOD_K": 1.05,
+      "CLAY_A1": 100,
+      "CLAY_K": 1.07,
+      "IRON_A1": 120,
+      "IRON_K": 1.1,
+      "TIME_A1": 100000,
+      "TIME_K": 100000,
+      "MAX_LEVEL": 20
+    },
+    "STABLE": {
+      "WOOD_A1": 100,
+      "WOOD_K": 1.05,
+      "CLAY_A1": 100,
+      "CLAY_K": 1.07,
+      "IRON_A1": 120,
+      "IRON_K": 1.1,
+      "TIME_A1": 100000,
+      "TIME_K": 100000,
+      "MAX_LEVEL": 20
+    },
+    "BLACKSMITH": {
+      "WOOD_A1": 100,
+      "WOOD_K": 1.05,
+      "CLAY_A1": 100,
+      "CLAY_K": 1.07,
+      "IRON_A1": 120,
+      "IRON_K": 1.1,
+      "TIME_A1": 100000,
+      "TIME_K": 100000,
+      "MAX_LEVEL": 20
+    },
+    "ARMOURY": {
+      "WOOD_A1": 100,
+      "WOOD_K": 1.05,
+      "CLAY_A1": 100,
+      "CLAY_K": 1.07,
+      "IRON_A1": 120,
+      "IRON_K": 1.1,
+      "TIME_A1": 100000,
+      "TIME_K": 100000,
+      "MAX_LEVEL": 20
+    },
+    "RALLY_POINT": {
+      "WOOD_A1": 100,
+      "WOOD_K": 1.05,
+      "CLAY_A1": 100,
+      "CLAY_K": 1.07,
+      "IRON_A1": 120,
+      "IRON_K": 1.1,
+      "TIME_A1": 100000,
+      "TIME_K": 100000,
+      "MAX_LEVEL": 20
+    },
+    "PALACE": {
+      "WOOD_A1": 100,
+      "WOOD_K": 1.05,
+      "CLAY_A1": 100,
+      "CLAY_K": 1.07,
+      "IRON_A1": 120,
+      "IRON_K": 1.1,
+      "TIME_A1": 100000,
+      "TIME_K": 100000,
+      "MAX_LEVEL": 20
+    },
+    "MARKETPLACE": {
+      "WOOD_A1": 100,
+      "WOOD_K": 1.05,
+      "CLAY_A1": 100,
+      "CLAY_K": 1.07,
+      "IRON_A1": 120,
+      "IRON_K": 1.1,
+      "TIME_A1": 100000,
+      "TIME_K": 100000,
+      "MAX_LEVEL": 20
+    },
+    "MAIN_BUILDING": {
+      "WOOD_A1": 100,
+      "WOOD_K": 1.05,
+      "CLAY_A1": 100,
+      "CLAY_K": 1.07,
+      "IRON_A1": 120,
+      "IRON_K": 1.1,
+      "TIME_A1": 100000,
+      "TIME_K": 100000,
+      "MAX_LEVEL": 20
+    },
+    "WONDER_OF_THE_WORLD": {
+      "WOOD_A1": 100,
+      "WOOD_K": 1.05,
+      "CLAY_A1": 100,
+      "CLAY_K": 1.07,
+      "IRON_A1": 120,
+      "IRON_K": 1.1,
+      "TIME_A1": 100000,
+      "TIME_K": 100000,
+      "MAX_LEVEL": 100
+    }
+  }
 }
