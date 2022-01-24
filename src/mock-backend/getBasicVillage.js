@@ -1,5 +1,5 @@
 export default function getBasicVillage(id, name) {
-    const SERVER_SPEED = 50
+    const SERVER_SPEED = 1000
     return {
         id: id,
         name: name,

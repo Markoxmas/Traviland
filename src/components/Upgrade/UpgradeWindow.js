@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import Button from '@material-ui/core/Button'
 import Dialog from '@material-ui/core/Dialog'
@@ -22,10 +22,11 @@ export default function UpgradeWindow({ open, closeWindow, field, village }) {
         canBeUpgraded = timeToUpgrade === 0
     }
 
-    const handleUpgrade = (village, upgrade, dispatch) => {
-        dispatch(onUpgradeRequested(village, upgrade, dispatch))
+    const handleUpgrade = (village, upgrade, serverConfig) => {
+        dispatch(onUpgradeRequested(village, upgrade, serverConfig))
         closeWindow()
     }
+
     return (
         <React.Fragment>
             <Dialog maxWidth="sm" open={open} onClose={closeWindow}>
@@ -48,8 +49,10 @@ export default function UpgradeWindow({ open, closeWindow, field, village }) {
                         onClick={() =>
                             handleUpgrade(
                                 village.id,
-                                { id: field.id },
-                                dispatch
+                                {
+                                    id: field.id,
+                                },
+                                serverConfig
                             )
                         }
                         color="primary"

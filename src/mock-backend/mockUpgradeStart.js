@@ -1,11 +1,15 @@
 import axios from 'axios'
-import SERVER_CONFIG from './mockServerConfig'
 import CONST from '../redux/constants'
 import getUpgradeCost from '../lib/getUpgradeCost'
 import getResources from '../lib/getResources'
 import getNewCheckpoint from './getNewCheckpoint'
 
-export default function mockUpgradeStart(villageId, upgrade, dispatch) {
+export default function mockUpgradeStart(
+    villageId,
+    upgrade,
+    serverConfig,
+    dispatch
+) {
     //Get the village
     axios
         .get(`http://localhost:4000/villages/${villageId}`)
@@ -21,7 +25,7 @@ export default function mockUpgradeStart(villageId, upgrade, dispatch) {
                     .concat(village.buildings)
                     .filter((field) => field.id === upgrade.id)[0]
 
-                const cost = getUpgradeCost(SERVER_CONFIG, field)
+                const cost = getUpgradeCost(serverConfig, field)
 
                 //Check if upgrade can be made
                 if (

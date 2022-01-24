@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/core/styles'
 import LinearProgress from '@material-ui/core/LinearProgress'
@@ -45,24 +45,21 @@ const useStyles = makeStyles({
 export default function Timer({ timer }) {
     const classes = useStyles()
     const dispatch = useDispatch()
+    const endTime = timer.startTime + timer.length
+    const [time, setTime] = React.useState(timer.length)
     const [progress, setProgress] = React.useState(0)
-    const [time, setTime] = React.useState(0)
-
-    const updateTimer = () => {
-        const now = new Date().getTime()
-        const endTime = timer.startTime + timer.length
-        const currentLength = endTime - now
-        const currentProgress = (1 - currentLength / timer.length) * 100
-        setProgress(currentProgress < 100 ? currentProgress : 100)
-        currentLength > 0 ? setTime(currentLength) : setTime(0)
-    }
+    const serverConfig = useSelector((state) => state.serverConfigReducer)
 
     React.useEffect(() => {
-        updateTimer()
         const timerId = setInterval(() => {
-            updateTimer()
-            if (time === 0) {
-                dispatch(onUpgradeFinished(timer, dispatch))
+            const now = new Date().getTime()
+            setTime(endTime - now)
+            const progress = Math.floor(
+                (1 - (endTime - now) / timer.length) * 100
+            )
+            setProgress(progress < 100 ? progress : 100)
+            if (endTime < now) {
+                dispatch(onUpgradeFinished(timer, serverConfig))
             }
         }, 1000)
         return () => {

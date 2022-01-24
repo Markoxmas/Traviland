@@ -1,11 +1,10 @@
 import axios from 'axios'
 import CONST from '../redux/constants'
-import SERVER_CONFIG from './mockServerConfig'
 import getProductionInfo from '../lib/getProductionInfo'
 import getNewCheckpoint from './getNewCheckpoint'
 import getUpgradeCost from '../lib/getUpgradeCost'
 
-export default function mockUpgradeEnd(timer, dispatch) {
+export default function mockUpgradeEnd(timer, serverConfig, dispatch) {
     //Get the village
     axios
         .get(`http://localhost:4000/villages/${timer.villageId}`)
@@ -20,7 +19,7 @@ export default function mockUpgradeEnd(timer, dispatch) {
                 const field = fields.filter(
                     (field) => field.id === timer.fieldId
                 )[0]
-                const cost = getUpgradeCost(SERVER_CONFIG, {
+                const cost = getUpgradeCost(serverConfig, {
                     ...field,
                     level: field.level - 1,
                 })
@@ -48,7 +47,7 @@ export default function mockUpgradeEnd(timer, dispatch) {
                         .reduce(
                             (production, field) =>
                                 production +
-                                getProductionInfo(SERVER_CONFIG, field)
+                                getProductionInfo(serverConfig, field)
                                     .currentLevel,
                             0
                         ),
@@ -57,7 +56,7 @@ export default function mockUpgradeEnd(timer, dispatch) {
                         .reduce(
                             (production, field) =>
                                 production +
-                                getProductionInfo(SERVER_CONFIG, field)
+                                getProductionInfo(serverConfig, field)
                                     .currentLevel,
                             0
                         ),
@@ -66,7 +65,7 @@ export default function mockUpgradeEnd(timer, dispatch) {
                         .reduce(
                             (production, field) =>
                                 production +
-                                getProductionInfo(SERVER_CONFIG, field)
+                                getProductionInfo(serverConfig, field)
                                     .currentLevel,
                             0
                         ),
