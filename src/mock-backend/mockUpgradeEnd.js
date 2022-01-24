@@ -2,6 +2,8 @@ import axios from 'axios'
 import CONST from '../redux/constants'
 import SERVER_CONFIG from './mockServerConfig'
 import getProductionInfo from '../lib/getProductionInfo'
+import getNewCheckpoint from './getNewCheckpoint'
+import getUpgradeCost from '../lib/getUpgradeCost'
 
 export default function mockUpgradeEnd(timer, dispatch) {
     //Get the village
@@ -13,6 +15,17 @@ export default function mockUpgradeEnd(timer, dispatch) {
             //If the timer is finished, increase the level of the field
             const now = new Date().getTime()
             if (timer.startTime + timer.length <= now) {
+                //get new checkpoint
+                const fields = village.resourceFields.concat(village.buildings)
+                const field = fields.filter(
+                    (field) => field.id === timer.fieldId
+                )[0]
+                const cost = getUpgradeCost(SERVER_CONFIG, {
+                    ...field,
+                    level: field.level - 1,
+                })
+                village.checkpoint = getNewCheckpoint(village, cost)
+
                 //remove the timer
                 village.timers = village.timers.filter(
                     (villageTimer) => villageTimer.id !== timer.id

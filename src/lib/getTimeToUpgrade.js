@@ -1,5 +1,8 @@
+import getResources from './getResources'
+
 export default function getTimeToUpgrade(village, cost) {
-    const { resources, production } = village
+    const { production } = village
+    const resources = getResources(village, new Date().getTime())
 
     //how many ms it needs to have enough of the resource
     const timeDiff = Math.max(

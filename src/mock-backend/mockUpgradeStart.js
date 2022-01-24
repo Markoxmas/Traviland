@@ -2,6 +2,8 @@ import axios from 'axios'
 import SERVER_CONFIG from './mockServerConfig'
 import CONST from '../redux/constants'
 import getUpgradeCost from '../lib/getUpgradeCost'
+import getResources from '../lib/getResources'
+import getNewCheckpoint from './getNewCheckpoint'
 
 export default function mockUpgradeStart(villageId, upgrade, dispatch) {
     //Get the village
@@ -13,11 +15,7 @@ export default function mockUpgradeStart(villageId, upgrade, dispatch) {
             //Check if resources are sufficient for the upgrade
             try {
                 //Current resources
-                const resources = {
-                    wood: village.resources.wood,
-                    clay: village.resources.clay,
-                    iron: village.resources.iron,
-                }
+                const resources = getResources(village, new Date().getTime())
 
                 const field = village.resourceFields
                     .concat(village.buildings)
@@ -31,10 +29,7 @@ export default function mockUpgradeStart(villageId, upgrade, dispatch) {
                     cost.clay <= resources.clay &&
                     cost.iron <= resources.iron
                 ) {
-                    //Substract the cost
-                    village.resources.wood -= cost.wood
-                    village.resources.clay -= cost.clay
-                    village.resources.iron -= cost.iron
+                    village.checkpoint = getNewCheckpoint(village, cost)
 
                     //Create a timer
                     village.timers.push({

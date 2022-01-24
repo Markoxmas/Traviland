@@ -2,7 +2,7 @@ import CONST from '../constants'
 
 const initialState = {
     id: 1,
-    villageIds: [1, 2],
+    villageIds: [1],
 }
 
 const userReducer = (state = initialState, action = {}) => {
