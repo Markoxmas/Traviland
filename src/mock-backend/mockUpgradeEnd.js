@@ -1,5 +1,6 @@
 import axios from 'axios'
 import CONST from '../redux/constants'
+import SERVER_CONFIG from './mockServerConfig'
 import getProductionInfo from '../lib/getProductionInfo'
 
 export default function mockUpgradeEnd(timer, dispatch) {
@@ -34,7 +35,8 @@ export default function mockUpgradeEnd(timer, dispatch) {
                         .reduce(
                             (production, field) =>
                                 production +
-                                getProductionInfo(field).currentLevel,
+                                getProductionInfo(SERVER_CONFIG, field)
+                                    .currentLevel,
                             0
                         ),
                     wood: village.resourceFields
@@ -42,14 +44,17 @@ export default function mockUpgradeEnd(timer, dispatch) {
                         .reduce(
                             (production, field) =>
                                 production +
-                                getProductionInfo(field).currentLevel
+                                getProductionInfo(SERVER_CONFIG, field)
+                                    .currentLevel,
+                            0
                         ),
                     iron: village.resourceFields
                         .filter((field) => field.type === 'iron')
                         .reduce(
                             (production, field) =>
                                 production +
-                                getProductionInfo(field).currentLevel,
+                                getProductionInfo(SERVER_CONFIG, field)
+                                    .currentLevel,
                             0
                         ),
                 }

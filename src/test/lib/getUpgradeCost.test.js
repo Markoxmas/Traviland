@@ -4,6 +4,7 @@ describe('Tests for lib function getUpgradeCost', () => {
     it('should correctly return cost for fields', () => {
         //Arrange
         const serverConfig = {
+            SERVER_SPEED: 1,
             CLAY: {
                 CLAY_A1: 100,
                 CLAY_K: 1.05,

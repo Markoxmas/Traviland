@@ -4,6 +4,7 @@ describe('Tests for lib function getProductionInfo', () => {
     it('should correctly return current and next level production for a specific field', () => {
         //Arrange
         const serverConfig = {
+            SERVER_SPEED: 1,
             CLAY: {
                 PROD_CLAY_A1: 100,
                 PROD_CLAY_K: 1.05,
