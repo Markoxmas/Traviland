@@ -71,7 +71,6 @@ export default function mockUpgradeEnd(timer, serverConfig, dispatch) {
                         ),
                 }
             }
-
             //Save the village
             axios
                 .put(

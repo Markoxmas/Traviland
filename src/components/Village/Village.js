@@ -71,7 +71,7 @@ export default function Village({ village }) {
                 village={village}
             />
             {village.timers.map((timer) => (
-                <Timer timer={timer} />
+                <Timer timer={timer} key={timer.id} />
             ))}
         </Grid>
     )

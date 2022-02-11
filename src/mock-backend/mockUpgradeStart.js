@@ -34,11 +34,19 @@ export default function mockUpgradeStart(
                     cost.iron <= resources.iron
                 ) {
                     village.checkpoint = getNewCheckpoint(village, cost)
+                    const lastTimerEnding = village.timers.length
+                        ? Math.max(
+                              ...village.timers.map(
+                                  (timer) => timer.startTime + timer.length
+                              )
+                          )
+                        : 0
 
                     //Create a timer
+                    const now = new Date().getTime()
                     village.timers.push({
                         id: Math.floor(Math.random() * (50000 - 1000) + 1000),
-                        startTime: new Date().getTime(),
+                        startTime: lastTimerEnding ? lastTimerEnding : now,
                         length: cost.time,
                         fieldId: upgrade.id,
                         villageId: villageId,
