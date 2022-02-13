@@ -25,7 +25,19 @@ export default function mockUpgradeStart(
                     (field) => field.id === upgrade.id
                 )[0]
 
-                const cost = getUpgradeCost(serverConfig, field)
+                const sameFieldTimers = village.timers.filter(
+                    (timer) => timer.fieldId === upgrade.id
+                )
+                const upgradeLevel = sameFieldTimers.length
+                    ? Math.max(
+                          ...sameFieldTimers.map((timer) => timer.upgradeLevel)
+                      )
+                    : field.level
+
+                const cost = getUpgradeCost(serverConfig, {
+                    ...field,
+                    level: upgradeLevel,
+                })
 
                 //Check if upgrade can be made
                 if (
@@ -45,7 +57,6 @@ export default function mockUpgradeStart(
                               0
                           )
                         : 0
-
                     //Create a timer
                     const now = new Date().getTime()
                     village.timers.push({
@@ -54,6 +65,8 @@ export default function mockUpgradeStart(
                         length: timersLength + cost.time,
                         fieldId: upgrade.id,
                         villageId: villageId,
+                        type: field.type,
+                        upgradeLevel: upgradeLevel + 1,
                     })
 
                     //Save the village

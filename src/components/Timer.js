@@ -46,8 +46,13 @@ export default function Timer({ timer }) {
     const classes = useStyles()
     const dispatch = useDispatch()
     const endTime = timer.startTime + timer.length
-    const [time, setTime] = React.useState(timer.length)
-    const [progress, setProgress] = React.useState(0)
+    const now = new Date().getTime()
+    const [time, setTime] = React.useState(
+        endTime - now > 0 ? endTime - now : 0
+    )
+    const [progress, setProgress] = React.useState(
+        Math.floor((1 - (endTime - now) / timer.length) * 100)
+    )
     const serverConfig = useSelector((state) => state.serverConfigReducer)
 
     React.useEffect(() => {
@@ -71,7 +76,9 @@ export default function Timer({ timer }) {
         <div className={classes.root}>
             <div>
                 <div>{formatMsToTime(time)}</div>
-                <div>Clay level 4</div>
+                <div>
+                    {timer.type} level {timer.upgradeLevel}
+                </div>
             </div>
             <LinearProgressWithLabel value={progress} />
         </div>

@@ -31,7 +31,7 @@ export default function mockUpgradeEnd(timer, serverConfig, dispatch) {
                 //upgrade the field
                 village.fields = village.fields.map((field) =>
                     field.id === timer.fieldId
-                        ? { ...field, level: field.level + 1 }
+                        ? { ...field, level: timer.upgradeLevel }
                         : field
                 )
                 //Update production
