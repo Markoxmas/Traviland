@@ -47,23 +47,32 @@ export default function Village({ village }) {
     return (
         <Grid container className={classes.root}>
             {tab === 1 &&
-                village.resourceFields.map((field) => (
-                    <Grid item xs={6} sm={4} md={3} lg={3} key={field.id}>
-                        <UpgradeField
-                            field={field}
-                            openUpgradeWindow={openUpgradeWindow}
-                        />
-                    </Grid>
-                ))}
+                village.fields
+                    .filter((field) =>
+                        ['clay', 'iron', 'wood'].includes(field.type)
+                    )
+                    .map((field) => (
+                        <Grid item xs={6} sm={4} md={3} lg={3} key={field.id}>
+                            <UpgradeField
+                                field={field}
+                                openUpgradeWindow={openUpgradeWindow}
+                            />
+                        </Grid>
+                    ))}
             {tab === 2 &&
-                village.buildings.map((field) => (
-                    <Grid item lg={3} key={field.id}>
-                        <UpgradeField
-                            field={field}
-                            openUpgradeWindow={openUpgradeWindow}
-                        />
-                    </Grid>
-                ))}
+                village.fields
+                    .filter(
+                        (field) =>
+                            !['clay', 'iron', 'wood'].includes(field.type)
+                    )
+                    .map((field) => (
+                        <Grid item lg={3} key={field.id}>
+                            <UpgradeField
+                                field={field}
+                                openUpgradeWindow={openUpgradeWindow}
+                            />
+                        </Grid>
+                    ))}
             <UpgradeWindow
                 open={openUpgrade}
                 field={field}

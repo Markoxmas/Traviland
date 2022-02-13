@@ -15,8 +15,7 @@ export default function mockUpgradeEnd(timer, serverConfig, dispatch) {
             const now = new Date().getTime()
             if (timer.startTime + timer.length <= now) {
                 //get new checkpoint
-                const fields = village.resourceFields.concat(village.buildings)
-                const field = fields.filter(
+                const field = village.fields.filter(
                     (field) => field.id === timer.fieldId
                 )[0]
                 const cost = getUpgradeCost(serverConfig, {
@@ -30,19 +29,14 @@ export default function mockUpgradeEnd(timer, serverConfig, dispatch) {
                     (villageTimer) => villageTimer.id !== timer.id
                 )
                 //upgrade the field
-                village.resourceFields = village.resourceFields.map((field) =>
-                    field.id === timer.fieldId
-                        ? { ...field, level: field.level + 1 }
-                        : field
-                )
-                village.buildings = village.buildings.map((field) =>
+                village.fields = village.fields.map((field) =>
                     field.id === timer.fieldId
                         ? { ...field, level: field.level + 1 }
                         : field
                 )
                 //Update production
                 village.production = {
-                    clay: village.resourceFields
+                    clay: village.fields
                         .filter((field) => field.type === 'clay')
                         .reduce(
                             (production, field) =>
@@ -51,7 +45,7 @@ export default function mockUpgradeEnd(timer, serverConfig, dispatch) {
                                     .currentLevel,
                             0
                         ),
-                    wood: village.resourceFields
+                    wood: village.fields
                         .filter((field) => field.type === 'wood')
                         .reduce(
                             (production, field) =>
@@ -60,7 +54,7 @@ export default function mockUpgradeEnd(timer, serverConfig, dispatch) {
                                     .currentLevel,
                             0
                         ),
-                    iron: village.resourceFields
+                    iron: village.fields
                         .filter((field) => field.type === 'iron')
                         .reduce(
                             (production, field) =>

@@ -21,9 +21,9 @@ export default function mockUpgradeStart(
                 //Current resources
                 const resources = getResources(village, new Date().getTime())
 
-                const field = village.resourceFields
-                    .concat(village.buildings)
-                    .filter((field) => field.id === upgrade.id)[0]
+                const field = village.fields.filter(
+                    (field) => field.id === upgrade.id
+                )[0]
 
                 const cost = getUpgradeCost(serverConfig, field)
 

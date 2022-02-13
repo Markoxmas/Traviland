@@ -19,7 +19,7 @@ export default function getBasicVillage(id, name) {
             iron: 30000,
             time: new Date().getTime(),
         },
-        resourceFields: [
+        fields: [
             {
                 id: 1,
                 level: 1,
@@ -104,8 +104,6 @@ export default function getBasicVillage(id, name) {
                 type: 'iron',
                 color: 'rgba(0, 0, 255, 0.7)',
             },
-        ],
-        buildings: [
             {
                 id: 16,
                 level: 1,
