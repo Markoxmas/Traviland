@@ -66,7 +66,7 @@ export default function Village({ village }) {
                             !['clay', 'iron', 'wood'].includes(field.type)
                     )
                     .map((field) => (
-                        <Grid item lg={3} key={field.id}>
+                        <Grid item xs={6} sm={4} md={3} lg={3} key={field.id}>
                             <UpgradeField
                                 field={field}
                                 openUpgradeWindow={openUpgradeWindow}
