@@ -53,7 +53,7 @@ export default function Timer({ timer }) {
     React.useEffect(() => {
         const timerId = setInterval(() => {
             const now = new Date().getTime()
-            setTime(endTime - now)
+            setTime(endTime - now > 0 ? endTime - now : 0)
             const progress = Math.floor(
                 (1 - (endTime - now) / timer.length) * 100
             )
