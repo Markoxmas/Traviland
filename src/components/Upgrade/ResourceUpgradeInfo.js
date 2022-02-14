@@ -25,7 +25,10 @@ const useStyles = makeStyles({
 export default function ResourceUpgradeInfo({ field }) {
     const classes = useStyles()
     const serverConfig = useSelector((state) => state.serverConfigReducer)
-    const production = getProductionInfo(serverConfig, field)
+    const production = getProductionInfo(serverConfig, {
+        ...field,
+        level: field.temporaryLevel,
+    })
     return (
         <Card className={classes.root}>
             <CardContent>
