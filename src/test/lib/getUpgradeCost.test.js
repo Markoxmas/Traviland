@@ -19,6 +19,7 @@ describe('Tests for lib function getUpgradeCost', () => {
         const field = {
             type: 'clay',
             level: 4,
+            temporaryLevel: 4,
         }
         const expectedResult = {
             clay: 121,
