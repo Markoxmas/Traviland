@@ -36,7 +36,7 @@ export default function mockUpgradeStart(
 
                 const cost = getUpgradeCost(serverConfig, {
                     ...field,
-                    level: upgradeLevel,
+                    temporaryLevel: upgradeLevel,
                 })
 
                 //Check if upgrade can be made
@@ -51,10 +51,9 @@ export default function mockUpgradeStart(
                               ...village.timers.map((timer) => timer.startTime)
                           )
                         : 0
-                    const timersLength = village.timers.length
-                        ? village.timers.reduce(
-                              (total, timer) => total + timer.length,
-                              0
+                    const timeBeforeTimer = village.timers.length
+                        ? Math.max(
+                              ...village.timers.map((timer) => timer.length)
                           )
                         : 0
                     //Create a timer
@@ -62,11 +61,16 @@ export default function mockUpgradeStart(
                     village.timers.push({
                         id: Math.floor(Math.random() * (50000 - 1000) + 1000),
                         startTime: firstStartTime ? firstStartTime : now,
-                        length: timersLength + cost.time,
+                        length: timeBeforeTimer + cost.time,
                         fieldId: upgrade.id,
                         villageId: villageId,
                         type: field.type,
                         upgradeLevel: upgradeLevel + 1,
+                    })
+                    village.fields = village.fields.map((field) => {
+                        return field.id === upgrade.id
+                            ? { ...field, temporaryLevel: upgradeLevel + 1 }
+                            : field
                     })
 
                     //Save the village

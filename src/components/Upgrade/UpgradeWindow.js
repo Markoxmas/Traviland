@@ -31,7 +31,7 @@ export default function UpgradeWindow({ open, closeWindow, field, village }) {
         <React.Fragment>
             <Dialog maxWidth="sm" open={open} onClose={closeWindow}>
                 <DialogTitle>
-                    Upgrade {field.name} to level {field.level + 1}
+                    Upgrade {field.name} to level {field.temporaryLevel + 1}
                 </DialogTitle>
                 <DialogContent>
                     <DialogContentText>

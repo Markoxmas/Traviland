@@ -23,6 +23,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 1,
                 level: 1,
+                temporaryLevel: 1,
                 name: 'Clay',
                 type: 'clay',
                 color: 'rgba(255, 0, 0, 0.7)',
@@ -30,6 +31,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 2,
                 level: 1,
+                temporaryLevel: 1,
                 name: 'Clay',
                 type: 'clay',
                 color: 'rgba(255, 0, 0, 0.7)',
@@ -37,6 +39,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 3,
                 level: 1,
+                temporaryLevel: 1,
                 name: 'Clay',
                 type: 'clay',
                 color: 'rgba(255, 0, 0, 0.7)',
@@ -44,6 +47,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 4,
                 level: 1,
+                temporaryLevel: 1,
                 name: 'Clay',
                 type: 'clay',
                 color: 'rgba(255, 0, 0, 0.7)',
@@ -51,6 +55,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 6,
                 level: 1,
+                temporaryLevel: 1,
                 name: 'Wood',
                 type: 'wood',
                 color: 'rgba(0, 255, 0, 0.7)',
@@ -58,6 +63,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 7,
                 level: 1,
+                temporaryLevel: 1,
                 name: 'Wood',
                 type: 'wood',
                 color: 'rgba(0, 255, 0, 0.7)',
@@ -65,6 +71,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 8,
                 level: 1,
+                temporaryLevel: 1,
                 name: 'Wood',
                 type: 'wood',
                 color: 'rgba(0, 255, 0, 0.7)',
@@ -72,6 +79,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 9,
                 level: 1,
+                temporaryLevel: 1,
                 name: 'Wood',
                 type: 'wood',
                 color: 'rgba(0, 255, 0, 0.7)',
@@ -79,6 +87,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 11,
                 level: 1,
+                temporaryLevel: 1,
                 name: 'Iron',
                 type: 'iron',
                 color: 'rgba(0, 0, 255, 0.7)',
@@ -86,6 +95,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 12,
                 level: 1,
+                temporaryLevel: 1,
                 name: 'Iron',
                 type: 'iron',
                 color: 'rgba(0, 0, 255, 0.7)',
@@ -93,6 +103,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 13,
                 level: 1,
+                temporaryLevel: 1,
                 name: 'Iron',
                 type: 'iron',
                 color: 'rgba(0, 0, 255, 0.7)',
@@ -100,6 +111,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 14,
                 level: 1,
+                temporaryLevel: 1,
                 name: 'Iron',
                 type: 'iron',
                 color: 'rgba(0, 0, 255, 0.7)',
@@ -107,6 +119,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 16,
                 level: 1,
+                temporaryLevel: 1,
                 type: 'warehouse',
                 name: 'Warehouse',
                 color: 'rgba(165, 42, 42, 0.7)',
@@ -114,6 +127,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 17,
                 level: 1,
+                temporaryLevel: 1,
                 type: 'brickyard',
                 name: 'Brickyard',
                 color: 'rgba(165, 42, 42, 0.7)',
@@ -121,6 +135,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 18,
                 level: 1,
+                temporaryLevel: 1,
                 type: 'iron_foundry',
                 name: 'Iron foundry',
                 color: 'rgba(165, 42, 42, 0.7)',
@@ -128,6 +143,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 19,
                 level: 1,
+                temporaryLevel: 1,
                 type: 'sawmill',
                 name: 'Sawmill',
                 color: 'rgba(165, 42, 42, 0.7)',
@@ -135,6 +151,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 20,
                 level: 1,
+                temporaryLevel: 1,
                 type: 'barracks',
                 name: 'Barracks',
                 color: 'rgba(165, 42, 42, 0.7)',
@@ -142,6 +159,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 21,
                 level: 1,
+                temporaryLevel: 1,
                 type: 'stable',
                 name: 'Stable',
                 color: 'rgba(165, 42, 42, 0.7)',
@@ -149,6 +167,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 22,
                 level: 1,
+                temporaryLevel: 1,
                 type: 'blacksmith',
                 name: 'Blacksmith',
                 color: 'rgba(165, 42, 42, 0.7)',
@@ -156,6 +175,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 23,
                 level: 1,
+                temporaryLevel: 1,
                 type: 'armoury',
                 name: 'Armoury',
                 color: 'rgba(165, 42, 42, 0.7)',
@@ -163,6 +183,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 24,
                 level: 1,
+                temporaryLevel: 1,
                 type: 'rally_point',
                 name: 'Rally point',
                 color: 'rgba(165, 42, 42, 0.7)',
@@ -170,6 +191,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 25,
                 level: 1,
+                temporaryLevel: 1,
                 type: 'palace',
                 name: 'Palace',
                 color: 'rgba(165, 42, 42, 0.7)',
@@ -177,6 +199,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 26,
                 level: 1,
+                temporaryLevel: 1,
                 type: 'marketplace',
                 name: 'Marketplace',
                 color: 'rgba(165, 42, 42, 0.7)',
@@ -184,6 +207,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 27,
                 level: 1,
+                temporaryLevel: 1,
                 type: 'main_building',
                 name: 'Main building',
                 color: 'rgba(165, 42, 42, 0.7)',
@@ -191,6 +215,7 @@ export default function getBasicVillage(id, name) {
             {
                 id: 28,
                 level: 1,
+                temporaryLevel: 1,
                 type: 'wonder_of_the_world',
                 name: 'Wonder of the world',
                 color: 'rgba(165, 42, 42, 0.7)',
