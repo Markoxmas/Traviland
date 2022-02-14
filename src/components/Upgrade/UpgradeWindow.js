@@ -10,6 +10,7 @@ import Cost from './Cost'
 import ResourceUpgradeInfo from './ResourceUpgradeInfo'
 import getUpgradeCost from '../../lib/getUpgradeCost'
 import getTimeToUpgrade from '../../lib/getTimeToUpgrade'
+import formatMsToDate from '../../lib/formatMsToDate'
 import { onUpgradeRequested } from '../../redux/actions/upgradeActions'
 
 export default function UpgradeWindow({ open, closeWindow, field, village }) {
@@ -55,9 +56,14 @@ export default function UpgradeWindow({ open, closeWindow, field, village }) {
                                 serverConfig
                             )
                         }
+                        disabled={!canBeUpgraded}
                         color="primary"
                     >
-                        {canBeUpgraded ? 'Upgrade' : timeToUpgrade}
+                        {canBeUpgraded
+                            ? 'Upgrade'
+                            : formatMsToDate(
+                                  new Date().getTime() + timeToUpgrade
+                              )}
                     </Button>
                 </DialogActions>
             </Dialog>
