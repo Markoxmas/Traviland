@@ -3,6 +3,8 @@ import CONST from '../redux/constants'
 import getProductionInfo from '../lib/getProductionInfo'
 import getNewCheckpoint from './getNewCheckpoint'
 import getUpgradeCost from '../lib/getUpgradeCost'
+import upgradeProduction from './upgradeProduction'
+import upgradeMaxResources from './upgradeMaxResources'
 
 export default function mockUpgradeEnd(timer, serverConfig, dispatch) {
     //Get the village
@@ -34,36 +36,12 @@ export default function mockUpgradeEnd(timer, serverConfig, dispatch) {
                         ? { ...field, level: timer.upgradeLevel }
                         : field
                 )
-                //Update production
-                village.production = {
-                    clay: village.fields
-                        .filter((field) => field.type === 'clay')
-                        .reduce(
-                            (production, field) =>
-                                production +
-                                getProductionInfo(serverConfig, field)
-                                    .currentLevel,
-                            0
-                        ),
-                    wood: village.fields
-                        .filter((field) => field.type === 'wood')
-                        .reduce(
-                            (production, field) =>
-                                production +
-                                getProductionInfo(serverConfig, field)
-                                    .currentLevel,
-                            0
-                        ),
-                    iron: village.fields
-                        .filter((field) => field.type === 'iron')
-                        .reduce(
-                            (production, field) =>
-                                production +
-                                getProductionInfo(serverConfig, field)
-                                    .currentLevel,
-                            0
-                        ),
-                }
+
+                village.production = upgradeProduction(village, serverConfig)
+                village.maxResources = upgradeMaxResources(
+                    village,
+                    serverConfig
+                )
             }
             //Save the village
             axios
