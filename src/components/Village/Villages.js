@@ -7,7 +7,7 @@ import ProductionBar from '../ProductionBar'
 export default function Villages() {
     const { villageId } = useSelector((state) => state.villageMenuReducer)
     const villages = useSelector((state) => state.villagesReducer)
-    const village = villages.filter((village) => village.id === villageId)[0]
+    const village = villages.find((village) => village.id === villageId)
     return (
         <>
             <VillageBar villages={villages} village={village} />

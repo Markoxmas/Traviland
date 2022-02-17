@@ -21,9 +21,9 @@ export default function mockUpgradeStart(
                 //Current resources
                 const resources = getResources(village, new Date().getTime())
 
-                const field = village.fields.filter(
+                const field = village.fields.find(
                     (field) => field.id === upgrade.id
-                )[0]
+                )
 
                 const sameFieldTimers = village.timers.filter(
                     (timer) => timer.fieldId === upgrade.id

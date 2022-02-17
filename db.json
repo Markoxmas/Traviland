@@ -19,14 +19,14 @@
       },
       "production": {
         "clay": 2362,
-        "wood": 2100,
-        "iron": 2100
+        "wood": 2362,
+        "iron": 2362
       },
       "checkpoint": {
-        "clay": 29873,
-        "wood": 29831,
-        "iron": 29623,
-        "time": 1645084638723
+        "clay": 28940,
+        "wood": 29330,
+        "iron": 28994,
+        "time": 1645092372359
       },
       "fields": [
         {
@@ -87,8 +87,8 @@
         },
         {
           "id": 9,
-          "level": 1,
-          "temporaryLevel": 1,
+          "level": 2,
+          "temporaryLevel": 2,
           "name": "Wood",
           "type": "wood",
           "color": "rgba(0, 255, 0, 0.7)"
@@ -111,8 +111,8 @@
         },
         {
           "id": 13,
-          "level": 1,
-          "temporaryLevel": 1,
+          "level": 2,
+          "temporaryLevel": 2,
           "name": "Iron",
           "type": "iron",
           "color": "rgba(0, 0, 255, 0.7)"
@@ -430,6 +430,7 @@
       "IRON_K": 1.1,
       "TIME_A1": 280000,
       "TIME_K": 1.8,
+      "DECREASE": 0.03,
       "MAX_LEVEL": 20
     },
     "WONDER_OF_THE_WORLD": {

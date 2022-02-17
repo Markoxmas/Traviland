@@ -17,9 +17,9 @@ export default function mockUpgradeEnd(timer, serverConfig, dispatch) {
             const now = new Date().getTime()
             if (timer.startTime + timer.length <= now) {
                 //get new checkpoint
-                const field = village.fields.filter(
+                const field = village.fields.find(
                     (field) => field.id === timer.fieldId
-                )[0]
+                )
                 const cost = getUpgradeCost(village, serverConfig, {
                     ...field,
                     level: field.level - 1,

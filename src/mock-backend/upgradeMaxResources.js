@@ -1,7 +1,5 @@
 export default function upgradeMaxResources(village, serverConfig) {
-    const warehouse = village.fields.filter(
-        (field) => field.type === 'warehouse'
-    )[0]
+    const warehouse = village.fields.find((field) => field.type === 'warehouse')
     const config = serverConfig[warehouse.type.toUpperCase()]
 
     const newValue = Math.floor(
