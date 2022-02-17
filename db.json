@@ -18,29 +18,29 @@
         "iron": 150000
       },
       "production": {
-        "clay": 2625,
-        "wood": 2000,
-        "iron": 2000
+        "clay": 2362,
+        "wood": 2100,
+        "iron": 2100
       },
       "checkpoint": {
-        "clay": 29625,
-        "wood": 29516,
-        "iron": 28975,
-        "time": 1644927609040
+        "clay": 29873,
+        "wood": 29831,
+        "iron": 29623,
+        "time": 1645084638723
       },
       "fields": [
         {
           "id": 1,
-          "level": 3,
-          "temporaryLevel": 3,
+          "level": 1,
+          "temporaryLevel": 1,
           "name": "Clay",
           "type": "clay",
           "color": "rgba(255, 0, 0, 0.7)"
         },
         {
           "id": 2,
-          "level": 1,
-          "temporaryLevel": 1,
+          "level": 2,
+          "temporaryLevel": 2,
           "name": "Clay",
           "type": "clay",
           "color": "rgba(255, 0, 0, 0.7)"
@@ -296,6 +296,14 @@
       "IRON_K": 1.1,
       "TIME_A1": 280000,
       "TIME_K": 1.8,
+      "INCREASE": [
+        1,
+        1.05,
+        1.1,
+        1.15,
+        1.2,
+        1.25
+      ],
       "MAX_LEVEL": 5
     },
     "IRON_FOUNDRY": {
@@ -307,6 +315,14 @@
       "IRON_K": 1.1,
       "TIME_A1": 280000,
       "TIME_K": 1.8,
+      "INCREASE": [
+        1,
+        1.05,
+        1.1,
+        1.15,
+        1.2,
+        1.25
+      ],
       "MAX_LEVEL": 5
     },
     "SAWMILL": {
@@ -318,6 +334,14 @@
       "IRON_K": 1.1,
       "TIME_A1": 280000,
       "TIME_K": 1.8,
+      "INCREASE": [
+        1,
+        1.05,
+        1.1,
+        1.15,
+        1.2,
+        1.25
+      ],
       "MAX_LEVEL": 5
     },
     "BARRACKS": {
