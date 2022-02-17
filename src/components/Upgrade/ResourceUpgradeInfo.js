@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux'
 import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
+import DialogContent from '@material-ui/core/DialogContent'
+import DialogContentText from '@material-ui/core/DialogContentText'
 import getProductionInfo from '../../lib/getProductionInfo'
 
 const useStyles = makeStyles({
@@ -30,13 +32,17 @@ export default function ResourceUpgradeInfo({ field }) {
         level: field.temporaryLevel,
     })
     return (
-        <Card className={classes.root}>
-            <CardContent>
-                <h3>
-                    Next level will increase production from{' '}
-                    {production.currentLevel} to {production.nextLevel}
-                </h3>
-            </CardContent>
-        </Card>
+        <DialogContent>
+            <DialogContentText>
+                <Card className={classes.root}>
+                    <CardContent>
+                        <h3>
+                            Next level will increase production from{' '}
+                            {production.currentLevel} to {production.nextLevel}
+                        </h3>
+                    </CardContent>
+                </Card>
+            </DialogContentText>
+        </DialogContent>
     )
 }

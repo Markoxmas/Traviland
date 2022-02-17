@@ -13,20 +13,29 @@
       "id": 1,
       "name": "Village 1",
       "maxResources": {
-        "clay": 150000,
-        "wood": 150000,
-        "iron": 150000
+        "clay": 100000,
+        "wood": 100000,
+        "iron": 100000
       },
       "production": {
-        "clay": 2362,
-        "wood": 2362,
-        "iron": 2362
+        "clay": 20000,
+        "wood": 20000,
+        "iron": 20000
       },
       "checkpoint": {
-        "clay": 28940,
-        "wood": 29330,
-        "iron": 28994,
-        "time": 1645092372359
+        "clay": 30000,
+        "wood": 30000,
+        "iron": 30000,
+        "time": 1645105458605
+      },
+      "army": {
+        "dogs": 10000,
+        "cats": 10,
+        "lizards": 42353,
+        "pidgeons": 635,
+        "horses": 5345345,
+        "catapults": 432424234,
+        "aligators": 432
       },
       "fields": [
         {
@@ -39,8 +48,8 @@
         },
         {
           "id": 2,
-          "level": 2,
-          "temporaryLevel": 2,
+          "level": 1,
+          "temporaryLevel": 1,
           "name": "Clay",
           "type": "clay",
           "color": "rgba(255, 0, 0, 0.7)"
@@ -87,8 +96,8 @@
         },
         {
           "id": 9,
-          "level": 2,
-          "temporaryLevel": 2,
+          "level": 1,
+          "temporaryLevel": 1,
           "name": "Wood",
           "type": "wood",
           "color": "rgba(0, 255, 0, 0.7)"
@@ -111,8 +120,8 @@
         },
         {
           "id": 13,
-          "level": 2,
-          "temporaryLevel": 2,
+          "level": 1,
+          "temporaryLevel": 1,
           "name": "Iron",
           "type": "iron",
           "color": "rgba(0, 0, 255, 0.7)"
@@ -353,6 +362,7 @@
       "IRON_K": 1.1,
       "TIME_A1": 280000,
       "TIME_K": 1.8,
+      "DECREASE": 0.03,
       "MAX_LEVEL": 20
     },
     "STABLE": {
@@ -364,6 +374,7 @@
       "IRON_K": 1.1,
       "TIME_A1": 280000,
       "TIME_K": 1.8,
+      "DECREASE": 0.03,
       "MAX_LEVEL": 20
     },
     "BLACKSMITH": {
@@ -443,6 +454,50 @@
       "TIME_A1": 280000,
       "TIME_K": 1.8,
       "MAX_LEVEL": 100
+    },
+    "UNITS": {
+      "DOG": {
+        "CLAY": 100,
+        "IRON": 100,
+        "WOOD": 100,
+        "TIME": 100000
+      },
+      "CAT": {
+        "CLAY": 101,
+        "IRON": 101,
+        "WOOD": 101,
+        "TIME": 10000
+      },
+      "LIZARD": {
+        "CLAY": 102,
+        "IRON": 102,
+        "WOOD": 102,
+        "TIME": 20000
+      },
+      "PIDGEON": {
+        "CLAY": 103,
+        "IRON": 103,
+        "WOOD": 103,
+        "TIME": 30000
+      },
+      "HORSE": {
+        "CLAY": 104,
+        "IRON": 104,
+        "WOOD": 104,
+        "TIME": 40000
+      },
+      "CATAPULT": {
+        "CLAY": 105,
+        "IRON": 105,
+        "WOOD": 105,
+        "TIME": 50000
+      },
+      "ALIGATOR": {
+        "CLAY": 106,
+        "IRON": 106,
+        "WOOD": 106,
+        "TIME": 60000
+      }
     }
   }
 }

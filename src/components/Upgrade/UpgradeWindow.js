@@ -3,10 +3,11 @@ import { useSelector, useDispatch } from 'react-redux'
 import Button from '@material-ui/core/Button'
 import Dialog from '@material-ui/core/Dialog'
 import DialogActions from '@material-ui/core/DialogActions'
+import DialogTitle from '@material-ui/core/DialogTitle'
 import DialogContent from '@material-ui/core/DialogContent'
 import DialogContentText from '@material-ui/core/DialogContentText'
-import DialogTitle from '@material-ui/core/DialogTitle'
 import Cost from './Cost'
+import UnitMaker from '../UnitMaker'
 import ResourceUpgradeInfo from './ResourceUpgradeInfo'
 import getUpgradeCost from '../../lib/getUpgradeCost'
 import getTimeToUpgrade from '../../lib/getTimeToUpgrade'
@@ -34,11 +35,18 @@ export default function UpgradeWindow({ open, closeWindow, field, village }) {
                 <DialogTitle>
                     Upgrade {field.name} to level {field.temporaryLevel + 1}
                 </DialogTitle>
+                {['clay', 'wood', 'iron'].includes(field.type) && (
+                    <ResourceUpgradeInfo field={field} />
+                )}
+                {field.type === 'barracks' && (
+                    <UnitMaker
+                        village={village}
+                        field={field}
+                        serverConfig={serverConfig}
+                    />
+                )}
                 <DialogContent>
                     <DialogContentText>
-                        {['clay', 'wood', 'iron'].includes(field.type) && (
-                            <ResourceUpgradeInfo field={field} />
-                        )}
                         <Cost cost={cost} />
                     </DialogContentText>
                 </DialogContent>

@@ -34,7 +34,7 @@ export default function Cost({ cost }) {
                     className={classes.chip}
                 />
             </li>
-            <li key={1}>
+            <li key={2}>
                 Wood:
                 <Chip
                     variant="outlined"
@@ -44,7 +44,7 @@ export default function Cost({ cost }) {
                     className={classes.chip}
                 />
             </li>
-            <li key={1}>
+            <li key={3}>
                 Iron:
                 <Chip
                     variant="outlined"
@@ -54,7 +54,7 @@ export default function Cost({ cost }) {
                     className={classes.chip}
                 />
             </li>
-            <li key={1}>
+            <li key={4}>
                 Time:
                 <Chip
                     variant="outlined"
