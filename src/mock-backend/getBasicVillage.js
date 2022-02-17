@@ -19,6 +19,15 @@ export default function getBasicVillage(id, name) {
             iron: 30000,
             time: new Date().getTime(),
         },
+        army: {
+            dogs: 10000,
+            cats: 10,
+            lizards: 42353,
+            pidgeons: 635,
+            horses: 5345345,
+            catapults: 432424234,
+            aligators: 432,
+        },
         fields: [
             {
                 id: 1,
