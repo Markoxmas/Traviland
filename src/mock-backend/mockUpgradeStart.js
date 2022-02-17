@@ -34,7 +34,7 @@ export default function mockUpgradeStart(
                       )
                     : field.level
 
-                const cost = getUpgradeCost(serverConfig, {
+                const cost = getUpgradeCost(village, serverConfig, {
                     ...field,
                     temporaryLevel: upgradeLevel,
                 })
@@ -65,6 +65,7 @@ export default function mockUpgradeStart(
                         fieldId: upgrade.id,
                         villageId: villageId,
                         type: field.type,
+                        name: field.name,
                         upgradeLevel: upgradeLevel + 1,
                     })
                     village.fields = village.fields.map((field) => {

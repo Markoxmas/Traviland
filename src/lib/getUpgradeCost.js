@@ -1,5 +1,8 @@
-export default function getUpgradeCost(serverConfig, field) {
+export default function getUpgradeCost(village, serverConfig, field) {
     const config = serverConfig[field.type.toUpperCase()]
+    const mainBuilding = village.fields.find(
+        (field) => field.type === 'main_building'
+    )
     return {
         clay: Math.floor(
             config.CLAY_A1 * config.CLAY_K ** field.temporaryLevel
@@ -12,7 +15,10 @@ export default function getUpgradeCost(serverConfig, field) {
         ),
         time: Math.floor(
             (config.TIME_A1 / serverConfig.SERVER_SPEED) *
-                config.TIME_K ** field.temporaryLevel
+                config.TIME_K ** field.temporaryLevel *
+                (1.0 -
+                    mainBuilding.temporaryLevel *
+                        serverConfig.MAIN_BUILDING.DECREASE)
         ),
     }
 }

@@ -20,7 +20,7 @@ export default function mockUpgradeEnd(timer, serverConfig, dispatch) {
                 const field = village.fields.filter(
                     (field) => field.id === timer.fieldId
                 )[0]
-                const cost = getUpgradeCost(serverConfig, {
+                const cost = getUpgradeCost(village, serverConfig, {
                     ...field,
                     level: field.level - 1,
                 })

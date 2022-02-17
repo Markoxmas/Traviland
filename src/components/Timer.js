@@ -77,7 +77,7 @@ export default function Timer({ timer }) {
             <div>
                 <div>{formatMsToTime(time)}</div>
                 <div>
-                    {timer.type} level {timer.upgradeLevel}
+                    {timer.name} level {timer.upgradeLevel}
                 </div>
             </div>
             <LinearProgressWithLabel value={progress} />

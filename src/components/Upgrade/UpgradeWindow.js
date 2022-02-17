@@ -18,7 +18,7 @@ export default function UpgradeWindow({ open, closeWindow, field, village }) {
     const dispatch = useDispatch()
     let cost, timeToUpgrade, canBeUpgraded
     if (field.id) {
-        cost = getUpgradeCost(serverConfig, field)
+        cost = getUpgradeCost(village, serverConfig, field)
         timeToUpgrade = getTimeToUpgrade(village, cost)
         canBeUpgraded = timeToUpgrade === 0
     }
