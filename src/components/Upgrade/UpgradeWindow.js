@@ -31,14 +31,14 @@ export default function UpgradeWindow({ open, closeWindow, field, village }) {
 
     return (
         <React.Fragment>
-            <Dialog maxWidth="sm" open={open} onClose={closeWindow}>
+            <Dialog open={open} onClose={closeWindow}>
                 <DialogTitle>
                     Upgrade {field.name} to level {field.temporaryLevel + 1}
                 </DialogTitle>
                 {['clay', 'wood', 'iron'].includes(field.type) && (
                     <ResourceUpgradeInfo field={field} />
                 )}
-                {field.type === 'barracks' && (
+                {(field.type === 'barracks' || field.type === 'stable') && (
                     <UnitMaker
                         village={village}
                         field={field}

@@ -17,22 +17,19 @@ const useStyles = makeStyles((theme) => ({
 
 export default function UnitMaker({ village, field, serverConfig }) {
     const classes = useStyles()
+    const units =
+        field.type === 'barracks'
+            ? ['dog', 'cat', 'lizard', 'pidgeon']
+            : ['horse', 'catapult', 'aligator']
     return (
         <div className={classes.root}>
-            <Grid container spacing={2}>
-                <Grid item xs={12} md={6}>
+            <Grid>
+                <Grid>
                     <div className={classes.demo}>
                         <List>
-                            {[
-                                'dog',
-                                'cat',
-                                'lizard',
-                                'pidgeon',
-                                'horse',
-                                'catapult',
-                                'aligator',
-                            ].map((unit) => (
+                            {units.map((unit) => (
                                 <UnitRow
+                                    village={village}
                                     serverConfig={serverConfig}
                                     field={field}
                                     unit={unit}
