@@ -2,7 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import List from '@material-ui/core/List'
 import Grid from '@material-ui/core/Grid'
-import UnitRow from './UnitRow'
+import UnitUpgradeRow from './UnitUpgradeRow'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -14,12 +14,17 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function UnitMaker({ village, field, serverConfig }) {
+export default function UnitUpgrader({ village, field, serverConfig }) {
     const classes = useStyles()
-    const units =
-        field.type === 'barracks'
-            ? ['dog', 'cat', 'lizard', 'pidgeon']
-            : ['horse', 'catapult', 'aligator']
+    const units = [
+        'dog',
+        'cat',
+        'lizard',
+        'pidgeon',
+        'horse',
+        'catapult',
+        'aligator',
+    ]
     return (
         <div className={classes.root}>
             <Grid>
@@ -27,7 +32,7 @@ export default function UnitMaker({ village, field, serverConfig }) {
                     <div className={classes.demo}>
                         <List>
                             {units.map((unit) => (
-                                <UnitRow
+                                <UnitUpgradeRow
                                     village={village}
                                     serverConfig={serverConfig}
                                     field={field}

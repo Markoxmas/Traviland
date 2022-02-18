@@ -28,6 +28,36 @@ export default function getBasicVillage(id, name) {
             catapults: 432424234,
             aligators: 432,
         },
+        units: {
+            dog: {
+                attack: 1,
+                defense: 2,
+            },
+            cat: {
+                attack: 3,
+                defense: 4,
+            },
+            lizard: {
+                attack: 5,
+                defense: 6,
+            },
+            pidgeon: {
+                attack: 7,
+                defense: 8,
+            },
+            horse: {
+                attack: 9,
+                defense: 10,
+            },
+            catapult: {
+                attack: 11,
+                defense: 12,
+            },
+            aligator: {
+                attack: 13,
+                defense: 14,
+            },
+        },
         fields: [
             {
                 id: 1,

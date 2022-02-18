@@ -8,6 +8,7 @@ import DialogContent from '@material-ui/core/DialogContent'
 import DialogContentText from '@material-ui/core/DialogContentText'
 import Cost from './Cost'
 import UnitMaker from '../UnitMaker'
+import UnitUpgrader from '../UnitUpgrader'
 import ResourceUpgradeInfo from './ResourceUpgradeInfo'
 import getUpgradeCost from '../../lib/getUpgradeCost'
 import getTimeToUpgrade from '../../lib/getTimeToUpgrade'
@@ -40,6 +41,20 @@ export default function UpgradeWindow({ open, closeWindow, field, village }) {
                 )}
                 {(field.type === 'barracks' || field.type === 'stable') && (
                     <UnitMaker
+                        village={village}
+                        field={field}
+                        serverConfig={serverConfig}
+                    />
+                )}
+                {field.type === 'blacksmith' && (
+                    <UnitUpgrader
+                        village={village}
+                        field={field}
+                        serverConfig={serverConfig}
+                    />
+                )}
+                {field.type === 'armoury' && (
+                    <UnitUpgrader
                         village={village}
                         field={field}
                         serverConfig={serverConfig}
