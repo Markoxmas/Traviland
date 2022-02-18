@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
         '& > *': {
             margin: theme.spacing(1),
             padding: theme.spacing(1),
-            height: theme.spacing(16),
         },
         textAlign: 'center',
     },
