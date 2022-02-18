@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/core/styles'
 import LinearProgress from '@material-ui/core/LinearProgress'
 import Typography from '@material-ui/core/Typography'
+import Paper from '@material-ui/core/Paper'
 import Box from '@material-ui/core/Box'
 import formatMsToTime from '../lib/formatMsToTime'
 import { onUpgradeFinished } from '../redux/actions/upgradeActions'
@@ -33,11 +34,9 @@ LinearProgressWithLabel.propTypes = {
 }
 
 const useStyles = makeStyles({
-    root: {
+    paper: {
         width: '100%',
         textAlign: 'center',
-        border: '2px solid grey',
-        borderRadius: '20px',
         padding: '5px',
     },
 })
@@ -73,14 +72,13 @@ export default function Timer({ timer }) {
     }, [])
 
     return (
-        <div className={classes.root}>
-            <div>
-                <div>{formatMsToTime(time)}</div>
+        <div className={classes.paper}>
+            <Paper>
                 <div>
                     {timer.name} level {timer.upgradeLevel}
                 </div>
-            </div>
-            <LinearProgressWithLabel value={progress} />
+                <div>{formatMsToTime(time)}</div>
+            </Paper>
         </div>
     )
 }
