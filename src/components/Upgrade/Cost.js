@@ -7,63 +7,29 @@ import formatNumber from '../../lib/formatNumber'
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        display: 'flex',
-        justifyContent: 'center',
-        flexWrap: 'wrap',
-        listStyle: 'none',
-        padding: theme.spacing(1.5),
-        margin: 0,
+        padding: theme.spacing(1),
     },
-    chip: {
-        margin: theme.spacing(0.5),
-        border: '2px solid grey',
+    listItem: {
+        padding: theme.spacing(1),
     },
 }))
 
 export default function Cost({ cost }) {
     const classes = useStyles()
     return (
-        <Paper component="ul" className={classes.root}>
-            <li key={1}>
-                Clay:
-                <Chip
-                    variant="outlined"
-                    size="small"
-                    label="Basic"
-                    label={formatNumber(cost.clay)}
-                    className={classes.chip}
-                />
-            </li>
-            <li key={2}>
-                Wood:
-                <Chip
-                    variant="outlined"
-                    size="small"
-                    label="Basic"
-                    label={formatNumber(cost.wood)}
-                    className={classes.chip}
-                />
-            </li>
-            <li key={3}>
-                Iron:
-                <Chip
-                    variant="outlined"
-                    size="small"
-                    label="Basic"
-                    label={formatNumber(cost.iron)}
-                    className={classes.chip}
-                />
-            </li>
-            <li key={4}>
-                Time:
-                <Chip
-                    variant="outlined"
-                    size="small"
-                    label="Basic"
-                    label={formatMsToTime(cost.time)}
-                    className={classes.chip}
-                />
-            </li>
+        <Paper className={classes.root}>
+            <b className={classes.listItem} key={1}>
+                Clay: {formatNumber(cost.clay)}
+            </b>
+            <b className={classes.listItem} key={2}>
+                Wood:{formatNumber(cost.wood)}
+            </b>
+            <b className={classes.listItem} key={3}>
+                Iron:{formatNumber(cost.iron)}
+            </b>
+            <b className={classes.listItem} key={4}>
+                Time:{formatMsToTime(cost.time)}
+            </b>
         </Paper>
     )
 }

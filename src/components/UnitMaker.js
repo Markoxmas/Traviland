@@ -32,6 +32,7 @@ export default function UnitMaker({ village, field, serverConfig }) {
                                     serverConfig={serverConfig}
                                     field={field}
                                     unit={unit}
+                                    key={field.type + unit}
                                 />
                             ))}
                         </List>

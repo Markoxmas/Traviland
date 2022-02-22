@@ -10,6 +10,8 @@ import Cost from './Cost'
 import UnitMaker from '../UnitMaker'
 import UnitUpgrader from '../UnitUpgrader'
 import ResourceUpgradeInfo from './ResourceUpgradeInfo'
+import MainBuilding from '../Buildings/MainBuilding'
+import Warehouse from '../Buildings/Warehouse'
 import getUpgradeCost from '../../lib/getUpgradeCost'
 import getTimeToUpgrade from '../../lib/getTimeToUpgrade'
 import formatMsToDate from '../../lib/formatMsToDate'
@@ -39,6 +41,9 @@ export default function UpgradeWindow({ open, closeWindow, field, village }) {
                 {['clay', 'wood', 'iron'].includes(field.type) && (
                     <ResourceUpgradeInfo field={field} />
                 )}
+                {field.type === 'warehouse' && (
+                    <Warehouse serverConfig={serverConfig} field={field} />
+                )}
                 {(field.type === 'barracks' || field.type === 'stable') && (
                     <UnitMaker
                         village={village}
@@ -59,6 +64,9 @@ export default function UpgradeWindow({ open, closeWindow, field, village }) {
                         field={field}
                         serverConfig={serverConfig}
                     />
+                )}
+                {field.type === 'main_building' && (
+                    <MainBuilding serverConfig={serverConfig} field={field} />
                 )}
                 <DialogContent>
                     <DialogContentText>
