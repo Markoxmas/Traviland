@@ -1,7 +1,8 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
-import ArmyInfo from './ArmyInfo'
+import VillagesList from './VillagesList'
+import ResourceBar from './ResourceBar'
 
 const useStyles = makeStyles({
     root: {
@@ -10,13 +11,14 @@ const useStyles = makeStyles({
     },
 })
 
-export default function ArmyBar({ village }) {
+export default function VillageBar({ villages, village }) {
     const classes = useStyles()
 
     return (
         <>
             <Paper square className={classes.root}>
-                <ArmyInfo village={village} />
+                <VillagesList villages={villages} chosenVillage={village} />
+                <ResourceBar village={village} />
             </Paper>
         </>
     )

@@ -1,9 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import VillageBar from './VillageBar'
+import Bars from '../AppBars/Bars'
 import Village from './Village'
-import ProductionBar from '../ProductionBar'
-import ArmyBar from '../ArmyBar'
 
 export default function Villages() {
     const { villageId } = useSelector((state) => state.villageMenuReducer)
@@ -11,9 +9,7 @@ export default function Villages() {
     const village = villages.find((village) => village.id === villageId)
     return (
         <>
-            <VillageBar villages={villages} village={village} />
-            <ProductionBar village={village} />
-            <ArmyBar village={village} />
+            <Bars villages={villages} village={village} />
             <Village village={village} />
         </>
     )
