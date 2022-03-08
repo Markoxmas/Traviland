@@ -1,13 +1,13 @@
 import React from 'react'
-import VillageBar from './VillageBar'
-import ProductionBar from './ProductionBar'
+import VillagesList from './VillagesList'
+import ResourceBar from './ResourceBar'
 import ArmyBar from './ArmyBar'
 
 export default function Bars({ villages, village }) {
     return (
         <>
-            <VillageBar villages={villages} village={village} />
-            <ProductionBar village={village} />
+            <VillagesList villages={villages} village={village} />
+            <ResourceBar villages={villages} village={village} />
             <ArmyBar village={village} />
         </>
     )

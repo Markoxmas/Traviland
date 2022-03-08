@@ -27,7 +27,7 @@ export default function ArmyBar({ village }) {
                     'aligators',
                 ].map((unit) =>
                     army[unit] > 0 ? (
-                        <Button>
+                        <Button key={unit}>
                             <b>
                                 {formatNumber(army[unit])} {unit}
                             </b>

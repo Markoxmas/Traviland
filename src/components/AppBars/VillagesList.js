@@ -1,85 +1,49 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
-import { withStyles } from '@material-ui/core/styles'
+import { useSelector } from 'react-redux'
+import { makeStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
-import Menu from '@material-ui/core/Menu'
-import MenuItem from '@material-ui/core/MenuItem'
-import ListItemText from '@material-ui/core/ListItemText'
-import { onSetVillage } from '../../redux/actions/villageMenuActions'
+import Paper from '@material-ui/core/Paper'
+import Dialog from '@material-ui/core/Dialog'
+import DialogContent from '@material-ui/core/DialogContent'
+import DialogTitle from '@material-ui/core/DialogTitle'
+import VillagesMenu from './VillagesMenu'
 
-const StyledMenu = withStyles({
-    paper: {
-        border: '1px solid #d3d4d5',
-    },
-})((props) => (
-    <Menu
-        elevation={0}
-        getContentAnchorEl={null}
-        anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'center',
-        }}
-        transformOrigin={{
-            vertical: 'top',
-            horizontal: 'center',
-        }}
-        {...props}
-    />
-))
-
-const StyledMenuItem = withStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({
     root: {
-        '&:focus': {
-            backgroundColor: theme.palette.primary.main,
-            '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
-                color: theme.palette.common.white,
-            },
-        },
+        display: 'flex',
+        justifyContent: 'center',
     },
-}))(MenuItem)
+}))
 
-export default function VillagesList({ villages, chosenVillage }) {
-    const dispatch = useDispatch()
-    const [anchorEl, setAnchorEl] = React.useState(null)
+export default function VillagesList() {
+    const classes = useStyles()
+    const [open, setOpen] = React.useState(false)
+    const currentVillageId = useSelector(
+        (state) => state.villageMenuReducer
+    ).villageId
+    const villages = useSelector((state) => state.villagesReducer)
+    const village = villages.find((village) => village.id === currentVillageId)
+    const villagesMenu = villages.map((village) => {
+        return { name: village.name }
+    })
 
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget)
+    const handleClickOpen = () => {
+        setOpen(true)
     }
 
-    const handleClose = (newId) => {
-        if (typeof newId === 'number') {
-            dispatch(onSetVillage(newId))
-        }
-        setAnchorEl(null)
+    const handleClose = () => {
+        setOpen(false)
     }
 
     return (
-        <div>
-            <Button
-                aria-controls="customized-menu"
-                aria-haspopup="true"
-                variant="contained"
-                color="primary"
-                onClick={handleClick}
-            >
-                {chosenVillage.name}
-            </Button>
-            <StyledMenu
-                id="customized-menu"
-                anchorEl={anchorEl}
-                keepMounted
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
-            >
-                {villages.map((village) => (
-                    <StyledMenuItem key={village.id}>
-                        <ListItemText
-                            primary={village.name}
-                            onClick={() => handleClose(village.id)}
-                        />
-                    </StyledMenuItem>
-                ))}
-            </StyledMenu>
-        </div>
+        <Paper className={classes.root}>
+            <Button onClick={handleClickOpen}>{village.name}</Button>
+            <Dialog open={open} onClose={handleClose}>
+                <DialogTitle>Choose village!</DialogTitle>
+                <DialogContent>
+                    <VillagesMenu villagesMenu={villagesMenu} />
+                </DialogContent>
+            </Dialog>
+        </Paper>
     )
 }
