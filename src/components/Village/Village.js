@@ -3,10 +3,10 @@ import { makeStyles } from '@material-ui/core/styles'
 import { useSelector, useDispatch } from 'react-redux'
 import Grid from '@material-ui/core/Grid'
 import UpgradeField from './UpgradeField'
-import UpgradeWindow from '../Upgrade/UpgradeWindow'
+import UpgradeWindow from './UpgradeWindow'
 import { onSetResources } from '../../redux/actions/resourcesActions'
 import getResources from '../../lib/getResources'
-import Timer from '../Timer'
+import Timer from './Timer'
 
 const useStyles = makeStyles({
     root: {

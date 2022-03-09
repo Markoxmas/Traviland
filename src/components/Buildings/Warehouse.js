@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Warehouse({ serverConfig, field }) {
     const classes = useStyles()
-    const config = serverConfig.WAREHOUSE
     return (
         <div className={classes.paper}>
             <Paper></Paper>

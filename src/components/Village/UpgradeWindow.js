@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import Button from '@material-ui/core/Button'
 import Dialog from '@material-ui/core/Dialog'
@@ -6,26 +6,32 @@ import DialogActions from '@material-ui/core/DialogActions'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import DialogContent from '@material-ui/core/DialogContent'
 import DialogContentText from '@material-ui/core/DialogContentText'
-import Cost from './Cost'
-import UnitMaker from '../Buildings/UnitMaker'
-import UnitUpgrader from '../Buildings/UnitUpgrader'
-import ResourceUpgradeInfo from './ResourceUpgradeInfo'
-import MainBuilding from '../Buildings/MainBuilding'
-import Warehouse from '../Buildings/Warehouse'
+import Cost from '../Upgrade/Cost'
+import UpgradeBody from './UpgradeBody'
 import getUpgradeCost from '../../lib/getUpgradeCost'
 import getTimeToUpgrade from '../../lib/getTimeToUpgrade'
 import formatMsToDate from '../../lib/formatMsToDate'
 import { onUpgradeRequested } from '../../redux/actions/upgradeActions'
 
 export default function UpgradeWindow({ open, closeWindow, field, village }) {
-    const serverConfig = useSelector((state) => state.serverConfigReducer)
     const dispatch = useDispatch()
-    let cost, timeToUpgrade, canBeUpgraded
-    if (field.id) {
-        cost = getUpgradeCost(village, serverConfig, field)
-        timeToUpgrade = getTimeToUpgrade(village, cost)
-        canBeUpgraded = timeToUpgrade === 0
-    }
+    const serverConfig = useSelector((state) => state.serverConfigReducer)
+    const [cost, setCost] = useState(null)
+    const [timeToUpgrade, setTimeToUpgrade] = useState(null)
+    const [canBeUpgraded, setCanBeUpgraded] = useState(null)
+
+    useEffect(() => {
+        if (field.id) {
+            //calculate
+            const cost = getUpgradeCost(village, serverConfig, field)
+            const timeToUpgrade = getTimeToUpgrade(village, cost)
+            const canBeUpgraded = timeToUpgrade === 0
+            //update
+            setCost(cost)
+            setTimeToUpgrade(timeToUpgrade)
+            setCanBeUpgraded(canBeUpgraded)
+        }
+    }, [village.id, field.id])
 
     const handleUpgrade = (village, upgrade, serverConfig) => {
         dispatch(onUpgradeRequested(village, upgrade, serverConfig))
@@ -38,36 +44,11 @@ export default function UpgradeWindow({ open, closeWindow, field, village }) {
                 <DialogTitle>
                     Upgrade {field.name} to level {field.temporaryLevel + 1}
                 </DialogTitle>
-                {['clay', 'wood', 'iron'].includes(field.type) && (
-                    <ResourceUpgradeInfo field={field} />
-                )}
-                {field.type === 'warehouse' && (
-                    <Warehouse serverConfig={serverConfig} field={field} />
-                )}
-                {(field.type === 'barracks' || field.type === 'stable') && (
-                    <UnitMaker
-                        village={village}
-                        field={field}
-                        serverConfig={serverConfig}
-                    />
-                )}
-                {field.type === 'blacksmith' && (
-                    <UnitUpgrader
-                        village={village}
-                        field={field}
-                        serverConfig={serverConfig}
-                    />
-                )}
-                {field.type === 'armoury' && (
-                    <UnitUpgrader
-                        village={village}
-                        field={field}
-                        serverConfig={serverConfig}
-                    />
-                )}
-                {field.type === 'main_building' && (
-                    <MainBuilding serverConfig={serverConfig} field={field} />
-                )}
+                <UpgradeBody
+                    serverConfig={serverConfig}
+                    village={village}
+                    field={field}
+                />
                 <DialogContent>
                     <DialogContentText>
                         <Cost cost={cost} />
