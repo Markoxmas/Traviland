@@ -6,12 +6,12 @@ import DialogActions from '@material-ui/core/DialogActions'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import DialogContent from '@material-ui/core/DialogContent'
 import DialogContentText from '@material-ui/core/DialogContentText'
-import Cost from '../Upgrade/Cost'
+import Cost from './Cost'
 import UpgradeBody from './UpgradeBody'
-import getUpgradeCost from '../../lib/getUpgradeCost'
-import getTimeToUpgrade from '../../lib/getTimeToUpgrade'
-import formatMsToDate from '../../lib/formatMsToDate'
-import { onUpgradeRequested } from '../../redux/actions/upgradeActions'
+import getUpgradeCost from '../../../lib/getUpgradeCost'
+import getTimeToUpgrade from '../../../lib/getTimeToUpgrade'
+import formatMsToDate from '../../../lib/formatMsToDate'
+import { onUpgradeRequested } from '../../../redux/actions/upgradeActions'
 
 export default function UpgradeWindow({ open, closeWindow, field, village }) {
     const dispatch = useDispatch()

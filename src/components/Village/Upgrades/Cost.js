@@ -1,8 +1,8 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
-import formatMsToTime from '../../lib/formatMsToTime'
-import formatNumber from '../../lib/formatNumber'
+import formatMsToTime from '../../../lib/formatMsToTime'
+import formatNumber from '../../../lib/formatNumber'
 
 const useStyles = makeStyles((theme) => ({
     root: {

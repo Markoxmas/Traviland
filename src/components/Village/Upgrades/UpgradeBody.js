@@ -1,9 +1,9 @@
 import React from 'react'
-import ResourceUpgradeInfo from '../Buildings/ResourceUpgradeInfo'
-import Warehouse from '../Buildings/Warehouse'
-import UnitMaker from '../Buildings/UnitMaker'
-import UnitUpgrader from '../Buildings/UnitUpgrader'
-import MainBuilding from '../Buildings/MainBuilding'
+import ResourceUpgradeInfo from '../../Buildings/Resources/ResourceUpgradeInfo'
+import Warehouse from '../../Buildings/Resources/Warehouse'
+import UnitMaker from '../../Buildings/Units/UnitMaker'
+import UnitUpgrader from '../../Buildings/Units/UnitUpgrader'
+import MainBuilding from '../../Buildings/MainBuilding'
 
 export default function UpgradeBody({ serverConfig, village, field }) {
     const propsToPass = {
