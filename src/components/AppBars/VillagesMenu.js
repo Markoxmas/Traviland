@@ -1,8 +1,10 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
+import { onSetVillage } from '../../redux/actions/villageMenuActions'
 
 const useStyles = makeStyles({
     root: {
@@ -15,13 +17,24 @@ const useStyles = makeStyles({
     },
 })
 
-export default function VillageMenu({ villagesMenu }) {
+export default function VillageMenu({ villagesMenu, handleClose }) {
     const classes = useStyles()
+    const dispatch = useDispatch()
+
+    const handleChoice = (newId) => {
+        if (typeof newId === 'number') {
+            dispatch(onSetVillage(newId))
+        }
+        handleClose()
+    }
 
     return (
         <div className={classes.root}>
             {villagesMenu.map((villageItem) => (
-                <Card className={classes.card}>
+                <Card
+                    className={classes.card}
+                    onClick={() => handleChoice(villageItem.id)}
+                >
                     <CardContent>
                         <Typography variant="h5" component="h3">
                             {villageItem.name}

@@ -24,7 +24,7 @@ export default function VillagesList() {
     const villages = useSelector((state) => state.villagesReducer)
     const village = villages.find((village) => village.id === currentVillageId)
     const villagesMenu = villages.map((village) => {
-        return { name: village.name }
+        return { id: village.id, name: village.name }
     })
 
     const handleClickOpen = () => {
@@ -41,7 +41,10 @@ export default function VillagesList() {
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>Choose village!</DialogTitle>
                 <DialogContent>
-                    <VillagesMenu villagesMenu={villagesMenu} />
+                    <VillagesMenu
+                        villagesMenu={villagesMenu}
+                        handleClose={handleClose}
+                    />
                 </DialogContent>
             </Dialog>
         </Paper>
