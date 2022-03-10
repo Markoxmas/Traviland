@@ -1,5 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
+import formatNumber from '../../../lib/formatNumber'
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -27,12 +28,12 @@ export default function Warehouse({ serverConfig, field }) {
     return (
         <div className={classes.paper}>
             <Paper>
-                Currently warehouse can hold {currentMaxResources} resources at
-                level {field.level}.
+                Currently warehouse can hold {formatNumber(currentMaxResources)}{' '}
+                resources at level {field.level}.
             </Paper>
             <Paper>
                 Level {field.temporaryLevel + 1} upgrade will be able to hold{' '}
-                {nextMaxResources} resources.
+                {formatNumber(nextMaxResources)} resources.
             </Paper>
         </div>
     )
