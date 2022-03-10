@@ -14,22 +14,28 @@ const useStyles = makeStyles((theme) => ({
 export default function ResourceIncrease({ serverConfig, field }) {
     const classes = useStyles()
     const config = serverConfig[field.type.toUpperCase()]
-    const increase =
-        Math.floor(config.MAX_RES_A1 * config.MAX_RES_K ** (field.level - 1)) *
-        serverConfig.SERVER_SPEED
-    const nextMaxResources =
-        Math.floor(
-            config.MAX_RES_A1 * config.MAX_RES_K ** field.temporaryLevel
-        ) * serverConfig.SERVER_SPEED
+    const currentIncrease = Math.floor(
+        config.INCREASE[field.level] * 100 - 100 + 0.5
+    )
+    const nextIncrease = Math.floor(
+        field.temporaryLevel + 1 <= config.MAX_LEVEL
+            ? config.INCREASE[field.temporaryLevel + 1] * 100 - 100 + 0.5
+            : config.INCREASE[field.temporaryLevel] * 100 - 100 + 0.5
+    )
+    const resource = {
+        brickyard: 'clay',
+        sawmill: 'wood',
+        iron_foundry: 'iron',
+    }
     return (
         <div className={classes.paper}>
             <Paper>
-                <b>Max resources are currently {maxResources}</b>
+                This level increases {resource[field.type]} production by{' '}
+                {currentIncrease} %
             </Paper>
             <Paper>
-                {field.temporaryLevel < config.MAX_LEVEL && (
-                    <b>Next level max resources will be {nextMaxResources}</b>
-                )}
+                Next level will increase {resource[field.type]} production by{' '}
+                {nextIncrease} %
             </Paper>
         </div>
     )
