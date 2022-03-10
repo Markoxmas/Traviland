@@ -438,6 +438,7 @@
             "IRON_K": 1.1,
             "TIME_A1": 280000,
             "TIME_K": 1.8,
+            "MERCHANT": 1000,
             "MAX_LEVEL": 20
         },
         "MAIN_BUILDING": {

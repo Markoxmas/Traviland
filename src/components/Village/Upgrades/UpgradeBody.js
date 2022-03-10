@@ -7,6 +7,7 @@ import MainBuilding from '../../Buildings/MainBuilding'
 import ResourceIncrease from '../../Buildings/Resources/ResourceIncrease'
 import RallyPoint from '../../Buildings/Units/RallyPoint'
 import Palace from '../../Buildings/Palace'
+import Marketplace from '../../Buildings/Resources/Marketplace'
 
 export default function UpgradeBody({ serverConfig, village, field }) {
     const propsToPass = {
@@ -33,6 +34,7 @@ export default function UpgradeBody({ serverConfig, village, field }) {
             )}
             {field.type === 'rally_point' && <RallyPoint {...propsToPass} />}
             {field.type === 'palace' && <Palace {...propsToPass} />}
+            {field.type === 'marketplace' && <Marketplace {...propsToPass} />}
             {field.type === 'main_building' && (
                 <MainBuilding {...propsToPass} />
             )}
