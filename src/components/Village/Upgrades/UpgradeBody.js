@@ -5,6 +5,7 @@ import UnitMaker from '../../Buildings/Units/UnitMaker'
 import UnitUpgrader from '../../Buildings/Units/UnitUpgrader'
 import MainBuilding from '../../Buildings/MainBuilding'
 import ResourceIncrease from '../../Buildings/Resources/ResourceIncrease'
+import RallyPoint from '../../Buildings/Units/RallyPoint'
 
 export default function UpgradeBody({ serverConfig, village, field }) {
     const propsToPass = {
@@ -29,6 +30,7 @@ export default function UpgradeBody({ serverConfig, village, field }) {
             {(field.type === 'blacksmith' || field.type === 'armoury') && (
                 <UnitUpgrader {...propsToPass} />
             )}
+            {field.type === 'rally_point' && <RallyPoint {...propsToPass} />}
             {field.type === 'main_building' && (
                 <MainBuilding {...propsToPass} />
             )}
