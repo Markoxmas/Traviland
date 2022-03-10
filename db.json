@@ -1,503 +1,511 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "villageIds": [
-        1,
-        2
-      ]
-    }
-  ],
-  "villages": [
-    {
-      "id": 1,
-      "name": "Village 1",
-      "maxResources": {
-        "clay": 100000,
-        "wood": 100000,
-        "iron": 100000
-      },
-      "production": {
-        "clay": 20000,
-        "wood": 20000,
-        "iron": 20000
-      },
-      "checkpoint": {
-        "clay": 30000,
-        "wood": 30000,
-        "iron": 30000,
-        "time": 1645105458605
-      },
-      "army": {
-        "dogs": 10000,
-        "cats": 10,
-        "lizards": 42353,
-        "pidgeons": 635,
-        "horses": 5345345,
-        "catapults": 432424234,
-        "aligators": 432
-      },
-      "fields": [
+    "users": [
         {
-          "id": 1,
-          "level": 1,
-          "temporaryLevel": 1,
-          "name": "Clay",
-          "type": "clay",
-          "color": "rgba(255, 0, 0, 0.7)"
-        },
-        {
-          "id": 2,
-          "level": 1,
-          "temporaryLevel": 1,
-          "name": "Clay",
-          "type": "clay",
-          "color": "rgba(255, 0, 0, 0.7)"
-        },
-        {
-          "id": 3,
-          "level": 1,
-          "temporaryLevel": 1,
-          "name": "Clay",
-          "type": "clay",
-          "color": "rgba(255, 0, 0, 0.7)"
-        },
-        {
-          "id": 4,
-          "level": 1,
-          "temporaryLevel": 1,
-          "name": "Clay",
-          "type": "clay",
-          "color": "rgba(255, 0, 0, 0.7)"
-        },
-        {
-          "id": 6,
-          "level": 1,
-          "temporaryLevel": 1,
-          "name": "Wood",
-          "type": "wood",
-          "color": "rgba(0, 255, 0, 0.7)"
-        },
-        {
-          "id": 7,
-          "level": 1,
-          "temporaryLevel": 1,
-          "name": "Wood",
-          "type": "wood",
-          "color": "rgba(0, 255, 0, 0.7)"
-        },
-        {
-          "id": 8,
-          "level": 1,
-          "temporaryLevel": 1,
-          "name": "Wood",
-          "type": "wood",
-          "color": "rgba(0, 255, 0, 0.7)"
-        },
-        {
-          "id": 9,
-          "level": 1,
-          "temporaryLevel": 1,
-          "name": "Wood",
-          "type": "wood",
-          "color": "rgba(0, 255, 0, 0.7)"
-        },
-        {
-          "id": 11,
-          "level": 1,
-          "temporaryLevel": 1,
-          "name": "Iron",
-          "type": "iron",
-          "color": "rgba(0, 0, 255, 0.7)"
-        },
-        {
-          "id": 12,
-          "level": 1,
-          "temporaryLevel": 1,
-          "name": "Iron",
-          "type": "iron",
-          "color": "rgba(0, 0, 255, 0.7)"
-        },
-        {
-          "id": 13,
-          "level": 1,
-          "temporaryLevel": 1,
-          "name": "Iron",
-          "type": "iron",
-          "color": "rgba(0, 0, 255, 0.7)"
-        },
-        {
-          "id": 14,
-          "level": 1,
-          "temporaryLevel": 1,
-          "name": "Iron",
-          "type": "iron",
-          "color": "rgba(0, 0, 255, 0.7)"
-        },
-        {
-          "id": 16,
-          "level": 1,
-          "temporaryLevel": 1,
-          "type": "warehouse",
-          "name": "Warehouse",
-          "color": "rgba(165, 42, 42, 0.7)"
-        },
-        {
-          "id": 17,
-          "level": 1,
-          "temporaryLevel": 1,
-          "type": "brickyard",
-          "name": "Brickyard",
-          "color": "rgba(165, 42, 42, 0.7)"
-        },
-        {
-          "id": 18,
-          "level": 1,
-          "temporaryLevel": 1,
-          "type": "iron_foundry",
-          "name": "Iron foundry",
-          "color": "rgba(165, 42, 42, 0.7)"
-        },
-        {
-          "id": 19,
-          "level": 1,
-          "temporaryLevel": 1,
-          "type": "sawmill",
-          "name": "Sawmill",
-          "color": "rgba(165, 42, 42, 0.7)"
-        },
-        {
-          "id": 20,
-          "level": 1,
-          "temporaryLevel": 1,
-          "type": "barracks",
-          "name": "Barracks",
-          "color": "rgba(165, 42, 42, 0.7)"
-        },
-        {
-          "id": 21,
-          "level": 1,
-          "temporaryLevel": 1,
-          "type": "stable",
-          "name": "Stable",
-          "color": "rgba(165, 42, 42, 0.7)"
-        },
-        {
-          "id": 22,
-          "level": 1,
-          "temporaryLevel": 1,
-          "type": "blacksmith",
-          "name": "Blacksmith",
-          "color": "rgba(165, 42, 42, 0.7)"
-        },
-        {
-          "id": 23,
-          "level": 1,
-          "temporaryLevel": 1,
-          "type": "armoury",
-          "name": "Armoury",
-          "color": "rgba(165, 42, 42, 0.7)"
-        },
-        {
-          "id": 24,
-          "level": 1,
-          "temporaryLevel": 1,
-          "type": "rally_point",
-          "name": "Rally point",
-          "color": "rgba(165, 42, 42, 0.7)"
-        },
-        {
-          "id": 25,
-          "level": 1,
-          "temporaryLevel": 1,
-          "type": "palace",
-          "name": "Palace",
-          "color": "rgba(165, 42, 42, 0.7)"
-        },
-        {
-          "id": 26,
-          "level": 1,
-          "temporaryLevel": 1,
-          "type": "marketplace",
-          "name": "Marketplace",
-          "color": "rgba(165, 42, 42, 0.7)"
-        },
-        {
-          "id": 27,
-          "level": 1,
-          "temporaryLevel": 1,
-          "type": "main_building",
-          "name": "Main building",
-          "color": "rgba(165, 42, 42, 0.7)"
-        },
-        {
-          "id": 28,
-          "level": 1,
-          "temporaryLevel": 1,
-          "type": "wonder_of_the_world",
-          "name": "Wonder of the world",
-          "color": "rgba(165, 42, 42, 0.7)"
+            "id": 1,
+            "villageIds": [1, 2]
         }
-      ],
-      "timers": []
+    ],
+    "villages": [
+        {
+            "id": 1,
+            "name": "Village 1",
+            "maxResources": {
+                "clay": 100000,
+                "wood": 100000,
+                "iron": 100000
+            },
+            "production": {
+                "clay": 20000,
+                "wood": 20000,
+                "iron": 20000
+            },
+            "checkpoint": {
+                "clay": 30000,
+                "wood": 30000,
+                "iron": 30000,
+                "time": 1646900600809
+            },
+            "army": {
+                "dogs": 10000,
+                "cats": 10,
+                "lizards": 42353,
+                "pidgeons": 635,
+                "horses": 5345345,
+                "catapults": 432424234,
+                "aligators": 432
+            },
+            "units": {
+                "dog": {
+                    "attack": 1,
+                    "defense": 2
+                },
+                "cat": {
+                    "attack": 3,
+                    "defense": 4
+                },
+                "lizard": {
+                    "attack": 5,
+                    "defense": 6
+                },
+                "pidgeon": {
+                    "attack": 7,
+                    "defense": 8
+                },
+                "horse": {
+                    "attack": 9,
+                    "defense": 10
+                },
+                "catapult": {
+                    "attack": 11,
+                    "defense": 12
+                },
+                "aligator": {
+                    "attack": 13,
+                    "defense": 14
+                }
+            },
+            "fields": [
+                {
+                    "id": 1,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "name": "Clay",
+                    "type": "clay",
+                    "color": "rgba(255, 0, 0, 0.7)"
+                },
+                {
+                    "id": 2,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "name": "Clay",
+                    "type": "clay",
+                    "color": "rgba(255, 0, 0, 0.7)"
+                },
+                {
+                    "id": 3,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "name": "Clay",
+                    "type": "clay",
+                    "color": "rgba(255, 0, 0, 0.7)"
+                },
+                {
+                    "id": 4,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "name": "Clay",
+                    "type": "clay",
+                    "color": "rgba(255, 0, 0, 0.7)"
+                },
+                {
+                    "id": 6,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "name": "Wood",
+                    "type": "wood",
+                    "color": "rgba(0, 255, 0, 0.7)"
+                },
+                {
+                    "id": 7,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "name": "Wood",
+                    "type": "wood",
+                    "color": "rgba(0, 255, 0, 0.7)"
+                },
+                {
+                    "id": 8,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "name": "Wood",
+                    "type": "wood",
+                    "color": "rgba(0, 255, 0, 0.7)"
+                },
+                {
+                    "id": 9,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "name": "Wood",
+                    "type": "wood",
+                    "color": "rgba(0, 255, 0, 0.7)"
+                },
+                {
+                    "id": 11,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "name": "Iron",
+                    "type": "iron",
+                    "color": "rgba(0, 0, 255, 0.7)"
+                },
+                {
+                    "id": 12,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "name": "Iron",
+                    "type": "iron",
+                    "color": "rgba(0, 0, 255, 0.7)"
+                },
+                {
+                    "id": 13,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "name": "Iron",
+                    "type": "iron",
+                    "color": "rgba(0, 0, 255, 0.7)"
+                },
+                {
+                    "id": 14,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "name": "Iron",
+                    "type": "iron",
+                    "color": "rgba(0, 0, 255, 0.7)"
+                },
+                {
+                    "id": 16,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "type": "warehouse",
+                    "name": "Warehouse",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 17,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "type": "brickyard",
+                    "name": "Brickyard",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 18,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "type": "iron_foundry",
+                    "name": "Iron foundry",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 19,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "type": "sawmill",
+                    "name": "Sawmill",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 20,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "type": "barracks",
+                    "name": "Barracks",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 21,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "type": "stable",
+                    "name": "Stable",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 22,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "type": "blacksmith",
+                    "name": "Blacksmith",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 23,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "type": "armoury",
+                    "name": "Armoury",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 24,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "type": "rally_point",
+                    "name": "Rally point",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 25,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "type": "palace",
+                    "name": "Palace",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 26,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "type": "marketplace",
+                    "name": "Marketplace",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 27,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "type": "main_building",
+                    "name": "Main building",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                },
+                {
+                    "id": 28,
+                    "level": 1,
+                    "temporaryLevel": 1,
+                    "type": "wonder_of_the_world",
+                    "name": "Wonder of the world",
+                    "color": "rgba(165, 42, 42, 0.7)"
+                }
+            ],
+            "timers": []
+        }
+    ],
+    "serverConfig": {
+        "SERVER_SPEED": 100,
+        "WOOD": {
+            "WOOD_A1": 40,
+            "WOOD_K": 1.6,
+            "CLAY_A1": 100,
+            "CLAY_K": 1.6,
+            "IRON_A1": 50,
+            "IRON_K": 1.6,
+            "PROD_WOOD_A1": 5,
+            "PROD_WOOD_K": 1.5,
+            "TIME_A1": 260000,
+            "TIME_K": 1.8,
+            "MAX_LEVEL": 10
+        },
+        "CLAY": {
+            "WOOD_A1": 50,
+            "WOOD_K": 1.6,
+            "CLAY_A1": 40,
+            "CLAY_K": 1.6,
+            "IRON_A1": 100,
+            "IRON_K": 1.6,
+            "PROD_CLAY_A1": 5,
+            "PROD_CLAY_K": 1.5,
+            "TIME_A1": 270000,
+            "TIME_K": 1.8,
+            "MAX_LEVEL": 10
+        },
+        "IRON": {
+            "WOOD_A1": 50,
+            "WOOD_K": 1.6,
+            "CLAY_A1": 100,
+            "CLAY_K": 1.6,
+            "IRON_A1": 40,
+            "IRON_K": 1.6,
+            "PROD_IRON_A1": 5,
+            "PROD_IRON_K": 1.5,
+            "TIME_A1": 280000,
+            "TIME_K": 1.8,
+            "MAX_LEVEL": 10
+        },
+        "WAREHOUSE": {
+            "WOOD_A1": 100,
+            "WOOD_K": 1.05,
+            "CLAY_A1": 100,
+            "CLAY_K": 1.07,
+            "IRON_A1": 120,
+            "IRON_K": 1.1,
+            "TIME_A1": 280000,
+            "TIME_K": 1.8,
+            "MAX_RES_A1": 1500,
+            "MAX_RES_K": 1.1,
+            "MAX_LEVEL": 20
+        },
+        "BRICKYARD": {
+            "WOOD_A1": 100,
+            "WOOD_K": 1.05,
+            "CLAY_A1": 100,
+            "CLAY_K": 1.07,
+            "IRON_A1": 120,
+            "IRON_K": 1.1,
+            "TIME_A1": 280000,
+            "TIME_K": 1.8,
+            "INCREASE": [1, 1.05, 1.1, 1.15, 1.2, 1.25],
+            "MAX_LEVEL": 5
+        },
+        "IRON_FOUNDRY": {
+            "WOOD_A1": 100,
+            "WOOD_K": 1.05,
+            "CLAY_A1": 100,
+            "CLAY_K": 1.07,
+            "IRON_A1": 120,
+            "IRON_K": 1.1,
+            "TIME_A1": 280000,
+            "TIME_K": 1.8,
+            "INCREASE": [1, 1.05, 1.1, 1.15, 1.2, 1.25],
+            "MAX_LEVEL": 5
+        },
+        "SAWMILL": {
+            "WOOD_A1": 100,
+            "WOOD_K": 1.05,
+            "CLAY_A1": 100,
+            "CLAY_K": 1.07,
+            "IRON_A1": 120,
+            "IRON_K": 1.1,
+            "TIME_A1": 280000,
+            "TIME_K": 1.8,
+            "INCREASE": [1, 1.05, 1.1, 1.15, 1.2, 1.25],
+            "MAX_LEVEL": 5
+        },
+        "BARRACKS": {
+            "WOOD_A1": 100,
+            "WOOD_K": 1.05,
+            "CLAY_A1": 100,
+            "CLAY_K": 1.07,
+            "IRON_A1": 120,
+            "IRON_K": 1.1,
+            "TIME_A1": 280000,
+            "TIME_K": 1.8,
+            "DECREASE": 0.03,
+            "MAX_LEVEL": 20
+        },
+        "STABLE": {
+            "WOOD_A1": 100,
+            "WOOD_K": 1.05,
+            "CLAY_A1": 100,
+            "CLAY_K": 1.07,
+            "IRON_A1": 120,
+            "IRON_K": 1.1,
+            "TIME_A1": 280000,
+            "TIME_K": 1.8,
+            "DECREASE": 0.03,
+            "MAX_LEVEL": 20
+        },
+        "BLACKSMITH": {
+            "WOOD_A1": 100,
+            "WOOD_K": 1.05,
+            "CLAY_A1": 100,
+            "CLAY_K": 1.07,
+            "IRON_A1": 120,
+            "IRON_K": 1.1,
+            "TIME_A1": 280000,
+            "TIME_K": 1.8,
+            "MAX_LEVEL": 20
+        },
+        "ARMOURY": {
+            "WOOD_A1": 100,
+            "WOOD_K": 1.05,
+            "CLAY_A1": 100,
+            "CLAY_K": 1.07,
+            "IRON_A1": 120,
+            "IRON_K": 1.1,
+            "TIME_A1": 280000,
+            "TIME_K": 1.8,
+            "MAX_LEVEL": 20
+        },
+        "RALLY_POINT": {
+            "WOOD_A1": 100,
+            "WOOD_K": 1.05,
+            "CLAY_A1": 100,
+            "CLAY_K": 1.07,
+            "IRON_A1": 120,
+            "IRON_K": 1.1,
+            "TIME_A1": 280000,
+            "TIME_K": 1.8,
+            "DECREASE": 0.03,
+            "MAX_LEVEL": 20
+        },
+        "PALACE": {
+            "WOOD_A1": 100,
+            "WOOD_K": 1.05,
+            "CLAY_A1": 100,
+            "CLAY_K": 1.07,
+            "IRON_A1": 120,
+            "IRON_K": 1.1,
+            "TIME_A1": 280000,
+            "TIME_K": 1.8,
+            "EXPANSION": [1, 10, 15, 20],
+            "MAX_LEVEL": 20
+        },
+        "MARKETPLACE": {
+            "WOOD_A1": 100,
+            "WOOD_K": 1.05,
+            "CLAY_A1": 100,
+            "CLAY_K": 1.07,
+            "IRON_A1": 120,
+            "IRON_K": 1.1,
+            "TIME_A1": 280000,
+            "TIME_K": 1.8,
+            "MAX_LEVEL": 20
+        },
+        "MAIN_BUILDING": {
+            "WOOD_A1": 100,
+            "WOOD_K": 1.05,
+            "CLAY_A1": 100,
+            "CLAY_K": 1.07,
+            "IRON_A1": 120,
+            "IRON_K": 1.1,
+            "TIME_A1": 280000,
+            "TIME_K": 1.8,
+            "DECREASE": 0.03,
+            "MAX_LEVEL": 20
+        },
+        "WONDER_OF_THE_WORLD": {
+            "WOOD_A1": 100,
+            "WOOD_K": 1.05,
+            "CLAY_A1": 100,
+            "CLAY_K": 1.07,
+            "IRON_A1": 120,
+            "IRON_K": 1.1,
+            "TIME_A1": 280000,
+            "TIME_K": 1.8,
+            "MAX_LEVEL": 100
+        },
+        "UNITS": {
+            "DOG": {
+                "CLAY": 100,
+                "IRON": 100,
+                "WOOD": 100,
+                "TIME": 100000
+            },
+            "CAT": {
+                "CLAY": 101,
+                "IRON": 101,
+                "WOOD": 101,
+                "TIME": 10000
+            },
+            "LIZARD": {
+                "CLAY": 102,
+                "IRON": 102,
+                "WOOD": 102,
+                "TIME": 20000
+            },
+            "PIDGEON": {
+                "CLAY": 103,
+                "IRON": 103,
+                "WOOD": 103,
+                "TIME": 30000
+            },
+            "HORSE": {
+                "CLAY": 104,
+                "IRON": 104,
+                "WOOD": 104,
+                "TIME": 40000
+            },
+            "CATAPULT": {
+                "CLAY": 105,
+                "IRON": 105,
+                "WOOD": 105,
+                "TIME": 50000
+            },
+            "ALIGATOR": {
+                "CLAY": 106,
+                "IRON": 106,
+                "WOOD": 106,
+                "TIME": 60000
+            }
+        }
     }
-  ],
-  "serverConfig": {
-    "SERVER_SPEED": 100,
-    "WOOD": {
-      "WOOD_A1": 40,
-      "WOOD_K": 1.6,
-      "CLAY_A1": 100,
-      "CLAY_K": 1.6,
-      "IRON_A1": 50,
-      "IRON_K": 1.6,
-      "PROD_WOOD_A1": 5,
-      "PROD_WOOD_K": 1.5,
-      "TIME_A1": 260000,
-      "TIME_K": 1.8,
-      "MAX_LEVEL": 10
-    },
-    "CLAY": {
-      "WOOD_A1": 50,
-      "WOOD_K": 1.6,
-      "CLAY_A1": 40,
-      "CLAY_K": 1.6,
-      "IRON_A1": 100,
-      "IRON_K": 1.6,
-      "PROD_CLAY_A1": 5,
-      "PROD_CLAY_K": 1.5,
-      "TIME_A1": 270000,
-      "TIME_K": 1.8,
-      "MAX_LEVEL": 10
-    },
-    "IRON": {
-      "WOOD_A1": 50,
-      "WOOD_K": 1.6,
-      "CLAY_A1": 100,
-      "CLAY_K": 1.6,
-      "IRON_A1": 40,
-      "IRON_K": 1.6,
-      "PROD_IRON_A1": 5,
-      "PROD_IRON_K": 1.5,
-      "TIME_A1": 280000,
-      "TIME_K": 1.8,
-      "MAX_LEVEL": 10
-    },
-    "WAREHOUSE": {
-      "WOOD_A1": 100,
-      "WOOD_K": 1.05,
-      "CLAY_A1": 100,
-      "CLAY_K": 1.07,
-      "IRON_A1": 120,
-      "IRON_K": 1.1,
-      "TIME_A1": 280000,
-      "TIME_K": 1.8,
-      "MAX_RES_A1": 1500,
-      "MAX_RES_K": 1.1,
-      "MAX_LEVEL": 20
-    },
-    "BRICKYARD": {
-      "WOOD_A1": 100,
-      "WOOD_K": 1.05,
-      "CLAY_A1": 100,
-      "CLAY_K": 1.07,
-      "IRON_A1": 120,
-      "IRON_K": 1.1,
-      "TIME_A1": 280000,
-      "TIME_K": 1.8,
-      "INCREASE": [
-        1,
-        1.05,
-        1.1,
-        1.15,
-        1.2,
-        1.25
-      ],
-      "MAX_LEVEL": 5
-    },
-    "IRON_FOUNDRY": {
-      "WOOD_A1": 100,
-      "WOOD_K": 1.05,
-      "CLAY_A1": 100,
-      "CLAY_K": 1.07,
-      "IRON_A1": 120,
-      "IRON_K": 1.1,
-      "TIME_A1": 280000,
-      "TIME_K": 1.8,
-      "INCREASE": [
-        1,
-        1.05,
-        1.1,
-        1.15,
-        1.2,
-        1.25
-      ],
-      "MAX_LEVEL": 5
-    },
-    "SAWMILL": {
-      "WOOD_A1": 100,
-      "WOOD_K": 1.05,
-      "CLAY_A1": 100,
-      "CLAY_K": 1.07,
-      "IRON_A1": 120,
-      "IRON_K": 1.1,
-      "TIME_A1": 280000,
-      "TIME_K": 1.8,
-      "INCREASE": [
-        1,
-        1.05,
-        1.1,
-        1.15,
-        1.2,
-        1.25
-      ],
-      "MAX_LEVEL": 5
-    },
-    "BARRACKS": {
-      "WOOD_A1": 100,
-      "WOOD_K": 1.05,
-      "CLAY_A1": 100,
-      "CLAY_K": 1.07,
-      "IRON_A1": 120,
-      "IRON_K": 1.1,
-      "TIME_A1": 280000,
-      "TIME_K": 1.8,
-      "DECREASE": 0.03,
-      "MAX_LEVEL": 20
-    },
-    "STABLE": {
-      "WOOD_A1": 100,
-      "WOOD_K": 1.05,
-      "CLAY_A1": 100,
-      "CLAY_K": 1.07,
-      "IRON_A1": 120,
-      "IRON_K": 1.1,
-      "TIME_A1": 280000,
-      "TIME_K": 1.8,
-      "DECREASE": 0.03,
-      "MAX_LEVEL": 20
-    },
-    "BLACKSMITH": {
-      "WOOD_A1": 100,
-      "WOOD_K": 1.05,
-      "CLAY_A1": 100,
-      "CLAY_K": 1.07,
-      "IRON_A1": 120,
-      "IRON_K": 1.1,
-      "TIME_A1": 280000,
-      "TIME_K": 1.8,
-      "MAX_LEVEL": 20
-    },
-    "ARMOURY": {
-      "WOOD_A1": 100,
-      "WOOD_K": 1.05,
-      "CLAY_A1": 100,
-      "CLAY_K": 1.07,
-      "IRON_A1": 120,
-      "IRON_K": 1.1,
-      "TIME_A1": 280000,
-      "TIME_K": 1.8,
-      "MAX_LEVEL": 20
-    },
-    "RALLY_POINT": {
-      "WOOD_A1": 100,
-      "WOOD_K": 1.05,
-      "CLAY_A1": 100,
-      "CLAY_K": 1.07,
-      "IRON_A1": 120,
-      "IRON_K": 1.1,
-      "TIME_A1": 280000,
-      "TIME_K": 1.8,
-      "MAX_LEVEL": 20
-    },
-    "PALACE": {
-      "WOOD_A1": 100,
-      "WOOD_K": 1.05,
-      "CLAY_A1": 100,
-      "CLAY_K": 1.07,
-      "IRON_A1": 120,
-      "IRON_K": 1.1,
-      "TIME_A1": 280000,
-      "TIME_K": 1.8,
-      "MAX_LEVEL": 20
-    },
-    "MARKETPLACE": {
-      "WOOD_A1": 100,
-      "WOOD_K": 1.05,
-      "CLAY_A1": 100,
-      "CLAY_K": 1.07,
-      "IRON_A1": 120,
-      "IRON_K": 1.1,
-      "TIME_A1": 280000,
-      "TIME_K": 1.8,
-      "MAX_LEVEL": 20
-    },
-    "MAIN_BUILDING": {
-      "WOOD_A1": 100,
-      "WOOD_K": 1.05,
-      "CLAY_A1": 100,
-      "CLAY_K": 1.07,
-      "IRON_A1": 120,
-      "IRON_K": 1.1,
-      "TIME_A1": 280000,
-      "TIME_K": 1.8,
-      "DECREASE": 0.03,
-      "MAX_LEVEL": 20
-    },
-    "WONDER_OF_THE_WORLD": {
-      "WOOD_A1": 100,
-      "WOOD_K": 1.05,
-      "CLAY_A1": 100,
-      "CLAY_K": 1.07,
-      "IRON_A1": 120,
-      "IRON_K": 1.1,
-      "TIME_A1": 280000,
-      "TIME_K": 1.8,
-      "MAX_LEVEL": 100
-    },
-    "UNITS": {
-      "DOG": {
-        "CLAY": 100,
-        "IRON": 100,
-        "WOOD": 100,
-        "TIME": 100000
-      },
-      "CAT": {
-        "CLAY": 101,
-        "IRON": 101,
-        "WOOD": 101,
-        "TIME": 10000
-      },
-      "LIZARD": {
-        "CLAY": 102,
-        "IRON": 102,
-        "WOOD": 102,
-        "TIME": 20000
-      },
-      "PIDGEON": {
-        "CLAY": 103,
-        "IRON": 103,
-        "WOOD": 103,
-        "TIME": 30000
-      },
-      "HORSE": {
-        "CLAY": 104,
-        "IRON": 104,
-        "WOOD": 104,
-        "TIME": 40000
-      },
-      "CATAPULT": {
-        "CLAY": 105,
-        "IRON": 105,
-        "WOOD": 105,
-        "TIME": 50000
-      },
-      "ALIGATOR": {
-        "CLAY": 106,
-        "IRON": 106,
-        "WOOD": 106,
-        "TIME": 60000
-      }
-    }
-  }
 }
