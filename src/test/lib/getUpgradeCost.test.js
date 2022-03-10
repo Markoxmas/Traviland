@@ -3,6 +3,15 @@ import getUpgradeCost from '../../lib/getUpgradeCost'
 describe('Tests for lib function getUpgradeCost', () => {
     it('should correctly return cost for fields', () => {
         //Arrange
+        const village = {
+            fields: [
+                {
+                    type: 'main_building',
+                    temporaryLevel: 2,
+                },
+            ],
+        }
+
         const serverConfig = {
             SERVER_SPEED: 1,
             CLAY: {
@@ -15,6 +24,9 @@ describe('Tests for lib function getUpgradeCost', () => {
                 TIME_A1: 10000,
                 TIME_K: 1.2,
             },
+            MAIN_BUILDING: {
+                DECREASE: 0.03,
+            },
         }
         const field = {
             type: 'clay',
@@ -25,10 +37,10 @@ describe('Tests for lib function getUpgradeCost', () => {
             clay: 121,
             wood: 175,
             iron: 262,
-            time: 20736,
+            time: 19491,
         }
         //Act
-        const result = getUpgradeCost(serverConfig, field)
+        const result = getUpgradeCost(village, serverConfig, field)
         //Assert
         expect(result).toStrictEqual(expectedResult)
     })
