@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button'
 import axios from 'axios'
 import getBasicVillage from '../getBasicVillage'
 import mockLoad from '../mockLoad'
+import mockConfig from '../mockConfig'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -22,20 +23,25 @@ export default function OutlinedButtons() {
         const id = 1
         const village = getBasicVillage(id, 'Village 1')
         axios
-            .delete(`http://localhost:4000/villages/${id}`)
+            .put(`http://localhost:4000/serverConfig`, mockConfig)
             .then((response) => {
                 axios
-                    .post(`http://localhost:4000/villages/`, village)
+                    .delete(`http://localhost:4000/villages/${id}`)
                     .then((response) => {
-                        dispatch(
-                            mockLoad(
-                                {
-                                    id: 1,
-                                    villageIds: [1],
-                                },
-                                dispatch
-                            )
-                        )
+                        axios
+                            .post(`http://localhost:4000/villages/`, village)
+                            .then((response) => {
+                                dispatch(
+                                    mockLoad(
+                                        {
+                                            id: 1,
+                                            villageIds: [1],
+                                        },
+                                        dispatch
+                                    )
+                                )
+                            })
+                            .catch((error) => console.log(error))
                     })
                     .catch((error) => console.log(error))
             })

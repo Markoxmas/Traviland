@@ -22,6 +22,7 @@
     },
     "scripts": {
         "start": "react-scripts start",
+        "startUp": "concurrently \"npm:start\" \"json-server --watch db.json --port 4000\"",
         "build": "react-scripts build",
         "eject": "react-scripts eject",
         "test": "jest",
