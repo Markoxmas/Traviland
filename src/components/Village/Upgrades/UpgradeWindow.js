@@ -19,6 +19,12 @@ export default function UpgradeWindow({ open, closeWindow, field, village }) {
     const [cost, setCost] = useState(null)
     const [timeToUpgrade, setTimeToUpgrade] = useState(null)
     const [canBeUpgraded, setCanBeUpgraded] = useState(null)
+    const upgrade = {
+        type: 'field',
+        level: field.temporaryLevel + 1,
+        villageId: village.id,
+        fieldId: field.id,
+    }
 
     useEffect(() => {
         if (field.id) {
@@ -59,15 +65,7 @@ export default function UpgradeWindow({ open, closeWindow, field, village }) {
                         Cancel
                     </Button>
                     <Button
-                        onClick={() =>
-                            handleUpgrade(
-                                village.id,
-                                {
-                                    id: field.id,
-                                },
-                                serverConfig
-                            )
-                        }
+                        onClick={() => handleUpgrade(upgrade)}
                         disabled={!canBeUpgraded}
                         color="primary"
                     >

@@ -2,7 +2,7 @@ import getLastTimer from './getLastTimer'
 import uuid from 'react-uuid'
 
 /** newTimerData properties:
- * type (village, army, armyUpgrade, marketplace, palace),
+ * type (field, army, armyUpgrade, marketplace, palace),
  * length, villageId, fieldId
  * */
 export default function addTimer(timers, newTimerData) {
