@@ -38,6 +38,13 @@ export default function mockRequestUpgrade(upgrade, dispatch) {
                 }
                 village.timers = addTimer(village.timers, newTimerData)
 
+                //increment temporary level
+                village.fields = village.fields.map((field) =>
+                    field.id === upgrade.fieldId
+                        ? { ...field, temporaryLevel: field.temporaryLevel + 1 }
+                        : field
+                )
+
                 //upgrade village
                 axios
                     .put(

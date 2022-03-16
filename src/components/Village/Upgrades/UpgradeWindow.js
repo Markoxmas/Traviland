@@ -39,8 +39,8 @@ export default function UpgradeWindow({ open, closeWindow, field, village }) {
         }
     }, [village.id, field.id])
 
-    const handleUpgrade = (village, upgrade, serverConfig) => {
-        dispatch(onUpgradeRequested(village, upgrade, serverConfig))
+    const handleUpgrade = (upgrade) => {
+        dispatch(onUpgradeRequested(upgrade))
         closeWindow()
     }
 
