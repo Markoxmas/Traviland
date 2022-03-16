@@ -33,7 +33,8 @@ export default function mockRequestUpgrade(upgrade, dispatch) {
                     type: upgrade.type,
                     length: cost.time,
                     villageId: upgrade.villageId,
-                    fieldId: upgrade.fieldId,
+                    field: field,
+                    level: upgrade.level,
                 }
                 village.timers = addTimer(village.timers, newTimerData)
 

@@ -8,20 +8,27 @@ describe('Tests for timer functions in mock-backend (adding, deleting)', () => {
         const timers = []
         /** newTimerData properties:
          * type (village, army, armyUpgrade, marketplace, palace),
-         * length, villageId, fieldId
+         * length, villageId, field
          * */
         const newTimerData = {
             type: 'village',
             length: 10000,
             villageId: 1,
-            fieldId: 2,
+            field: {
+                id: 9,
+                level: 1,
+                temporaryLevel: 1,
+                name: 'Wood',
+                type: 'wood',
+                color: 'rgba(0, 255, 0, 0.7)',
+            },
         }
         const expectedResult = {
             type: newTimerData.type,
             displayLength: newTimerData.length,
             length: newTimerData.length,
             villageId: newTimerData.villageId,
-            fieldId: newTimerData.fieldId,
+            field: newTimerData.field,
         }
         //Act
         const result = addTimer(timers, newTimerData)
@@ -33,7 +40,7 @@ describe('Tests for timer functions in mock-backend (adding, deleting)', () => {
         expect(firstTimer.displayLength).toEqual(expectedResult.displayLength)
         expect(firstTimer.length).toEqual(firstTimer.displayLength)
         expect(firstTimer.villageId).toEqual(expectedResult.villageId)
-        expect(firstTimer.fieldId).toEqual(expectedResult.fieldId)
+        expect(firstTimer.field.id).toEqual(expectedResult.field.id)
     })
 
     it('should correctly add second timer', () => {
@@ -46,14 +53,28 @@ describe('Tests for timer functions in mock-backend (adding, deleting)', () => {
                 displayLength: 10000,
                 length: 10000,
                 villageId: 1,
-                fieldId: 2,
+                field: {
+                    id: 9,
+                    level: 1,
+                    temporaryLevel: 1,
+                    name: 'Wood',
+                    type: 'wood',
+                    color: 'rgba(0, 255, 0, 0.7)',
+                },
             },
         ]
         const newTimerData = {
             type: 'village',
             length: 10000,
             villageId: 1,
-            fieldId: 3,
+            field: {
+                id: 9,
+                level: 1,
+                temporaryLevel: 1,
+                name: 'Wood',
+                type: 'wood',
+                color: 'rgba(0, 255, 0, 0.7)',
+            },
         }
         //For 2nd item
         const expectedResult = {
@@ -61,7 +82,7 @@ describe('Tests for timer functions in mock-backend (adding, deleting)', () => {
             displayLength: timers[0].length + newTimerData.length,
             length: newTimerData.length,
             villageId: newTimerData.villageId,
-            fieldId: newTimerData.fieldId,
+            field: newTimerData.field,
         }
         //Act
         const result = addTimer(timers, newTimerData)
@@ -73,7 +94,7 @@ describe('Tests for timer functions in mock-backend (adding, deleting)', () => {
         expect(secondItem.displayLength).toEqual(expectedResult.displayLength)
         expect(secondItem.length).toEqual(expectedResult.length)
         expect(secondItem.villageId).toEqual(expectedResult.villageId)
-        expect(secondItem.fieldId).toEqual(expectedResult.fieldId)
+        expect(secondItem.field.id).toEqual(expectedResult.field.id)
     })
 
     it('should correctly add first timer of different type', () => {
@@ -86,14 +107,28 @@ describe('Tests for timer functions in mock-backend (adding, deleting)', () => {
                 displayLength: 10000,
                 length: 10000,
                 villageId: 1,
-                fieldId: 2,
+                field: {
+                    id: 9,
+                    level: 1,
+                    temporaryLevel: 1,
+                    name: 'Wood',
+                    type: 'wood',
+                    color: 'rgba(0, 255, 0, 0.7)',
+                },
             },
         ]
         const newTimerData = {
             type: 'army',
             length: 10000,
             villageId: 1,
-            fieldId: 3,
+            field: {
+                id: 10,
+                level: 1,
+                temporaryLevel: 1,
+                name: 'Wood',
+                type: 'wood',
+                color: 'rgba(0, 255, 0, 0.7)',
+            },
         }
         // For new timer
         const expectedResult = {
@@ -101,7 +136,7 @@ describe('Tests for timer functions in mock-backend (adding, deleting)', () => {
             displayLength: newTimerData.length,
             length: newTimerData.length,
             villageId: newTimerData.villageId,
-            fieldId: newTimerData.fieldId,
+            field: newTimerData.field,
         }
         //Act
         const result = addTimer(timers, newTimerData)
@@ -114,7 +149,7 @@ describe('Tests for timer functions in mock-backend (adding, deleting)', () => {
         expect(newTimer.length).toEqual(expectedResult.length)
         expect(newTimer.displayLength).toEqual(expectedResult.displayLength)
         expect(newTimer.villageId).toEqual(expectedResult.villageId)
-        expect(newTimer.fieldId).toEqual(expectedResult.fieldId)
+        expect(newTimer.field.id).toEqual(expectedResult.field.id)
     })
 
     it('should delete the only timer', () => {
@@ -126,7 +161,14 @@ describe('Tests for timer functions in mock-backend (adding, deleting)', () => {
             displayLength: 10000,
             length: 10000,
             villageId: 1,
-            fieldId: 2,
+            field: {
+                id: 9,
+                level: 1,
+                temporaryLevel: 1,
+                name: 'Wood',
+                type: 'wood',
+                color: 'rgba(0, 255, 0, 0.7)',
+            },
         }
         const timers = [timer]
         //Act
@@ -145,7 +187,14 @@ describe('Tests for timer functions in mock-backend (adding, deleting)', () => {
             displayLength: 10000,
             length: 10000,
             villageId: 1,
-            fieldId: 1,
+            field: {
+                id: 9,
+                level: 1,
+                temporaryLevel: 1,
+                name: 'Wood',
+                type: 'wood',
+                color: 'rgba(0, 255, 0, 0.7)',
+            },
         }
         const secondTimer = {
             id: uuid(),
@@ -154,7 +203,14 @@ describe('Tests for timer functions in mock-backend (adding, deleting)', () => {
             displayLength: 20000,
             length: 10000,
             villageId: 1,
-            fieldId: 2,
+            field: {
+                id: 10,
+                level: 1,
+                temporaryLevel: 1,
+                name: 'Wood',
+                type: 'wood',
+                color: 'rgba(0, 255, 0, 0.7)',
+            },
         }
         const timers = [firstTimer, secondTimer]
         const expectedResult = [
@@ -169,7 +225,7 @@ describe('Tests for timer functions in mock-backend (adding, deleting)', () => {
         expect(result.length).toEqual(1)
         expect(result[0].displayLength).toEqual(expectedResult[0].displayLength)
         expect(result[0].length).toEqual(expectedResult[0].length)
-        expect(result[0].fieldId).toEqual(expectedResult[0].fieldId)
+        expect(result[0].field.id).toEqual(expectedResult[0].field.id)
     })
 
     it('should delete second timer from multiple types of timers', () => {
@@ -182,7 +238,14 @@ describe('Tests for timer functions in mock-backend (adding, deleting)', () => {
             displayLength: 10000,
             length: 10000,
             villageId: 1,
-            fieldId: 1,
+            field: {
+                id: 9,
+                level: 1,
+                temporaryLevel: 1,
+                name: 'Wood',
+                type: 'wood',
+                color: 'rgba(0, 255, 0, 0.7)',
+            },
         }
         const secondTimer = {
             id: uuid(),
@@ -191,7 +254,14 @@ describe('Tests for timer functions in mock-backend (adding, deleting)', () => {
             displayLength: 20000,
             length: 10000,
             villageId: 1,
-            fieldId: 2,
+            field: {
+                id: 10,
+                level: 1,
+                temporaryLevel: 1,
+                name: 'Wood',
+                type: 'wood',
+                color: 'rgba(0, 255, 0, 0.7)',
+            },
         }
         const thirdTimer = {
             id: uuid(),
@@ -200,7 +270,14 @@ describe('Tests for timer functions in mock-backend (adding, deleting)', () => {
             displayLength: 30000,
             length: 30000,
             villageId: 1,
-            fieldId: 3,
+            field: {
+                id: 11,
+                level: 1,
+                temporaryLevel: 1,
+                name: 'Wood',
+                type: 'wood',
+                color: 'rgba(0, 255, 0, 0.7)',
+            },
         }
         const timers = [firstTimer, secondTimer, thirdTimer]
         const expectedResult = [

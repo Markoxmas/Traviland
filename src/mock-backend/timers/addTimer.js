@@ -19,7 +19,8 @@ export default function addTimer(timers, newTimerData) {
             displayLength: lastTimer.length + newTimerData.length,
             length: newTimerData.length,
             villageId: newTimerData.villageId,
-            fieldId: newTimerData.fieldId,
+            field: newTimerData.field,
+            level: newTimerData.level,
         })
     } else {
         timers.push({
@@ -29,7 +30,8 @@ export default function addTimer(timers, newTimerData) {
             displayLength: newTimerData.length,
             length: newTimerData.length,
             villageId: newTimerData.villageId,
-            fieldId: newTimerData.fieldId,
+            field: newTimerData.field,
+            level: newTimerData.level,
         })
     }
     return timers

@@ -13,11 +13,11 @@ const useStyles = makeStyles({
     },
 })
 
-export default function Timer({ timer }) {
+export default function BasicTimer({ timer }) {
     const classes = useStyles()
     const dispatch = useDispatch()
     const serverConfig = useSelector((state) => state.serverConfigReducer)
-    const endTime = timer.startTime + timer.length
+    const endTime = timer.displayStartTime + timer.displayLength
     const now = new Date().getTime()
     const [time, setTime] = React.useState(
         endTime - now > 0 ? endTime - now : 0
@@ -40,7 +40,7 @@ export default function Timer({ timer }) {
         <div className={classes.paper}>
             <Paper>
                 <div>
-                    {timer.name} level {timer.upgradeLevel}
+                    {timer.field.name} to level {timer.level}
                 </div>
                 <div>{formatMsToTime(time)}</div>
             </Paper>
