@@ -43,7 +43,22 @@ export default function OutlinedButtons() {
                             })
                             .catch((error) => console.log(error))
                     })
-                    .catch((error) => console.log(error))
+                    .catch((error) => {
+                        axios
+                            .post(`http://localhost:4000/villages/`, village)
+                            .then((response) => {
+                                dispatch(
+                                    mockLoad(
+                                        {
+                                            id: 1,
+                                            villageIds: [1],
+                                        },
+                                        dispatch
+                                    )
+                                )
+                            })
+                            .catch((error) => console.log(error))
+                    })
             })
             .catch((error) => console.log(error))
     }
