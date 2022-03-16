@@ -1,22 +1,15 @@
+import getMaxResources from './getMaxResources'
+import getProduction from './getProduction'
+import serverConfig from './mockConfig'
+
 export default function getBasicVillage(id, name) {
-    const SERVER_SPEED = 1000
-    return {
+    const village = {
         id: id,
         name: name,
-        maxResources: {
-            clay: 100000,
-            wood: 100000,
-            iron: 100000,
-        },
-        production: {
-            clay: 20 * SERVER_SPEED,
-            wood: 20 * SERVER_SPEED,
-            iron: 20 * SERVER_SPEED,
-        },
         checkpoint: {
-            clay: 30000,
-            wood: 30000,
-            iron: 30000,
+            clay: 1000,
+            wood: 1000,
+            iron: 1000,
             time: new Date().getTime(),
         },
         army: {
@@ -262,4 +255,7 @@ export default function getBasicVillage(id, name) {
         ],
         timers: [],
     }
+    village.production = getProduction(village, serverConfig)
+    village.maxResources = getMaxResources(village, serverConfig)
+    return village
 }

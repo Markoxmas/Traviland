@@ -16,7 +16,7 @@ export default function addTimer(timers, newTimerData) {
             id: uuid(),
             type: newTimerData.type,
             displayStartTime: relevantTimers[0].displayStartTime,
-            displayLength: lastTimer.length + newTimerData.length,
+            displayLength: lastTimer.displayLength + newTimerData.length,
             length: newTimerData.length,
             villageId: newTimerData.villageId,
             field: newTimerData.field,

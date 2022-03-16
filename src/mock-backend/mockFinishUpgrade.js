@@ -3,6 +3,7 @@ import serverConfig from './mockConfig'
 import deleteTimer from './timers/deleteTimer'
 import updateCheckpoint from './timers/updateCheckpoint'
 import getProduction from './getProduction'
+import getMaxResources from './getMaxResources'
 import CONST from '../redux/constants'
 
 export default function mockFinishUpgrade(timer, dispatch) {
@@ -37,6 +38,8 @@ export default function mockFinishUpgrade(timer, dispatch) {
 
                 //update production
                 village.production = getProduction(village, serverConfig)
+                //update max resources
+                village.maxResources = getMaxResources(village, serverConfig)
 
                 //upgrade village
                 axios

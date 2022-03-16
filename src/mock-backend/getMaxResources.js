@@ -1,4 +1,4 @@
-export default function upgradeMaxResources(village, serverConfig) {
+export default function getMaxResources(village, serverConfig) {
     const warehouse = village.fields.find((field) => field.type === 'warehouse')
     const config = serverConfig[warehouse.type.toUpperCase()]
 

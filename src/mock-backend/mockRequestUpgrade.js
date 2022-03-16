@@ -22,9 +22,9 @@ export default function mockRequestUpgrade(upgrade, dispatch) {
 
             if (sufficientResources && validUpgrade) {
                 const checkpointData = {
-                    clay: cost.clay,
-                    wood: cost.wood,
-                    iron: cost.iron,
+                    clay: -cost.clay,
+                    wood: -cost.wood,
+                    iron: -cost.iron,
                     time: new Date().getTime(),
                 }
                 village.checkpoint = updateCheckpoint(village, checkpointData)
