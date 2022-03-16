@@ -37,7 +37,7 @@ export default function UpgradeWindow({ open, closeWindow, field, village }) {
             setTimeToUpgrade(timeToUpgrade)
             setCanBeUpgraded(canBeUpgraded)
         }
-    }, [village.id, field.id])
+    }, [village.id, field.id, field.temporaryLevel])
 
     const handleUpgrade = (upgrade) => {
         dispatch(onUpgradeRequested(upgrade))
