@@ -1,4 +1,4 @@
-export default function getProductionInfo(serverConfig, field) {
+export default function getFieldProduction(serverConfig, field) {
     const config = serverConfig[field.type.toUpperCase()]
     return {
         currentLevel: Math.floor(

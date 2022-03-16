@@ -1,6 +1,6 @@
-import getProductionInfo from '../../lib/getProductionInfo'
+import getFieldProduction from '../../lib/getFieldProduction'
 
-describe('Tests for lib function getProductionInfo', () => {
+describe('Tests for lib function getFieldProduction', () => {
     it('should correctly return current and next level production for a specific field', () => {
         //Arrange
         const serverConfig = {
@@ -19,7 +19,7 @@ describe('Tests for lib function getProductionInfo', () => {
             nextLevel: 121,
         }
         //Act
-        const result = getProductionInfo(serverConfig, field)
+        const result = getFieldProduction(serverConfig, field)
         //Assert
         expect(result).toStrictEqual(expectedResult)
     })

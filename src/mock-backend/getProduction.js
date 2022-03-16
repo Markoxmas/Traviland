@@ -1,6 +1,6 @@
-import getProductionInfo from '../lib/getProductionInfo'
+import getFieldProduction from '../lib/getFieldProduction'
 
-export default function upgradeProduction(village, serverConfig) {
+export default function getProduction(village, serverConfig) {
     const [brickyard, ironFoundry, sawmill] = [
         village.fields.find((field) => field.type === 'brickyard'),
         village.fields.find((field) => field.type === 'iron_foundry'),
@@ -14,7 +14,7 @@ export default function upgradeProduction(village, serverConfig) {
                 .reduce(
                     (production, field) =>
                         production +
-                        getProductionInfo(serverConfig, field).currentLevel,
+                        getFieldProduction(serverConfig, field).currentLevel,
                     0
                 ) * BRICKYARD.INCREASE[brickyard.level]
         ),
@@ -24,7 +24,7 @@ export default function upgradeProduction(village, serverConfig) {
                 .reduce(
                     (production, field) =>
                         production +
-                        getProductionInfo(serverConfig, field).currentLevel,
+                        getFieldProduction(serverConfig, field).currentLevel,
                     0
                 ) * IRON_FOUNDRY.INCREASE[ironFoundry.level]
         ),
@@ -34,7 +34,7 @@ export default function upgradeProduction(village, serverConfig) {
                 .reduce(
                     (production, field) =>
                         production +
-                        getProductionInfo(serverConfig, field).currentLevel,
+                        getFieldProduction(serverConfig, field).currentLevel,
                     0
                 ) * SAWMILL.INCREASE[sawmill.level]
         ),

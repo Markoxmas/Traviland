@@ -1,10 +1,10 @@
 import mockRequestUpgrade from '../../mock-backend/mockRequestUpgrade'
-import mockUpgradeEnd from '../../mock-backend/mockUpgradeEnd'
+import mockFinishUpgrade from '../../mock-backend/mockFinishUpgrade'
 
 export const onUpgradeRequested = (upgrade) => (dispatch) => {
     mockRequestUpgrade(upgrade, dispatch)
 }
 
-export const onUpgradeFinished = (timer, serverConfig) => (dispatch) => {
-    mockUpgradeEnd(timer, serverConfig, dispatch)
+export const onUpgradeFinished = (timer) => (dispatch) => {
+    mockFinishUpgrade(timer, dispatch)
 }

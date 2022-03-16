@@ -5,7 +5,7 @@ import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import DialogContent from '@material-ui/core/DialogContent'
 import DialogContentText from '@material-ui/core/DialogContentText'
-import getProductionInfo from '../../../lib/getProductionInfo'
+import getFieldProduction from '../../../lib/getFieldProduction'
 
 const useStyles = makeStyles({
     root: {
@@ -16,7 +16,7 @@ const useStyles = makeStyles({
 export default function ResourceUpgradeInfo({ field }) {
     const classes = useStyles()
     const serverConfig = useSelector((state) => state.serverConfigReducer)
-    const production = getProductionInfo(serverConfig, {
+    const production = getFieldProduction(serverConfig, {
         ...field,
         level: field.temporaryLevel,
     })

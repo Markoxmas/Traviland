@@ -28,7 +28,7 @@ export default function BasicTimer({ timer }) {
             const now = new Date().getTime()
             setTime(endTime - now > 0 ? endTime - now : 0)
             if (endTime < now) {
-                dispatch(onUpgradeFinished(timer, serverConfig))
+                dispatch(onUpgradeFinished(timer))
             }
         }, 1000)
         return () => {
