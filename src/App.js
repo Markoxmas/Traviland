@@ -6,6 +6,7 @@ import Container from '@material-ui/core/Container'
 import Menu from './components/Menu'
 import Profile from './components/Profile'
 import Villages from './components/Village/Villages'
+import Reports from './components/Reports'
 import { onLoadData } from './redux/actions/loadDataActions'
 import { onSetMenu } from './redux/actions/menuActions'
 
@@ -26,6 +27,7 @@ export default function App() {
                 {tab === 0 && !pending && <Profile />}
                 {tab === 1 && !pending && <Villages />}
                 {tab === 2 && !pending && <Villages />}
+                {tab === 3 && !pending && <Reports />}
                 <Typography component="div" />
             </Container>
         </React.Fragment>

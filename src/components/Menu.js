@@ -33,6 +33,7 @@ export default function Menu() {
                 <Tab label="Profile" />
                 <Tab label="Resources" />
                 <Tab label="Buildings" />
+                <Tab label="Reports" />
             </Tabs>
         </Paper>
     )
