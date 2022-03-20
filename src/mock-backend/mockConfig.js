@@ -157,6 +157,10 @@ const mockConfig = {
         TIME_K: 1.8,
         EXPANSION: [1, 10, 15, 20],
         MAX_LEVEL: 20,
+        COST_WOOD: 100,
+        COST_CLAY: 100,
+        COST_IRON: 100,
+        COST_TIME: 2220000,
     },
     MARKETPLACE: {
         WOOD_A1: 100,

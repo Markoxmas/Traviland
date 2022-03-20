@@ -5,6 +5,7 @@ import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
+import Cost from '../Village/Upgrades/Cost'
 
 const useStyles = makeStyles({
     root: {
@@ -26,10 +27,11 @@ const useStyles = makeStyles({
 
 export default function Palace({ serverConfig, field }) {
     const classes = useStyles()
-    const config = serverConfig.PALACE
+    const { PALACE, SERVER_SPEED } = serverConfig
+    const timeCost = Math.floor(PALACE.COST_TIME / SERVER_SPEED)
     return (
         <>
-            {config.EXPANSION.map((expansionLevel) => (
+            {PALACE.EXPANSION.map((expansionLevel) => (
                 <Card className={classes.root}>
                     <CardContent>
                         <Typography
@@ -39,6 +41,14 @@ export default function Palace({ serverConfig, field }) {
                         >
                             Create a new village at level {expansionLevel}
                         </Typography>
+                        <Cost
+                            cost={{
+                                clay: PALACE.COST_CLAY,
+                                wood: PALACE.COST_WOOD,
+                                iron: PALACE.COST_IRON,
+                                time: timeCost,
+                            }}
+                        />
                     </CardContent>
                     <CardActions>
                         <Button
