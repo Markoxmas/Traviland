@@ -7,8 +7,8 @@ export default function Bars({ villages, village }) {
     return (
         <>
             <VillagesList villages={villages} village={village} />
-            <ResourceBar villages={villages} village={village} />
-            <ArmyBar village={village} />
+            <ResourceBar />
+            <ArmyBar />
         </>
     )
 }

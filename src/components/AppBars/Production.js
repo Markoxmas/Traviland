@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 import { makeStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Button from '@material-ui/core/Button'
@@ -20,19 +21,40 @@ const useStyles = makeStyles({
     },
 })
 
-export default function Production({ village }) {
+export default function Production() {
     const classes = useStyles()
-    const { production } = village
+    const { villageId } = useSelector((state) => state.villageMenuReducer)
+    const villages = useSelector((state) => state.villagesReducer)
+    const [village, setVillage] = useState(undefined)
+
+    useEffect(() => {
+        setVillage(villages.find((village) => village.id === villageId))
+    }, [villageId])
     return (
         <Paper className={classes.root}>
             <Button className={classes.clay}>
-                <b>{production ? formatNumber(production.clay) : 0} per hour</b>
+                <b>
+                    {village && village.production
+                        ? formatNumber(village.production.clay)
+                        : 0}{' '}
+                    per hour
+                </b>
             </Button>
             <Button className={classes.wood}>
-                <b>{production ? formatNumber(production.wood) : 0} per hour</b>
+                <b>
+                    {village && village.production
+                        ? formatNumber(village.production.wood)
+                        : 0}{' '}
+                    per hour
+                </b>
             </Button>
             <Button className={classes.iron}>
-                <b>{production ? formatNumber(production.iron) : 0} per hour</b>
+                <b>
+                    {village && village.production
+                        ? formatNumber(village.production.iron)
+                        : 0}{' '}
+                    per hour
+                </b>
             </Button>
         </Paper>
     )

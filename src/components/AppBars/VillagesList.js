@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { makeStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
@@ -17,15 +17,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function VillagesList() {
     const classes = useStyles()
-    const [open, setOpen] = React.useState(false)
-    const currentVillageId = useSelector(
-        (state) => state.villageMenuReducer
-    ).villageId
+    const { villageId } = useSelector((state) => state.villageMenuReducer)
     const villages = useSelector((state) => state.villagesReducer)
-    const village = villages.find((village) => village.id === currentVillageId)
-    const villagesMenu = villages.map((village) => {
-        return { id: village.id, name: village.name }
-    })
+    const [open, setOpen] = useState(false)
+    const [village, setVillage] = useState(undefined)
 
     const handleClickOpen = () => {
         setOpen(true)
@@ -35,18 +30,26 @@ export default function VillagesList() {
         setOpen(false)
     }
 
+    useEffect(() => {
+        setVillage(villages.find((village) => village.id === villageId))
+    }, [villageId])
+
     return (
-        <Paper className={classes.root}>
-            <Button onClick={handleClickOpen}>{village.name}</Button>
-            <Dialog open={open} onClose={handleClose}>
-                <DialogTitle>Choose village!</DialogTitle>
-                <DialogContent>
-                    <VillagesMenu
-                        villagesMenu={villagesMenu}
-                        handleClose={handleClose}
-                    />
-                </DialogContent>
-            </Dialog>
-        </Paper>
+        <>
+            {village && (
+                <Paper className={classes.root}>
+                    <Button onClick={handleClickOpen}>{village.name}</Button>
+                    <Dialog open={open} onClose={handleClose}>
+                        <DialogTitle>Choose village!</DialogTitle>
+                        <DialogContent>
+                            <VillagesMenu
+                                villagesMenu={{}}
+                                handleClose={handleClose}
+                            />
+                        </DialogContent>
+                    </Dialog>
+                </Paper>
+            )}
+        </>
     )
 }

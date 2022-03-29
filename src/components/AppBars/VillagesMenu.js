@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
@@ -17,9 +17,13 @@ const useStyles = makeStyles({
     },
 })
 
-export default function VillageMenu({ villagesMenu, handleClose }) {
+export default function VillageMenu({ handleClose }) {
     const classes = useStyles()
     const dispatch = useDispatch()
+    const villages = useSelector((state) => state.villagesReducer)
+    const villagesMenu = villages.map((village) => {
+        return { id: village.id, name: village.name }
+    })
 
     const handleChoice = (newId) => {
         if (typeof newId === 'number') {
