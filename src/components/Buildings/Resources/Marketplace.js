@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function Marketplace({ village, field }) {
+export default function Marketplace() {
     const classes = useStyles()
     const serverConfig = useSelector((state) => state.serverConfigReducer)
     const config = serverConfig.MARKETPLACE

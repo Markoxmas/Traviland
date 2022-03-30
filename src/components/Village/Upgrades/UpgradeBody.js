@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import ResourceUpgradeInfo from '../../Buildings/Resources/ResourceUpgradeInfo'
 import Warehouse from '../../Buildings/Resources/Warehouse'
 import UnitMaker from '../../Buildings/Units/UnitMaker'
@@ -9,34 +10,27 @@ import RallyPoint from '../../Buildings/Units/RallyPoint'
 import Palace from '../../Buildings/Palace'
 import Marketplace from '../../Buildings/Resources/Marketplace'
 
-export default function UpgradeBody({ village, field }) {
-    const propsToPass = {
-        village,
-        field,
-    }
+export default function UpgradeBody() {
+    const { field } = useSelector((state) => state.fieldReducer)
     return (
         <>
             {['clay', 'wood', 'iron'].includes(field.type) && (
-                <ResourceUpgradeInfo {...propsToPass} />
+                <ResourceUpgradeInfo />
             )}
-            {field.type === 'warehouse' && <Warehouse {...propsToPass} />}
+            {field.type === 'warehouse' && <Warehouse />}
             {(field.type === 'brickyard' ||
                 field.type === 'sawmill' ||
-                field.type === 'iron_foundry') && (
-                <ResourceIncrease {...propsToPass} />
-            )}
+                field.type === 'iron_foundry') && <ResourceIncrease />}
             {(field.type === 'barracks' || field.type === 'stable') && (
-                <UnitMaker {...propsToPass} />
+                <UnitMaker />
             )}
             {(field.type === 'blacksmith' || field.type === 'armoury') && (
-                <UnitUpgrader {...propsToPass} />
+                <UnitUpgrader />
             )}
-            {field.type === 'rally_point' && <RallyPoint {...propsToPass} />}
-            {field.type === 'palace' && <Palace {...propsToPass} />}
-            {field.type === 'marketplace' && <Marketplace {...propsToPass} />}
-            {field.type === 'main_building' && (
-                <MainBuilding {...propsToPass} />
-            )}
+            {field.type === 'rally_point' && <RallyPoint />}
+            {field.type === 'palace' && <Palace />}
+            {field.type === 'marketplace' && <Marketplace />}
+            {field.type === 'main_building' && <MainBuilding />}
         </>
     )
 }

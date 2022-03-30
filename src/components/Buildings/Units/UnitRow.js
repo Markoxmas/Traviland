@@ -18,9 +18,11 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function UnitRow({ village, field, unit }) {
+export default function UnitRow({ unit }) {
     const classes = useStyles()
     const serverConfig = useSelector((state) => state.serverConfigReducer)
+    const { village } = useSelector((state) => state.villageMenuReducer)
+    const { field } = useSelector((state) => state.fieldReducer)
     const [units, setUnits] = useState(undefined)
     const cost = getUnitCost(serverConfig, field)[unit]
     const maxUnits = getMaxUnitAmount(village, field, serverConfig)

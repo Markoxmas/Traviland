@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import List from '@material-ui/core/List'
 import Grid from '@material-ui/core/Grid'
@@ -17,10 +16,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function UnitUpgrader() {
     const classes = useStyles()
-    const { field } = useSelector((state) => state.fieldReducer)
-    const serverConfig = useSelector((state) => state.serverConfigReducer)
-    const { village } = useSelector((state) => state.villageMenuReducer)
-
     const units = [
         'dog',
         'cat',
@@ -33,25 +28,17 @@ export default function UnitUpgrader() {
 
     return (
         <div className={classes.root}>
-            {village && (
+            <Grid>
                 <Grid>
-                    <Grid>
-                        <div className={classes.demo}>
-                            <List>
-                                {units.map((unit) => (
-                                    <UnitUpgradeRow
-                                        village={village}
-                                        serverConfig={serverConfig}
-                                        field={field}
-                                        unit={unit}
-                                        key={field.type + unit}
-                                    />
-                                ))}
-                            </List>
-                        </div>
-                    </Grid>
+                    <div className={classes.demo}>
+                        <List>
+                            {units.map((unit) => (
+                                <UnitUpgradeRow unit={unit} key={unit} />
+                            ))}
+                        </List>
+                    </div>
                 </Grid>
-            )}
+            </Grid>
         </div>
     )
 }

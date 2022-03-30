@@ -26,9 +26,10 @@ const useStyles = makeStyles({
     },
 })
 
-export default function Palace({ field }) {
+export default function Palace() {
     const classes = useStyles()
     const serverConfig = useSelector((state) => state.serverConfigReducer)
+    const { field } = useSelector((state) => state.fieldReducer)
     const { PALACE, SERVER_SPEED } = serverConfig
     const timeCost = Math.floor(PALACE.COST_TIME / SERVER_SPEED)
     return (
