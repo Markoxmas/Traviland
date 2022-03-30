@@ -3,10 +3,10 @@ import VillagesList from './VillagesList'
 import ResourceBar from './ResourceBar'
 import ArmyBar from './ArmyBar'
 
-export default function Bars({ villages, village }) {
+export default function Bars() {
     return (
         <>
-            <VillagesList villages={villages} village={village} />
+            <VillagesList />
             <ResourceBar />
             <ArmyBar />
         </>

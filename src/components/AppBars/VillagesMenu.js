@@ -21,27 +21,22 @@ export default function VillageMenu({ handleClose }) {
     const classes = useStyles()
     const dispatch = useDispatch()
     const villages = useSelector((state) => state.villagesReducer)
-    const villagesMenu = villages.map((village) => {
-        return { id: village.id, name: village.name }
-    })
 
-    const handleChoice = (newId) => {
-        if (typeof newId === 'number') {
-            dispatch(onSetVillage(newId))
-        }
+    const handleChoice = (newVillage) => {
+        dispatch(onSetVillage(newVillage))
         handleClose()
     }
 
     return (
         <div className={classes.root}>
-            {villagesMenu.map((villageItem) => (
+            {villages.map((village) => (
                 <Card
                     className={classes.card}
-                    onClick={() => handleChoice(villageItem.id)}
+                    onClick={() => handleChoice(village)}
                 >
                     <CardContent>
                         <Typography variant="h5" component="h3">
-                            {villageItem.name}
+                            {village.name}
                         </Typography>
                     </CardContent>
                 </Card>

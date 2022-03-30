@@ -7,6 +7,7 @@ import UpgradeWindow from './Upgrades/UpgradeWindow'
 import { onSetResources } from '../../redux/actions/resourcesActions'
 import getResources from '../../lib/getResources'
 import BasicTimer from './BasicTimer'
+import Bars from '../AppBars/Bars'
 import { onSetField } from '../../redux/actions/villageMenuActions'
 
 const useStyles = makeStyles({
@@ -16,11 +17,12 @@ const useStyles = makeStyles({
     },
 })
 
-export default function Village({ village }) {
+export default function Village() {
     const classes = useStyles()
     const dispatch = useDispatch()
     const [openUpgrade, setOpenUpgrade] = React.useState(false)
     const { field } = useSelector((state) => state.fieldReducer)
+    const { village } = useSelector((state) => state.villageMenuReducer)
     const { tab } = useSelector((state) => state.menuReducer)
 
     useEffect(() => {
@@ -46,46 +48,63 @@ export default function Village({ village }) {
     }
 
     return (
-        <Grid container className={classes.root}>
-            {tab === 1 &&
-                village.fields
-                    .filter((field) =>
-                        ['clay', 'iron', 'wood'].includes(field.type)
-                    )
-                    .map((field) => (
-                        <Grid item xs={6} sm={4} md={3} lg={3} key={field.id}>
-                            <UpgradeField
-                                field={field}
-                                openUpgradeWindow={openUpgradeWindow}
-                            />
-                        </Grid>
-                    ))}
-            {tab === 2 &&
-                village.fields
-                    .filter(
-                        (field) =>
-                            !['clay', 'iron', 'wood'].includes(field.type)
-                    )
-                    .map((field) => (
-                        <Grid item xs={6} sm={4} md={3} lg={3} key={field.id}>
-                            <UpgradeField
-                                field={field}
-                                openUpgradeWindow={openUpgradeWindow}
-                            />
-                        </Grid>
-                    ))}
-            {field && (
-                <UpgradeWindow
-                    open={openUpgrade}
-                    field={field}
-                    closeWindow={closeUpgradeWindow}
-                    village={village}
-                />
-            )}
+        <>
+            <Bars />
+            <Grid container className={classes.root}>
+                {tab === 1 &&
+                    village.fields
+                        .filter((field) =>
+                            ['clay', 'iron', 'wood'].includes(field.type)
+                        )
+                        .map((field) => (
+                            <Grid
+                                item
+                                xs={6}
+                                sm={4}
+                                md={3}
+                                lg={3}
+                                key={field.id}
+                            >
+                                <UpgradeField
+                                    field={field}
+                                    openUpgradeWindow={openUpgradeWindow}
+                                />
+                            </Grid>
+                        ))}
+                {tab === 2 &&
+                    village.fields
+                        .filter(
+                            (field) =>
+                                !['clay', 'iron', 'wood'].includes(field.type)
+                        )
+                        .map((field) => (
+                            <Grid
+                                item
+                                xs={6}
+                                sm={4}
+                                md={3}
+                                lg={3}
+                                key={field.id}
+                            >
+                                <UpgradeField
+                                    field={field}
+                                    openUpgradeWindow={openUpgradeWindow}
+                                />
+                            </Grid>
+                        ))}
+                {field && (
+                    <UpgradeWindow
+                        open={openUpgrade}
+                        field={field}
+                        closeWindow={closeUpgradeWindow}
+                        village={village}
+                    />
+                )}
 
-            {village.timers.map((timer) => (
-                <BasicTimer timer={timer} key={timer.id} />
-            ))}
-        </Grid>
+                {village.timers.map((timer) => (
+                    <BasicTimer timer={timer} key={timer.id} />
+                ))}
+            </Grid>
+        </>
     )
 }

@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
 import Menu from './components/Menu'
 import Profile from './components/Profile'
-import Villages from './components/Village/Villages'
+import Village from './components/Village/Village'
 import Reports from './components/Reports'
 import { onLoadData } from './redux/actions/loadDataActions'
 import { onSetMenu } from './redux/actions/menuActions'
@@ -25,8 +25,8 @@ export default function App() {
             <Container maxWidth="lg">
                 <Menu />
                 {tab === 0 && !pending && <Profile />}
-                {tab === 1 && !pending && <Villages />}
-                {tab === 2 && !pending && <Villages />}
+                {tab === 1 && !pending && <Village />}
+                {tab === 2 && !pending && <Village />}
                 {tab === 3 && !pending && <Reports />}
                 <Typography component="div" />
             </Container>
