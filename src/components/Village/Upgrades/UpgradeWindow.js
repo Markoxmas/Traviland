@@ -43,40 +43,37 @@ export default function UpgradeWindow({ open, closeWindow, field, village }) {
         dispatch(onUpgradeRequested(upgrade))
         closeWindow()
     }
-
     return (
         <React.Fragment>
-            <Dialog open={open} onClose={closeWindow}>
-                <DialogTitle>
-                    Upgrade {field.name} to level {field.temporaryLevel + 1}
-                </DialogTitle>
-                <UpgradeBody
-                    serverConfig={serverConfig}
-                    village={village}
-                    field={field}
-                />
-                <DialogContent>
-                    <DialogContentText>
-                        <Cost cost={cost} />
-                    </DialogContentText>
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={closeWindow} color="secondary">
-                        Cancel
-                    </Button>
-                    <Button
-                        onClick={() => handleUpgrade(upgrade)}
-                        disabled={!canBeUpgraded}
-                        color="primary"
-                    >
-                        {canBeUpgraded
-                            ? 'Upgrade'
-                            : formatMsToDate(
-                                  new Date().getTime() + timeToUpgrade
-                              )}
-                    </Button>
-                </DialogActions>
-            </Dialog>
+            {field && (
+                <Dialog open={open} onClose={closeWindow}>
+                    <DialogTitle>
+                        Upgrade {field.name} to level {field.temporaryLevel + 1}
+                    </DialogTitle>
+                    <UpgradeBody village={village} field={field} />
+                    <DialogContent>
+                        <DialogContentText>
+                            {cost && <Cost cost={cost} />}
+                        </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={closeWindow} color="secondary">
+                            Cancel
+                        </Button>
+                        <Button
+                            onClick={() => handleUpgrade(upgrade)}
+                            disabled={!canBeUpgraded}
+                            color="primary"
+                        >
+                            {canBeUpgraded
+                                ? 'Upgrade'
+                                : formatMsToDate(
+                                      new Date().getTime() + timeToUpgrade
+                                  )}
+                        </Button>
+                    </DialogActions>
+                </Dialog>
+            )}
         </React.Fragment>
     )
 }

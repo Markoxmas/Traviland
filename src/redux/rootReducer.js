@@ -6,6 +6,7 @@ import villageMenuReducer from './reducers/villageMenuReducer'
 import userReducer from './reducers/userReducer'
 import serverConfigReducer from './reducers/serverConfigReducer'
 import resourcesReducer from './reducers/resourcesReducer'
+import fieldReducer from './reducers/fieldReducer'
 
 const rootReducer = combineReducers({
     villagesReducer,
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
     userReducer,
     serverConfigReducer,
     resourcesReducer,
+    fieldReducer,
 })
 
 export default rootReducer

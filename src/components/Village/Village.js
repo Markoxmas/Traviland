@@ -7,6 +7,7 @@ import UpgradeWindow from './Upgrades/UpgradeWindow'
 import { onSetResources } from '../../redux/actions/resourcesActions'
 import getResources from '../../lib/getResources'
 import BasicTimer from './BasicTimer'
+import { onSetField } from '../../redux/actions/villageMenuActions'
 
 const useStyles = makeStyles({
     root: {
@@ -19,7 +20,7 @@ export default function Village({ village }) {
     const classes = useStyles()
     const dispatch = useDispatch()
     const [openUpgrade, setOpenUpgrade] = React.useState(false)
-    const [field, setField] = React.useState({})
+    const { field } = useSelector((state) => state.fieldReducer)
     const { tab } = useSelector((state) => state.menuReducer)
 
     useEffect(() => {
@@ -37,7 +38,7 @@ export default function Village({ village }) {
 
     function openUpgradeWindow(field) {
         setOpenUpgrade(true)
-        setField(field)
+        dispatch(onSetField(field))
     }
 
     function closeUpgradeWindow() {
@@ -73,12 +74,15 @@ export default function Village({ village }) {
                             />
                         </Grid>
                     ))}
-            <UpgradeWindow
-                open={openUpgrade}
-                field={field}
-                closeWindow={closeUpgradeWindow}
-                village={village}
-            />
+            {field && (
+                <UpgradeWindow
+                    open={openUpgrade}
+                    field={field}
+                    closeWindow={closeUpgradeWindow}
+                    village={village}
+                />
+            )}
+
             {village.timers.map((timer) => (
                 <BasicTimer timer={timer} key={timer.id} />
             ))}
