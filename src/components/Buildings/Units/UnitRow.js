@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useSelector } from 'react-redux'
 import { makeStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Input from '@material-ui/core/Input'
@@ -17,8 +18,10 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function UnitRow({ village, serverConfig, field, unit }) {
+export default function UnitRow({ village, unit }) {
     const classes = useStyles()
+    const serverConfig = useSelector((state) => state.serverConfigReducer)
+    const { field } = useSelector((state) => state.serverConfigReducer)
     const [units, setUnits] = useState(undefined)
     const cost = getUnitCost(serverConfig, field)[unit]
     const maxUnits = getMaxUnitAmount(village, field, serverConfig)

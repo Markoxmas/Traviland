@@ -13,8 +13,9 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function Warehouse({ field }) {
+export default function Warehouse() {
     const classes = useStyles()
+    const { field } = useSelector((state) => state.fieldReducer)
     const serverConfig = useSelector((state) => state.serverConfigReducer)
     const config = serverConfig.WAREHOUSE
     const currentMaxResources = Math.floor(

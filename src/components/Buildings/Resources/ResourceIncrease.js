@@ -12,8 +12,9 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function ResourceIncrease({ field }) {
+export default function ResourceIncrease() {
     const classes = useStyles()
+    const { field } = useSelector((state) => state.fieldReducer)
     const serverConfig = useSelector((state) => state.serverConfigReducer)
     const config = serverConfig[field.type.toUpperCase()]
     const currentIncrease = Math.floor(

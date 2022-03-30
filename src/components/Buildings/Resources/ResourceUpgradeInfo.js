@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
@@ -13,13 +13,16 @@ const useStyles = makeStyles({
     },
 })
 
-export default function ResourceUpgradeInfo({ field }) {
+export default function ResourceUpgradeInfo() {
     const classes = useStyles()
     const serverConfig = useSelector((state) => state.serverConfigReducer)
+    const { field } = useSelector((state) => state.fieldReducer)
+
     const production = getFieldProduction(serverConfig, {
         ...field,
         level: field.temporaryLevel,
     })
+
     return (
         <DialogContent>
             <DialogContentText>

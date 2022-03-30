@@ -12,8 +12,9 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function MainBuilding({ field }) {
+export default function MainBuilding() {
     const classes = useStyles()
+    const field = useSelector((state) => state.fieldReducer)
     const serverConfig = useSelector((state) => state.serverConfigReducer)
     const decrease = Math.floor(
         field.level * serverConfig.MAIN_BUILDING.DECREASE * 100
