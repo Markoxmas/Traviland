@@ -9,9 +9,8 @@ import RallyPoint from '../../Buildings/Units/RallyPoint'
 import Palace from '../../Buildings/Palace'
 import Marketplace from '../../Buildings/Resources/Marketplace'
 
-export default function UpgradeBody({ serverConfig, village, field }) {
+export default function UpgradeBody({ village, field }) {
     const propsToPass = {
-        serverConfig,
         village,
         field,
     }

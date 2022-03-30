@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { makeStyles } from '@material-ui/core/styles'
 import List from '@material-ui/core/List'
 import Grid from '@material-ui/core/Grid'
@@ -14,8 +15,9 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function UnitMaker({ village, field, serverConfig }) {
+export default function UnitMaker({ village, field }) {
     const classes = useStyles()
+    const serverConfig = useSelector((state) => state.serverConfigReducer)
     const units =
         field.type === 'barracks'
             ? ['dog', 'cat', 'lizard', 'pidgeon']

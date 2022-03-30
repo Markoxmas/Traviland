@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles'
+import { useSelector } from 'react-redux'
 import Paper from '@material-ui/core/Paper'
 
 const useStyles = makeStyles((theme) => ({
@@ -11,8 +12,9 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function RallyPoint({ serverConfig, field }) {
+export default function RallyPoint({ field }) {
     const classes = useStyles()
+    const serverConfig = useSelector((state) => state.serverConfigReducer)
     const config = serverConfig.RALLY_POINT
     const currentDecrease = Math.floor(config.DECREASE * 100 * field.level)
     const nextDecrease =

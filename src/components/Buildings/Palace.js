@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
 import CardActions from '@material-ui/core/CardActions'
@@ -25,8 +26,9 @@ const useStyles = makeStyles({
     },
 })
 
-export default function Palace({ serverConfig, field }) {
+export default function Palace({ field }) {
     const classes = useStyles()
+    const serverConfig = useSelector((state) => state.serverConfigReducer)
     const { PALACE, SERVER_SPEED } = serverConfig
     const timeCost = Math.floor(PALACE.COST_TIME / SERVER_SPEED)
     return (

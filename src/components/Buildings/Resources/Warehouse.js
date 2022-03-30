@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles'
+import { useSelector } from 'react-redux'
 import Paper from '@material-ui/core/Paper'
 import formatNumber from '../../../lib/formatNumber'
 
@@ -12,8 +13,9 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function Warehouse({ serverConfig, field }) {
+export default function Warehouse({ field }) {
     const classes = useStyles()
+    const serverConfig = useSelector((state) => state.serverConfigReducer)
     const config = serverConfig.WAREHOUSE
     const currentMaxResources = Math.floor(
         config.MAX_RES_A1 *

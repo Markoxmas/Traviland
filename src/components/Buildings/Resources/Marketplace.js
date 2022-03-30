@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
 import { makeStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Input from '@material-ui/core/Input'
@@ -15,8 +16,9 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function Marketplace({ village, serverConfig, field }) {
+export default function Marketplace({ village, field }) {
     const classes = useStyles()
+    const serverConfig = useSelector((state) => state.serverConfigReducer)
     const config = serverConfig.MARKETPLACE
     const [clay, setClay] = useState(0)
     const [wood, setWood] = useState(0)

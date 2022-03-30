@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles'
+import { useSelector } from 'react-redux'
 import Paper from '@material-ui/core/Paper'
 
 const useStyles = makeStyles((theme) => ({
@@ -11,8 +12,9 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function ResourceIncrease({ serverConfig, field }) {
+export default function ResourceIncrease({ field }) {
     const classes = useStyles()
+    const serverConfig = useSelector((state) => state.serverConfigReducer)
     const config = serverConfig[field.type.toUpperCase()]
     const currentIncrease = Math.floor(
         config.INCREASE[field.level] * 100 - 100 + 0.5

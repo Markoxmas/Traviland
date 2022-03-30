@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles'
+import { useSelector } from 'react-redux'
 import Paper from '@material-ui/core/Paper'
 
 const useStyles = makeStyles((theme) => ({
@@ -11,8 +12,9 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function MainBuilding({ serverConfig, field }) {
+export default function MainBuilding({ field }) {
     const classes = useStyles()
+    const serverConfig = useSelector((state) => state.serverConfigReducer)
     const decrease = Math.floor(
         field.level * serverConfig.MAIN_BUILDING.DECREASE * 100
     )
