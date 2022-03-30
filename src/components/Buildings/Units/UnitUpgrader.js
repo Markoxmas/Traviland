@@ -19,9 +19,8 @@ export default function UnitUpgrader() {
     const classes = useStyles()
     const { field } = useSelector((state) => state.fieldReducer)
     const serverConfig = useSelector((state) => state.serverConfigReducer)
-    const { villageId } = useSelector((state) => state.villageMenuReducer)
-    const villages = useSelector((state) => state.villagesReducer)
-    const [village, setVillage] = useState(undefined)
+    const { village } = useSelector((state) => state.villageMenuReducer)
+
     const units = [
         'dog',
         'cat',
@@ -31,10 +30,6 @@ export default function UnitUpgrader() {
         'catapult',
         'aligator',
     ]
-
-    useEffect(() => {
-        setVillage(villages.find((village) => village.id === villageId))
-    }, [villageId])
 
     return (
         <div className={classes.root}>

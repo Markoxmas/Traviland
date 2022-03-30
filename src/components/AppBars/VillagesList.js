@@ -17,10 +17,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function VillagesList() {
     const classes = useStyles()
-    const { villageId } = useSelector((state) => state.villageMenuReducer)
-    const villages = useSelector((state) => state.villagesReducer)
+    const { village } = useSelector((state) => state.villageMenuReducer)
     const [open, setOpen] = useState(false)
-    const [village, setVillage] = useState(undefined)
 
     const handleClickOpen = () => {
         setOpen(true)
@@ -29,10 +27,6 @@ export default function VillagesList() {
     const handleClose = () => {
         setOpen(false)
     }
-
-    useEffect(() => {
-        setVillage(villages.find((village) => village.id === villageId))
-    }, [villageId])
 
     return (
         <>

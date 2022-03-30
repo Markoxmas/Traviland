@@ -23,13 +23,8 @@ const useStyles = makeStyles({
 
 export default function Production() {
     const classes = useStyles()
-    const { villageId } = useSelector((state) => state.villageMenuReducer)
-    const villages = useSelector((state) => state.villagesReducer)
-    const [village, setVillage] = useState(undefined)
+    const { village } = useSelector((state) => state.villageMenuReducer)
 
-    useEffect(() => {
-        setVillage(villages.find((village) => village.id === villageId))
-    }, [villageId])
     return (
         <Paper className={classes.root}>
             <Button className={classes.clay}>

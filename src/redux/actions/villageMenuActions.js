@@ -1,8 +1,8 @@
 import CONST from '../constants'
 
-export const onSetVillage = (newId) => ({
+export const onSetVillage = (newVillage) => ({
     type: CONST.SET_VILLAGE,
-    newId,
+    newVillage,
 })
 
 export const onSetField = (newField) => ({
